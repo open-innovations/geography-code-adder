@@ -164,7 +164,7 @@
 		"E07000162":{"date":{"e":"2009-03-31","s":"2009-01-01"},"nm":"Wansbeck","parent":"E10000022"},
 		"E07000163":{"date":{"e":"2023-03-31","s":"2009-01-01"},"nm":"Craven","nm_alt":["Craven District Council"],"parent":"E10000023"},
 		"E07000164":{"date":{"e":"2023-03-31","s":"2009-01-01"},"nm":"Hambleton","nm_alt":["Hambleton District Council"],"parent":"E10000023"},
-		"E07000165":{"date":{"e":"2023-03-31","s":"2009-01-01"},"nm":"Harrogate","nm_alt":["Harrogate District Council","Harrogate Borough Council"],"parent":"E10000023"},
+		"E07000165":{"date":{"e":"2023-03-31","s":"2009-01-01"},"nm":"Harrogate","nm_alt":["Harrogate Borough Council","Harrogate District Council"],"parent":"E10000023"},
 		"E07000166":{"date":{"e":"2023-03-31","s":"2009-01-01"},"nm":"Richmondshire","nm_alt":["Richmondshire District Council"],"parent":"E10000023"},
 		"E07000167":{"date":{"e":"2023-03-31","s":"2009-01-01"},"nm":"Ryedale","nm_alt":["Ryedale District Council"],"parent":"E10000023"},
 		"E07000168":{"date":{"e":"2023-03-31","s":"2009-01-01"},"nm":"Scarborough","nm_alt":["Scarborough Borough Council"],"parent":"E10000023"},

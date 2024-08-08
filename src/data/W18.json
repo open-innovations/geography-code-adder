@@ -1,7 +1,7 @@
 {
 	"areas":{
 		"W18000001":{"date":{"e":"2023-04-16","s":"2022-12-31"},"nm":"Brecon Beacons","nm_alt":["Brecon Beacons National Park","Parc Cenedlaethol Bannau Brycheiniog"]},
-		"W18000002":{"date":{"s":"2022-12-31"},"nm":"Pembrokeshire Coast","nm_alt":["Pembrokeshire Coast National Park","Parc Cenedlaethol Afordir Penfro"]},
+		"W18000002":{"date":{"s":"2022-12-31"},"nm":"Pembrokeshire Coast","nm_alt":["Parc Cenedlaethol Afordir Penfro","Pembrokeshire Coast National Park"]},
 		"W18000003":{"date":{"s":"2023-04-17"},"nm":"Eryri","nm_alt":["Parc Cenedlaethol Eryri","Snowdonia National Park"]}
 	},
 	"description":"National Parks",

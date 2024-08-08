@@ -1,6 +1,6 @@
 {
 	"areas":{
-		"W09000001":{"date":{"s":"2009-01-01"},"nm":"Ynys Môn","parent":"W10000001"},
+		"W09000001":{"date":{"s":"2009-01-01"},"nm":"Ynys MÃ´n","parent":"W10000001"},
 		"W09000002":{"date":{"s":"2009-01-01"},"nm":"Arfon","parent":"W10000001"},
 		"W09000003":{"date":{"s":"2009-01-01"},"nm":"Aberconwy","parent":"W10000001"},
 		"W09000004":{"date":{"s":"2009-01-01"},"nm":"Clwyd West","nm_alt":["Gorllewin Clwyd"],"parent":"W10000001"},

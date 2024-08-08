@@ -20,7 +20,7 @@
 		"W20000018":{"date":{"s":"2009-01-01"},"nm":"Conwy","parent":"W92000004"},
 		"W20000019":{"date":{"e":"2009-07-05","s":"2009-01-01"},"nm":"Penllyn"},
 		"W20000020":{"date":{"e":"2009-07-05","s":"2009-01-01"},"nm":"Dwyfor"},
-		"W20000021":{"date":{"s":"2009-01-01"},"nm":"Isle of Anglesey","nm_alt":["Ynys Mon (Isle of Anglesey)","Ynys Môn"],"parent":"W92000004"},
+		"W20000021":{"date":{"s":"2009-01-01"},"nm":"Isle of Anglesey","nm_alt":["Ynys Mon (Isle of Anglesey)","Ynys MÃ´n"],"parent":"W92000004"},
 		"W20000022":{"date":{"s":"2009-01-01"},"nm":"Merthyr Tydfil","nm_alt":["Merthyr Tudful"],"parent":"W92000004"},
 		"W20000023":{"date":{"s":"2009-01-01"},"nm":"Bridgend","nm_alt":["Pen-y-bont ar Ogwr"],"parent":"W92000004"},
 		"W20000024":{"date":{"s":"2009-01-01"},"nm":"Caerphilly","nm_alt":["Caerffili"],"parent":"W92000004"},

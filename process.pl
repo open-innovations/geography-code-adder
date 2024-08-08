@@ -5,9 +5,9 @@ use warnings;
 use utf8;
 use JSON::XS;
 use Data::Dumper;
-
-
 use Cwd qw(abs_path);
+binmode STDOUT, 'utf8';
+binmode STDERR, 'utf8';
 
 # Get the real base directory for this script
 my $basedir = "./";
@@ -119,7 +119,7 @@ while(<FILE>){
 				}
 				@alts = keys(%{$equivalents{$cd}});
 				if(@alts > 0){
-					@{$geotypes{$typ}{'areas'}{$cd}{'nm_alt'}} = @alts;
+					@{$geotypes{$typ}{'areas'}{$cd}{'nm_alt'}} = sort(@alts);
 				}
 			}
 		}
@@ -144,7 +144,7 @@ foreach $typ (sort(keys(%geotypes))){
 	$file = $basedir.($args->{'dir'}||"./")."/".$typ.$ext;
 	msg("\tSaving to <cyan>$file<none>\n");
 
-	open($fh,">",$file);
+	open($fh,">:utf8",$file);
 
 	if($args->{'format'} eq "CSV"){
 		print $fh "Code,Name,Start,End,Parent\n";
@@ -152,15 +152,19 @@ foreach $typ (sort(keys(%geotypes))){
 
 	$c = 0;
 	if($args->{'format'} eq "CSV"){
+
 		foreach $cd (sort(keys(%{$geotypes{$typ}{'areas'}}))){
-			
+
 			print $fh ",".($geotypes{$typ}{'areas'}{$cd}{'nm'} =~ /,/ ? '"':'').$geotypes{$typ}{'areas'}{$cd}{'nm'}.($geotypes{$typ}{'areas'}{$cd}{'nm'} =~ /,/ ? '"':'');
 			print $fh ",".$geotypes{$typ}{'areas'}{$cd}{'start_date'};
 			print $fh ",".$geotypes{$typ}{'areas'}{$cd}{'end_date'};
 			print $fh ",".$geotypes{$typ}{'areas'}{$cd}{'parent'};
 			print $fh "\n";
+
 		}
+
 	}else{
+
 		$str = JSON::XS->new->canonical(1)->encode($geotypes{$typ});
 		if($str eq "null"){ $str = "{}"; }
 		$str =~ s/^\{/\{\n\t/;
@@ -170,7 +174,7 @@ foreach $typ (sort(keys(%geotypes))){
 		$str =~ s/,(\"source\")/,\n\t$1/;
 		$str =~ s/\}$/\n\}/;
 		print $fh $str;
-	
+
 	}
 
 	close($fh);

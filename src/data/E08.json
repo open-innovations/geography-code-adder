@@ -12,7 +12,7 @@
 		"E08000010":{"date":{"s":"2009-01-01"},"nm":"Wigan","nm_alt":["Wigan Metropolitan Borough Council"],"parent":"E12000002"},
 		"E08000011":{"date":{"s":"2009-01-01"},"nm":"Knowsley","nm_alt":["Knowsley Metropolitan Borough Council"],"parent":"E12000002"},
 		"E08000012":{"date":{"s":"2009-01-01"},"nm":"Liverpool","nm_alt":["Liverpool City Council"],"parent":"E12000002"},
-		"E08000013":{"date":{"s":"2009-01-01"},"nm":"St. Helens","nm_alt":["St Helens Metropolitan Borough Council","St Helens"],"parent":"E12000002"},
+		"E08000013":{"date":{"s":"2009-01-01"},"nm":"St. Helens","nm_alt":["St Helens","St Helens Metropolitan Borough Council"],"parent":"E12000002"},
 		"E08000014":{"date":{"s":"2009-01-01"},"nm":"Sefton","nm_alt":["Sefton Council"],"parent":"E12000002"},
 		"E08000015":{"date":{"s":"2009-01-01"},"nm":"Wirral","nm_alt":["Wirral Metropolitan Borough Council"],"parent":"E12000002"},
 		"E08000016":{"date":{"s":"2009-01-01"},"nm":"Barnsley","nm_alt":["Barnsley Metropolitan Borough Council"],"parent":"E12000003"},
