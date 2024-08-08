@@ -1,0 +1,9 @@
+{
+	"areas":{
+		"E19000001":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"North, Midlands and the East Programme for IT (NMEPFiT)"},
+		"E19000002":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Southern Programme for IT (SPFiT)"},
+		"E19000003":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"London Programme for IT (LPFiT)"}
+	},
+	"description":"Pan Strategic Health Authorities",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

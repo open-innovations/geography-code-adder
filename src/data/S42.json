@@ -1,0 +1,22 @@
+{
+	"areas":{
+		"S42000001":{"date":{"s":"2019-04-01"},"nm":"Argyll and Bute and West Dunbartonshire"},
+		"S42000002":{"date":{"s":"2019-04-01"},"nm":"Ayrshire"},
+		"S42000003":{"date":{"s":"2019-04-01"},"nm":"Dumfries and Galloway"},
+		"S42000004":{"date":{"e":"2019-07-02","s":"2019-04-01"},"nm":"Glasgow and East Dunbartonshire"},
+		"S42000005":{"date":{"e":"2019-07-02","s":"2019-04-01"},"nm":"Lanarkshire"},
+		"S42000006":{"date":{"s":"2019-04-01"},"nm":"West"},
+		"S42000007":{"date":{"e":"2019-07-02","s":"2019-04-01"},"nm":"Fife"},
+		"S42000008":{"date":{"s":"2019-04-01"},"nm":"Forth Valley"},
+		"S42000009":{"date":{"s":"2019-04-01"},"nm":"Lothian and Borders"},
+		"S42000010":{"date":{"s":"2019-04-01"},"nm":"Highlands and Islands"},
+		"S42000011":{"date":{"e":"2019-07-02","s":"2019-04-01"},"nm":"Tayside"},
+		"S42000012":{"date":{"s":"2019-04-01"},"nm":"Grampian"},
+		"S42000013":{"date":{"s":"2019-07-03"},"nm":"Fife"},
+		"S42000014":{"date":{"s":"2019-07-03"},"nm":"Tayside"},
+		"S42000015":{"date":{"s":"2019-07-03"},"nm":"Glasgow and East Dunbartonshire"},
+		"S42000016":{"date":{"s":"2019-07-03"},"nm":"Lanarkshire"}
+	},
+	"description":"Scottish Local Resilience Partnerships",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

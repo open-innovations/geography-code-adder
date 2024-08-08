@@ -1,0 +1,12 @@
+{
+	"areas":{
+		"E17000001":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Northumberland"},
+		"E17000002":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Bexley"},
+		"E17000003":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Torbay"},
+		"E17000004":{"date":{"e":"2011-04-14","s":"2009-01-01"},"nm":"Solihull"},
+		"E17000005":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"North East Lincolnshire"},
+		"E17000006":{"date":{"e":"2013-03-31","s":"2010-04-01"},"nm":"Blackburn with Darwen Teaching"}
+	},
+	"description":"Care Trusts",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

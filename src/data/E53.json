@@ -1,0 +1,28 @@
+{
+	"areas":{
+		"E53000001":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"Buckinghamshire Thames Valley (LEPNOP)"},
+		"E53000002":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"Coast to Capital (LEPNOP)"},
+		"E53000003":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"Derby, Derbyshire, Nottingham and Nottinghamshire (LEPNOP)"},
+		"E53000004":{"date":{"e":"2024-03-31","s":"2016-04-01"},"nm":"Greater Birmingham and Solihull (LEPNOP)"},
+		"E53000005":{"date":{"e":"2021-03-31","s":"2016-04-01"},"nm":"Greater Cambridge and Greater Peterborough (LEPNOP)"},
+		"E53000006":{"date":{"e":"2017-03-31","s":"2016-04-01"},"nm":"Greater Lincolnshire (LEPNOP)"},
+		"E53000007":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"Hertfordshire (LEPNOP)"},
+		"E53000008":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"Humber (LEPNOP)"},
+		"E53000009":{"date":{"e":"2021-03-31","s":"2016-04-01"},"nm":"Leeds City Region (LEPNOP)"},
+		"E53000010":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"London (LEPNOP)"},
+		"E53000011":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"New Anglia (LEPNOP)"},
+		"E53000012":{"date":{"e":"2017-03-31","s":"2016-04-01"},"nm":"Northamptonshire (LEPNOP)"},
+		"E53000013":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"Oxfordshire (LEPNOP)"},
+		"E53000014":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"Sheffield City Region (LEPNOP)"},
+		"E53000015":{"date":{"e":"2020-03-31","s":"2016-04-01"},"nm":"South East (LEPNOP)"},
+		"E53000016":{"date":{"e":"2017-03-31","s":"2016-04-01"},"nm":"South East Midlands (LEPNOP)"},
+		"E53000017":{"date":{"e":"2024-03-31","s":"2016-04-01"},"nm":"Stoke-on-Trent and Staffordshire (LEPNOP)"},
+		"E53000018":{"date":{"e":"2024-03-31","s":"2016-04-01"},"nm":"Worcestershire (LEPNOP)"},
+		"E53000019":{"date":{"e":"2021-03-31","s":"2016-04-01"},"nm":"York, North Yorkshire and East Riding (LEPNOP)"},
+		"E53000020":{"date":{"e":"2020-03-31","s":"2017-04-01"},"nm":"South East Midlands (LEPNOP)"},
+		"E53000021":{"date":{"e":"2021-03-31","s":"2017-04-01"},"nm":"Greater Lincolnshire (LEPNOP)"},
+		"E53000022":{"date":{"e":"2021-03-31","s":"2020-04-01"},"nm":"Humber (LEPNOP)"}
+	},
+	"description":"LEP - non overlapping part",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

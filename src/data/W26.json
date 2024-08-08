@@ -1,0 +1,13 @@
+{
+	"areas":{
+		"W26000001":{"date":{"s":"2010-01-01"},"nm":"Mon a Menai"},
+		"W26000002":{"date":{"s":"2010-01-01"},"nm":"North Wales Coast","nm_alt":["Arfordir Gogledd Cymru"]},
+		"W26000003":{"date":{"s":"2010-01-01"},"nm":"Aberystwyth"},
+		"W26000004":{"date":{"s":"2010-01-01"},"nm":"Swansea","nm_alt":["Abertawe"]},
+		"W26000005":{"date":{"s":"2010-01-01"},"nm":"Western Valleys","nm_alt":["Cymoedd Gorllewinol"]},
+		"W26000006":{"date":{"s":"2010-01-01"},"nm":"Head of the Valleys","nm_alt":["Blaenau'r Cymoedd"]},
+		"W26000007":{"date":{"s":"2011-01-01"},"nm":"Barry"}
+	},
+	"description":"Strategic Regeneration Areas",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

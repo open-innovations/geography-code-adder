@@ -1,0 +1,26 @@
+{
+	"areas":{
+		"S17000001":{"date":{"e":"2011-05-04","s":"2009-01-01"},"nm":"Central Scotland"},
+		"S17000002":{"date":{"e":"2011-05-04","s":"2009-01-01"},"nm":"Glasgow"},
+		"S17000003":{"date":{"e":"2011-05-04","s":"2009-01-01"},"nm":"Highlands and Islands"},
+		"S17000004":{"date":{"e":"2011-05-04","s":"2009-01-01"},"nm":"Lothians"},
+		"S17000005":{"date":{"e":"2011-05-04","s":"2009-01-01"},"nm":"Mid Scotland and Fife"},
+		"S17000006":{"date":{"e":"2011-05-04","s":"2009-01-01"},"nm":"North East Scotland"},
+		"S17000007":{"date":{"e":"2011-05-04","s":"2009-01-01"},"nm":"South of Scotland"},
+		"S17000008":{"date":{"e":"2011-05-04","s":"2009-01-01"},"nm":"West of Scotland"},
+		"S17000009":{"date":{"e":"2021-05-05","s":"2011-05-05"},"nm":"Central Scotland"},
+		"S17000010":{"date":{"e":"2016-05-04","s":"2011-05-05"},"nm":"Glasgow"},
+		"S17000011":{"date":{"s":"2011-05-05"},"nm":"Highlands and Islands"},
+		"S17000012":{"date":{"s":"2011-05-05"},"nm":"Lothian"},
+		"S17000013":{"date":{"s":"2011-05-05"},"nm":"Mid Scotland and Fife"},
+		"S17000014":{"date":{"s":"2011-05-05"},"nm":"North East Scotland"},
+		"S17000015":{"date":{"s":"2011-05-05"},"nm":"South Scotland"},
+		"S17000016":{"date":{"e":"2016-05-04","s":"2011-05-05"},"nm":"West Scotland"},
+		"S17000017":{"date":{"e":"2021-05-05","s":"2016-05-05"},"nm":"Glasgow"},
+		"S17000018":{"date":{"s":"2016-05-05"},"nm":"West Scotland"},
+		"S17000019":{"date":{"s":"2021-05-06"},"nm":"Central Scotland"},
+		"S17000020":{"date":{"s":"2021-05-06"},"nm":"Glasgow"}
+	},
+	"description":"Welsh Assembly; Scottish Parliament Electoral Region",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

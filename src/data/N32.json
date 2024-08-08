@@ -1,0 +1,10 @@
+{
+	"areas":{
+		"N32000001":{"date":{"s":"2016-02-01"},"nm":"Eastern","parent":"N31000001"},
+		"N32000002":{"date":{"s":"2016-02-01"},"nm":"Northern","parent":"N31000001"},
+		"N32000003":{"date":{"s":"2016-02-01"},"nm":"Southern","parent":"N31000001"},
+		"N32000004":{"date":{"s":"2016-02-01"},"nm":"Western","parent":"N31000001"}
+	},
+	"description":"Northern Ireland Fire and Rescue Service Areas",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

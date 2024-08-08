@@ -1,0 +1,14 @@
+{
+	"areas":{
+		"S24000001":{"date":{"s":"2009-01-01"},"nm":"Argyll & the Islands"},
+		"S24000002":{"date":{"s":"2009-01-01"},"nm":"Caithness & Sutherland"},
+		"S24000003":{"date":{"s":"2009-01-01"},"nm":"Inner Moray Firth"},
+		"S24000004":{"date":{"s":"2009-01-01"},"nm":"Innse Gall"},
+		"S24000005":{"date":{"s":"2009-01-01"},"nm":"Lochaber, Skye & Wester Ross"},
+		"S24000006":{"date":{"s":"2009-01-01"},"nm":"Moray"},
+		"S24000007":{"date":{"s":"2009-01-01"},"nm":"Orkney"},
+		"S24000008":{"date":{"s":"2009-01-01"},"nm":"Shetland"}
+	},
+	"description":"Highlands and Islands Enterprise",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

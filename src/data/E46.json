@@ -1,0 +1,10 @@
+{
+	"areas":{
+		"E46000001":{"date":{"e":"2021-10-01","s":"2013-04-01"},"nm":"London"},
+		"E46000002":{"date":{"e":"2021-10-01","s":"2013-04-01"},"nm":"Midlands and East of England"},
+		"E46000003":{"date":{"e":"2021-10-01","s":"2013-04-01"},"nm":"North of England"},
+		"E46000004":{"date":{"e":"2021-10-01","s":"2013-04-01"},"nm":"South of England"}
+	},
+	"description":"Public Health England Regions",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

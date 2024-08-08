@@ -1,0 +1,8 @@
+{
+	"areas":{
+		"E13000001":{"date":{"s":"2009-01-01"},"nm":"Inner London"},
+		"E13000002":{"date":{"s":"2009-01-01"},"nm":"Outer London"}
+	},
+	"description":"Inner and Outer London",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

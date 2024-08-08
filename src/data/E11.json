@@ -1,0 +1,13 @@
+{
+	"areas":{
+		"E11000001":{"date":{"s":"2009-01-01"},"nm":"Greater Manchester"},
+		"E11000002":{"date":{"s":"2009-01-01"},"nm":"Merseyside"},
+		"E11000003":{"date":{"s":"2009-01-01"},"nm":"South Yorkshire"},
+		"E11000004":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Tyne and Wear"},
+		"E11000005":{"date":{"s":"2009-01-01"},"nm":"West Midlands"},
+		"E11000006":{"date":{"s":"2009-01-01"},"nm":"West Yorkshire"},
+		"E11000007":{"date":{"s":"2013-04-01"},"nm":"Tyne and Wear"}
+	},
+	"description":"Metropolitan County",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

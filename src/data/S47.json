@@ -1,0 +1,7 @@
+{
+	"areas":{
+		"S47000001":{"date":{"s":"2022-09-05"},"nm":"Unknown"},
+		"S47000002":{"date":{"s":"2022-09-05"},"nm":"Other Scottish Location"},
+		"S47000003":{"date":{"s":"2022-09-05"},"nm":"Non-Scottish UK Location"}},
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

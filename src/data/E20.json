@@ -1,0 +1,14 @@
+{
+	"areas":{
+		"E20000001":{"date":{"s":"2009-01-01"},"nm":"Northern & Yorkshire Cancer Registry & Information Service"},
+		"E20000002":{"date":{"s":"2009-01-01"},"nm":"Trent Cancer Registry"},
+		"E20000003":{"date":{"s":"2009-01-01"},"nm":"Eastern Cancer Registration & Information Centre"},
+		"E20000004":{"date":{"s":"2009-01-01"},"nm":"Thames Cancer Registry"},
+		"E20000005":{"date":{"s":"2009-01-01"},"nm":"Oxford Cancer Intelligence Unit"},
+		"E20000006":{"date":{"s":"2009-01-01"},"nm":"South West Cancer Intelligence Service"},
+		"E20000007":{"date":{"s":"2009-01-01"},"nm":"West Midlands Cancer Intelligence Unit"},
+		"E20000008":{"date":{"s":"2009-01-01"},"nm":"North West Cancer Intelligence Service"}
+	},
+	"description":"Cancer Registries",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

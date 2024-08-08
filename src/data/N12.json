@@ -1,0 +1,16 @@
+{
+	"areas":{
+		"N12000001":{"date":{"s":"2015-07-31"},"nm":"Ballymena","parent":"N92000002"},
+		"N12000002":{"date":{"s":"2015-07-31"},"nm":"Belfast","parent":"N92000002"},
+		"N12000003":{"date":{"s":"2015-07-31"},"nm":"Coleraine","parent":"N92000002"},
+		"N12000004":{"date":{"s":"2015-07-31"},"nm":"Cookstown and Magherafelt","parent":"N92000002"},
+		"N12000005":{"date":{"s":"2015-07-31"},"nm":"Craigavon","parent":"N92000002"},
+		"N12000006":{"date":{"s":"2015-07-31"},"nm":"Derry","parent":"N92000002"},
+		"N12000007":{"date":{"s":"2015-07-31"},"nm":"Dungannon","parent":"N92000002"},
+		"N12000008":{"date":{"s":"2015-07-31"},"nm":"Enniskillen","parent":"N92000002"},
+		"N12000009":{"date":{"s":"2015-07-31"},"nm":"Newry and Banbridge","parent":"N92000002"},
+		"N12000010":{"date":{"s":"2015-07-31"},"nm":"Omagh and Strabane","parent":"N92000002"}
+	},
+	"description":"Travel to Work Areas",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

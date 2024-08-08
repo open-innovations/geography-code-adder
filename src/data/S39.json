@@ -1,0 +1,30 @@
+{
+	"areas":{
+		"S39000001":{"date":{"e":"2021-06-30","s":"2013-04-01"},"nm":"Aberdeen City","parent":"S40000002"},
+		"S39000002":{"date":{"e":"2021-06-30","s":"2013-04-01"},"nm":"Aberdeenshire and Moray","parent":"S40000002"},
+		"S39000003":{"date":{"s":"2013-04-01"},"nm":"Argyll and Bute, East Dunbartonshire and West Dunbartonshire","parent":"S40000003"},
+		"S39000004":{"date":{"s":"2013-04-01"},"nm":"Dumfries and Galloway","parent":"S40000003"},
+		"S39000005":{"date":{"e":"2018-02-01","s":"2013-04-01"},"nm":"Dundee, Angus, Perth and Kinross","parent":"S40000002"},
+		"S39000006":{"date":{"s":"2013-04-01"},"nm":"East Ayrshire, North Ayrshire and South Ayrshire","parent":"S40000003"},
+		"S39000007":{"date":{"s":"2013-04-01"},"nm":"East Lothian, Midlothian and the Scottish Borders","parent":"S40000004"},
+		"S39000008":{"date":{"s":"2013-04-01"},"nm":"East Renfrewshire, Renfrewshire and Inverclyde","parent":"S40000003"},
+		"S39000009":{"date":{"s":"2013-04-01"},"nm":"Edinburgh City","parent":"S40000004"},
+		"S39000010":{"date":{"s":"2013-04-01"},"nm":"Falkirk and West Lothian","parent":"S40000004"},
+		"S39000011":{"date":{"e":"2018-02-01","s":"2013-04-01"},"nm":"Fife","parent":"S40000001"},
+		"S39000012":{"date":{"e":"2019-03-31","s":"2013-04-01"},"nm":"Glasgow City","parent":"S40000003"},
+		"S39000013":{"date":{"s":"2013-04-01"},"nm":"Highlands","parent":"S40000005"},
+		"S39000014":{"date":{"e":"2019-03-31","s":"2013-04-01"},"nm":"North Lanarkshire","parent":"S40000003"},
+		"S39000015":{"date":{"e":"2021-06-30","s":"2013-04-01"},"nm":"South Lanarkshire","parent":"S40000003"},
+		"S39000016":{"date":{"e":"2019-09-15","s":"2013-04-01"},"nm":"Stirling and Clackmannanshire","parent":"S40000001"},
+		"S39000017":{"date":{"s":"2013-04-01"},"nm":"Western Isles, Orkney and Shetland Islands","parent":"S40000005"},
+		"S39000018":{"date":{"s":"2018-02-02"},"nm":"Dundee, Angus, Perth and Kinross","parent":"S40000005"},
+		"S39000019":{"date":{"e":"2019-09-15","s":"2018-02-02"},"nm":"Fife","parent":"S40000001"},
+		"S39000020":{"date":{"s":"2019-04-01"},"nm":"Glasgow City","parent":"S40000003"},
+		"S39000021":{"date":{"e":"2021-06-30","s":"2019-04-01"},"nm":"North Lanarkshire","parent":"S40000003"},
+		"S39000022":{"date":{"s":"2019-09-16"},"nm":"Stirling, Clackmannanshire and Fife","parent":"S40000004"},
+		"S39000023":{"date":{"s":"2021-07-01"},"nm":"Aberdeen City, Aberdeenshire and Moray","parent":"S40000005"},
+		"S39000024":{"date":{"s":"2021-07-01"},"nm":"Lanarkshire","parent":"S40000003"}
+	},
+	"description":"Scottish Fire and Rescue Local Senior Officer Areas",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

@@ -1,0 +1,22 @@
+{
+	"areas":{
+		"N05000001":{"date":{"s":"2024-07-04"},"nm":"Belfast East"},
+		"N05000002":{"date":{"s":"2024-07-04"},"nm":"Belfast North"},
+		"N05000003":{"date":{"s":"2024-07-04"},"nm":"Belfast South and Mid Down"},
+		"N05000004":{"date":{"s":"2024-07-04"},"nm":"Belfast West"},
+		"N05000005":{"date":{"s":"2024-07-04"},"nm":"East Antrim"},
+		"N05000006":{"date":{"s":"2024-07-04"},"nm":"East Londonderry"},
+		"N05000007":{"date":{"s":"2024-07-04"},"nm":"Fermanagh and South Tyrone"},
+		"N05000008":{"date":{"s":"2024-07-04"},"nm":"Foyle"},
+		"N05000009":{"date":{"s":"2024-07-04"},"nm":"Lagan Valley"},
+		"N05000010":{"date":{"s":"2024-07-04"},"nm":"Mid Ulster"},
+		"N05000011":{"date":{"s":"2024-07-04"},"nm":"Newry and Armagh"},
+		"N05000012":{"date":{"s":"2024-07-04"},"nm":"North Antrim"},
+		"N05000013":{"date":{"s":"2024-07-04"},"nm":"North Down"},
+		"N05000014":{"date":{"s":"2024-07-04"},"nm":"South Antrim"},
+		"N05000015":{"date":{"s":"2024-07-04"},"nm":"South Down"},
+		"N05000016":{"date":{"s":"2024-07-04"},"nm":"Strangford"},
+		"N05000017":{"date":{"s":"2024-07-04"},"nm":"Upper Barn"},
+		"N05000018":{"date":{"s":"2024-07-04"},"nm":"West Tyrone"}},
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

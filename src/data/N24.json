@@ -1,0 +1,17 @@
+{
+	"areas":{
+		"N24000001":{"date":{"s":"2015-04-01"},"nm":"Antrim and Newtownabbey","parent":"N23000001"},
+		"N24000002":{"date":{"s":"2015-04-01"},"nm":"Armagh City, Banbridge and Craigavon","parent":"N23000001"},
+		"N24000003":{"date":{"s":"2015-04-01"},"nm":"Belfast City","parent":"N23000001"},
+		"N24000004":{"date":{"s":"2015-04-01"},"nm":"Causeway Coast and Glens","parent":"N23000001"},
+		"N24000005":{"date":{"s":"2015-04-01"},"nm":"Derry and Strabane","parent":"N23000001"},
+		"N24000006":{"date":{"s":"2015-04-01"},"nm":"Fermanagh and Omagh","parent":"N23000001"},
+		"N24000007":{"date":{"s":"2015-04-01"},"nm":"Lisburn and Castlereagh City","parent":"N23000001"},
+		"N24000008":{"date":{"s":"2015-04-01"},"nm":"Mid and East Antrim","parent":"N23000001"},
+		"N24000009":{"date":{"s":"2015-04-01"},"nm":"Mid Ulster","parent":"N23000001"},
+		"N24000010":{"date":{"s":"2015-04-01"},"nm":"Newry, Mourne and Down","parent":"N23000001"},
+		"N24000011":{"date":{"s":"2015-04-01"},"nm":"Ards and North Down","parent":"N23000001"}
+	},
+	"description":"Police Force Districts",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

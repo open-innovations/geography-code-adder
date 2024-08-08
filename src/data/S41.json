@@ -1,0 +1,17 @@
+{
+	"areas":{
+		"S41000001":{"date":{"s":"2015-05-13"},"nm":"Argyll"},
+		"S41000002":{"date":{"s":"2015-05-13"},"nm":"Clyde"},
+		"S41000003":{"date":{"s":"2015-05-13"},"nm":"Forth and Tay"},
+		"S41000004":{"date":{"s":"2015-05-13"},"nm":"Moray Firth"},
+		"S41000005":{"date":{"s":"2015-05-13"},"nm":"North Coast"},
+		"S41000006":{"date":{"s":"2015-05-13"},"nm":"North East"},
+		"S41000007":{"date":{"s":"2015-05-13"},"nm":"Orkney Islands"},
+		"S41000008":{"date":{"s":"2015-05-13"},"nm":"Outer Hebrides"},
+		"S41000009":{"date":{"s":"2015-05-13"},"nm":"Shetland Isles"},
+		"S41000010":{"date":{"s":"2015-05-13"},"nm":"Solway"},
+		"S41000011":{"date":{"s":"2015-05-13"},"nm":"West Highlands"}
+	},
+	"description":"Scottish Marine Regions",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

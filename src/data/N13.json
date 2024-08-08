@@ -1,0 +1,18 @@
+{
+	"areas":{
+		"N13000001":{"date":{"s":"2019-04-01"},"nm":"Antrim and Newtownabbey LPA","parent":"N92000002"},
+		"N13000002":{"date":{"s":"2019-04-01"},"nm":"Ards and North Down LPA","parent":"N92000002"},
+		"N13000003":{"date":{"s":"2019-04-01"},"nm":"Armagh City, Banbridge and Craigavon LPA","parent":"N92000002"},
+		"N13000004":{"date":{"s":"2019-04-01"},"nm":"Belfast LPA","parent":"N92000002"},
+		"N13000005":{"date":{"s":"2019-04-01"},"nm":"Causeway Coast and Glens LPA","parent":"N92000002"},
+		"N13000006":{"date":{"s":"2019-04-01"},"nm":"Derry City and Strabane LPA","parent":"N92000002"},
+		"N13000007":{"date":{"s":"2019-04-01"},"nm":"Fermanagh and Omagh LPA","parent":"N92000002"},
+		"N13000008":{"date":{"s":"2019-04-01"},"nm":"Lisburn and Castlereagh LPA","parent":"N92000002"},
+		"N13000009":{"date":{"s":"2019-04-01"},"nm":"Mid and East Antrim LPA","parent":"N92000002"},
+		"N13000010":{"date":{"s":"2019-04-01"},"nm":"Mid Ulster LPA","parent":"N92000002"},
+		"N13000011":{"date":{"s":"2019-04-01"},"nm":"Newry, Mourne and Down LPA","parent":"N92000002"},
+		"N13000012":{"date":{"s":"2019-04-01"},"nm":"Department for Infrastructure LPA","parent":"N92000002"}
+	},
+	"description":"Local Planning Authorities",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

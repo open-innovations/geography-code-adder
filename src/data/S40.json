@@ -1,0 +1,11 @@
+{
+	"areas":{
+		"S40000001":{"date":{"e":"2018-02-01","s":"2013-04-01"},"nm":"East","parent":"S38000001"},
+		"S40000002":{"date":{"e":"2018-02-01","s":"2013-04-01"},"nm":"North","parent":"S38000001"},
+		"S40000003":{"date":{"s":"2013-04-01"},"nm":"West","parent":"S38000001"},
+		"S40000004":{"date":{"s":"2018-02-02"},"nm":"East"},
+		"S40000005":{"date":{"s":"2018-02-02"},"nm":"North"}
+	},
+	"description":"Scottish Fire and Rescue Service Delivery Areas",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

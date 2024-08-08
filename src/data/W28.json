@@ -1,0 +1,10 @@
+{
+	"areas":{
+		"W28000001":{"date":{"s":"2009-01-01"},"nm":"North Wales Transport Consortium","nm_alt":["Consortiwm Cludiant Gogledd Cymru"]},
+		"W28000002":{"date":{"s":"2009-01-01"},"nm":"Transport Consortium for the Mid Wales region","nm_alt":["Trafnidiaeth Canolbarth Cymru"]},
+		"W28000003":{"date":{"s":"2009-01-01"},"nm":"South West Wales Integrated Transport Consortium","nm_alt":["Consortiwm Cludiant Integredig De-orllewin Cymru"]},
+		"W28000004":{"date":{"s":"2009-01-01"},"nm":"South East Wales Transport Alliance","nm_alt":["Cynghrair Trafnidiaeth De-ddwyrain Cymru"]}
+	},
+	"description":"Transport Consortia Areas",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

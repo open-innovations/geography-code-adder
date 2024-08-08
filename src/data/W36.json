@@ -1,0 +1,12 @@
+{
+	"areas":{
+		"W36000001":{"date":{"s":"2011-09-01"},"nm":"North Wales"},
+		"W36000002":{"date":{"s":"2011-09-01"},"nm":"Mid and West"},
+		"W36000003":{"date":{"s":"2011-09-01"},"nm":"Swansea Bay"},
+		"W36000004":{"date":{"s":"2011-09-01"},"nm":"Cwm Taf"},
+		"W36000005":{"date":{"s":"2011-09-01"},"nm":"Gwent"},
+		"W36000006":{"date":{"s":"2011-09-01"},"nm":"Cardiff and Vale"}
+	},
+	"description":"Footprint Regions for Public Service Collaboration",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

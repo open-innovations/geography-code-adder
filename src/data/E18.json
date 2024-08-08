@@ -1,0 +1,16 @@
+{
+	"areas":{
+		"E18000001":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"North East","parent":"E19000001"},
+		"E18000002":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"North West","parent":"E19000001"},
+		"E18000003":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Yorkshire and the Humber","parent":"E19000001"},
+		"E18000004":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"East Midlands","parent":"E19000001"},
+		"E18000005":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"West Midlands","parent":"E19000001"},
+		"E18000006":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"East of England","parent":"E19000001"},
+		"E18000007":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"London","parent":"E19000003"},
+		"E18000008":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"South East Coast","parent":"E19000002"},
+		"E18000009":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"South Central","parent":"E19000002"},
+		"E18000010":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"South West","parent":"E19000002"}
+	},
+	"description":"Strategic Health Authorities",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

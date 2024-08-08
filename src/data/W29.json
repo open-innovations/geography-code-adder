@@ -1,0 +1,13 @@
+{
+	"areas":{
+		"W29000001":{"date":{"s":"2009-01-01"},"nm":"North West","nm_alt":["Gogledd-Orllewin"]},
+		"W29000002":{"date":{"s":"2009-01-01"},"nm":"North East","nm_alt":["Gogledd-Ddwyrain"]},
+		"W29000003":{"date":{"s":"2009-01-01"},"nm":"Powys"},
+		"W29000004":{"date":{"s":"2009-01-01"},"nm":"Ceredigion"},
+		"W29000005":{"date":{"s":"2009-01-01"},"nm":"Pembrokeshire","nm_alt":["Sir Benfro"]},
+		"W29000006":{"date":{"s":"2009-01-01"},"nm":"Carmarthenshire","nm_alt":["Sir Gaerfyrddin"]},
+		"W29000007":{"date":{"s":"2009-01-01"},"nm":"South","nm_alt":["De"]}
+	},
+	"description":"Agricultural Regions",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

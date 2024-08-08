@@ -1,0 +1,8 @@
+{
+	"areas":{
+		"W27000001":{"date":{"s":"2010-01-01"},"nm":"Inner Aberystwyth","nm_alt":["Aberystwyth - mewnol"],"parent":"W26000003"},
+		"W27000002":{"date":{"s":"2010-01-01"},"nm":"Outer Aberystwyth","nm_alt":["Aberystwyth - allanol"],"parent":"W26000003"}
+	},
+	"description":"Strategic Regeneration Sub-areas",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

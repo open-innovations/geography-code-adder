@@ -1,0 +1,13 @@
+{
+	"areas":{
+		"S48000001":{"date":{"s":"2023-06-20"},"nm":"Argyll Islands"},
+		"S48000002":{"date":{"s":"2023-06-20"},"nm":"Arran, Bute and the Cumbraes"},
+		"S48000003":{"date":{"s":"2023-06-20"},"nm":"Highland Islands"},
+		"S48000004":{"date":{"s":"2023-06-20"},"nm":"Lewis and Harris, Great Bernera and Scalpay"},
+		"S48000005":{"date":{"s":"2023-06-20"},"nm":"Orkney - Mainland and connected"},
+		"S48000006":{"date":{"s":"2023-06-20"},"nm":"Orkney - Outer islands"},
+		"S48000007":{"date":{"s":"2023-06-20"},"nm":"Shetland - Mainland and connected"},
+		"S48000008":{"date":{"s":"2023-06-20"},"nm":"Shetland - Outer islands"},
+		"S48000009":{"date":{"s":"2023-06-20"},"nm":"The Uists and Barra islands"}},
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

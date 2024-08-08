@@ -1,0 +1,28 @@
+{
+	"areas":{
+		"W40000001":{"date":{"s":"2011-12-31"},"nm":"Isle of Anglesey","parent":"W92000004"},
+		"W40000002":{"date":{"s":"2011-12-31"},"nm":"Gwynedd","parent":"W92000004"},
+		"W40000003":{"date":{"s":"2011-12-31"},"nm":"Conwy","parent":"W92000004"},
+		"W40000004":{"date":{"s":"2011-12-31"},"nm":"Denbighshire","parent":"W92000004"},
+		"W40000005":{"date":{"s":"2011-12-31"},"nm":"Flintshire","parent":"W92000004"},
+		"W40000006":{"date":{"s":"2011-12-31"},"nm":"Wrexham","parent":"W92000004"},
+		"W40000007":{"date":{"s":"2011-12-31"},"nm":"Ceredigion","parent":"W92000004"},
+		"W40000008":{"date":{"s":"2011-12-31"},"nm":"Pembrokeshire","parent":"W92000004"},
+		"W40000009":{"date":{"s":"2011-12-31"},"nm":"Carmarthenshire","parent":"W92000004"},
+		"W40000010":{"date":{"s":"2011-12-31"},"nm":"Swansea","parent":"W92000004"},
+		"W40000011":{"date":{"s":"2011-12-31"},"nm":"Neath Port Talbot","parent":"W92000004"},
+		"W40000012":{"date":{"s":"2011-12-31"},"nm":"Bridgend","parent":"W92000004"},
+		"W40000013":{"date":{"s":"2011-12-31"},"nm":"The Vale of Glamorgan","parent":"W92000004"},
+		"W40000014":{"date":{"s":"2011-12-31"},"nm":"Cardiff","parent":"W92000004"},
+		"W40000015":{"date":{"s":"2011-12-31"},"nm":"Rhondda Cynon Taf","parent":"W92000004"},
+		"W40000016":{"date":{"s":"2011-12-31"},"nm":"Caerphilly","parent":"W92000004"},
+		"W40000017":{"date":{"s":"2011-12-31"},"nm":"Blaenau Gwent","parent":"W92000004"},
+		"W40000018":{"date":{"s":"2011-12-31"},"nm":"Torfaen","parent":"W92000004"},
+		"W40000019":{"date":{"s":"2011-12-31"},"nm":"Monmouthshire","parent":"W92000004"},
+		"W40000020":{"date":{"s":"2011-12-31"},"nm":"Newport","parent":"W92000004"},
+		"W40000021":{"date":{"s":"2011-12-31"},"nm":"Powys","parent":"W92000004"},
+		"W40000022":{"date":{"s":"2011-12-31"},"nm":"Merthyr Tydfil","parent":"W92000004"}
+	},
+	"description":"Merged Local Authority Districts",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

@@ -1,0 +1,30 @@
+{
+	"areas":{
+		"W06000001":{"date":{"s":"2009-01-01"},"nm":"Isle of Anglesey","nm_alt":["Isle of Anglesey County Council","Ynys Môn"],"parent":"W92000004"},
+		"W06000002":{"date":{"s":"2009-01-01"},"nm":"Gwynedd","nm_alt":["Gwynedd County Council"],"parent":"W92000004"},
+		"W06000003":{"date":{"s":"2009-01-01"},"nm":"Conwy","nm_alt":["Conwy County Borough Council"],"parent":"W92000004"},
+		"W06000004":{"date":{"s":"2009-01-01"},"nm":"Denbighshire","nm_alt":["Denbighshire County Council","Sir Ddinbych"],"parent":"W92000004"},
+		"W06000005":{"date":{"s":"2009-01-01"},"nm":"Flintshire","nm_alt":["Flintshire County Council","Sir y Fflint"],"parent":"W92000004"},
+		"W06000006":{"date":{"s":"2009-01-01"},"nm":"Wrexham","nm_alt":["Wrecsam","Wrexham County Borough Council"],"parent":"W92000004"},
+		"W06000007":{"date":{"e":"2009-05-31","s":"2009-01-01"},"nm":"Powys","parent":"W92000004"},
+		"W06000008":{"date":{"s":"2009-01-01"},"nm":"Ceredigion","nm_alt":["Ceredigion County Council"],"parent":"W92000004"},
+		"W06000009":{"date":{"s":"2009-01-01"},"nm":"Pembrokeshire","nm_alt":["Pembrokeshire County Council","Sir Benfro"],"parent":"W92000004"},
+		"W06000010":{"date":{"s":"2009-01-01"},"nm":"Carmarthenshire","nm_alt":["Sir Gaerfyrddin","Carmarthenshire County Council"],"parent":"W92000004"},
+		"W06000011":{"date":{"s":"2009-01-01"},"nm":"Swansea","nm_alt":["Swansea City and Borough Council","Abertawe"],"parent":"W92000004"},
+		"W06000012":{"date":{"s":"2009-01-01"},"nm":"Neath Port Talbot","nm_alt":["Neath Port Talbot County Borough Council","Castell-nedd Port Talbot"],"parent":"W92000004"},
+		"W06000013":{"date":{"s":"2009-01-01"},"nm":"Bridgend","nm_alt":["Bridgend County Borough Council","Pen-y-bont ar Ogwr"],"parent":"W92000004"},
+		"W06000014":{"date":{"e":"2012-12-31","s":"2009-01-01"},"nm":"The Vale of Glamorgan","nm_alt":["Vale of Glamorgan","Bro Morgannwg","Vale of Glamorgan Council"],"parent":"W92000004"},
+		"W06000015":{"date":{"s":"2009-01-01"},"nm":"Cardiff","nm_alt":["Caerdydd","Cardiff Council"],"parent":"W92000004"},
+		"W06000016":{"date":{"s":"2010-01-01"},"nm":"Rhondda Cynon Taf","nm_alt":["Rhondda Cynon Taff County Borough Council","Rhondda, Cynon, Taff"],"parent":"W92000004"},
+		"W06000017":{"date":{"e":"2009-05-31","s":"2009-01-01"},"nm":"Merthyr Tydfil","nm_alt":["Merthyr Tudful"],"parent":"W92000004"},
+		"W06000018":{"date":{"s":"2009-01-01"},"nm":"Caerphilly","nm_alt":["Caerffili","Caephilly County Borough Council"],"parent":"W92000004"},
+		"W06000019":{"date":{"s":"2009-01-01"},"nm":"Blaenau Gwent","nm_alt":["Blaenau Gwent County Borough Council"],"parent":"W92000004"},
+		"W06000020":{"date":{"s":"2009-01-01"},"nm":"Torfaen","nm_alt":["Tor-faen","Torfaen County Borough Council"],"parent":"W92000004"},
+		"W06000021":{"date":{"s":"2009-01-01"},"nm":"Monmouthshire","nm_alt":["Monmouthshire County Council","Sir Fynwy"],"parent":"W92000004"},
+		"W06000022":{"date":{"s":"2009-01-01"},"nm":"Newport","nm_alt":["Casnewydd","Newport City Council"],"parent":"W92000004"},
+		"W06000023":{"date":{"s":"2009-06-01"},"nm":"Powys","nm_alt":["Powys County Council"],"parent":"W92000004"},
+		"W06000024":{"date":{"s":"2009-06-01"},"nm":"Merthyr Tydfil","nm_alt":["Merthyr Tudful","Merthyr Tydfil County Borough Council"],"parent":"W92000004"}
+	},
+	"description":"Unitary Authority",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

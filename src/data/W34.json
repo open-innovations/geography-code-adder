@@ -1,0 +1,8 @@
+{
+	"areas":{
+		"W34000001":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Non-Communities First Area","nm_alt":["Ddim yn Ardal Cymunedau yn Gyntaf","Non-Communities First Areas"]},
+		"W34000002":{"date":{"s":"2013-04-01"},"nm":"Non-Communities First Areas (1 April 2013)"}
+	},
+	"description":"Non-Communities First Areas",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}

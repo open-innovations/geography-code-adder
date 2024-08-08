@@ -1,0 +1,9 @@
+{
+	"areas":{
+		"S21000001":{"date":{"e":"2010-10-01","s":"2009-01-01"},"nm":"The Cairngorms National Park"},
+		"S21000002":{"date":{"e":"2023-04-16","s":"2022-12-31"},"nm":"Loch Lomond and the Trossachs","nm_alt":["The Loch Lomond and the Trossachs National Park"]},
+		"S21000003":{"date":{"s":"2022-12-31"},"nm":"Cairngorms","nm_alt":["The Cairngorms National Park"]}
+	},
+	"description":"National Parks",
+	"source":"Code History Database (July 2024) ChangeHistory"
+}
