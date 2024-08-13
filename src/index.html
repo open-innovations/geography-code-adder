@@ -50,8 +50,9 @@
 		height: 100%;
 		opacity: 0.01;
 	}
-	#output { width: 100%; aspect-ratio: 2 / 1; margin-top: 1rem; }
-	select,input { font-size: 1em; line-height: 2em; height: 2em; }
+	#config { margin-top: 1rem; display: flex; gap: 1rem; }
+	#output { width: 100%; aspect-ratio: 2 / 1; }
+	select,input { font-size: 1em; line-height: 2em; height: 2em; border-radius: 4px; border: 1px solid #999; }
 	#messages .msg:first-child { margin-top: 1rem; }
 	</style>
 </head>
@@ -94,6 +95,22 @@
 			</form>
 
 			<div id="messages"></div>
+
+			<div id="config" class="b5-bg padded">
+				<div class="row">
+					<label for="geography-type">Geography type:</label>
+					<select id="geography-type">
+						<option value=""></option>
+						<option value="LAD">Local Authorities</option>
+						<option value="WD">Wards</option>
+						<option value="PCON">Constituencies</option>
+					</select>
+				</div>
+				<div class="row">
+					<label for="geography-year">Geography year:</label>
+					<input type="number" min="2010" max="2024" id="geography-year">
+				</div>
+			</div>
 
 			<!--<div class="spinner" style="text-align:center;">
 				<img src="https://open-innovations.org/resources/images/loader.svg" alt="Loading..." />

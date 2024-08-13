@@ -20,10 +20,9 @@
 		this.version = "0.1";
 
 		let msg = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
-
-		msg.log();
-
 		var _obj = this;
+
+		this.lookup = new GeographyLookup({'dir':'data/'});
 
 		this.buildOutput = function(csv){
 			this.data = CSV2JSON(csv);
@@ -32,20 +31,22 @@
 
 			// Update select and options
 			if(!this.select){
+				var row = document.createElement('div');
+				row.classList.add('row');
 				this.select = document.createElement('select');
 				this.select.setAttribute('id','column');
 				this.label = document.createElement('label');
 				this.label.innerHTML = 'Select column for geography:'
 				this.label.setAttribute('for','column');
-				document.getElementById('output').before(this.label);
-				document.getElementById('output').before(this.select);
+				document.getElementById('config').append(row);
+				row.append(this.label);
+				row.append(this.select);
 				this.select.addEventListener('change',function(e){
 					_obj.updateColumn(e.target.value);
 				});
 			}
 			this.select.innerHTML = '';
 			opt = document.createElement('option');
-			opt.innerHTML = 'Column';
 			this.select.append(opt);
 			for(var c = 0; c < this.data[0].order.length; c++){
 				opt = document.createElement('option');
@@ -86,9 +87,14 @@
 			}
 			return this;
 		};
+		this.updateType = function(){
+			msg.log('Type',document.getElementById('geography-type').value);
+			this.lookup.load(document.getElementById('geography-type').value,function(){ msg.log('loaded all',this); });
+		};
 		this.updateColumn = function(c){
-			msg.info('Column',c);
-		}
+			msg.log('Column',c);
+		};
+
 
 		// Add callbacks
 		document.getElementById('btnSubmit').addEventListener('click',function(e){
@@ -106,10 +112,21 @@
 				else msg.warn('No input CSV provided. Please provide a URL or a file.',{'id':'no-file'});
 			}
 		});
+
 		document.getElementById('url').addEventListener('change',function(e){ _obj.getURL(e.target.value); });
 		document.getElementById('standard_files').addEventListener('change',function(e){ _obj.updateFileDetails(); });
 		this.updateFileDetails();
 
+		document.getElementById('geography-type').addEventListener('change',function(){ _obj.updateType(); });
+		this.updateType();
+
+		// Update year
+		var year = document.getElementById('geography-year');
+		if(year.value==""){
+			var d = new Date();
+			year.value = d.getFullYear();
+			year.setAttribute('max',year.value)
+		}
 
 		// Build any examples
 		var exs = document.querySelectorAll('a.example');
@@ -117,10 +134,60 @@
 			exs[i].addEventListener('click',function(e){
 				e.preventDefault();
 				document.getElementById('url').value = e.target.getAttribute('href');
-				_obj.getURL(e.target.getAttribute('href'));
+				//_obj.getURL(e.target.getAttribute('href'));
 			});
 		}
 
+		return this;
+	}
+
+	function GeographyLookup(opt){
+		if(!opt) opt = {};
+		if(!opt.dir) opt.dir = "";
+		var msg = new OI.logger('Geography Lookup',{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
+		this.data = {};
+		this.lookup = {
+			'LAD':['E06','E07','E08','E09','N09','S12','W06'],
+			'WD':['E05','N08','W05','S13'],
+			'PCON':['E14','N05','W07','S14']
+		};
+		this.getCode = function(name,code,cb){
+			if(this.data[name][code]){
+				this.loaded++;
+				if(this.loaded==this.toload && typeof cb==="function") cb.call(this);
+			}else{
+				this.data[name][code] = {};
+				var url = opt.dir+code+'.json';
+				msg.log('Loading '+url);
+				fetch(url,{}).then(response => {
+					if(!response.ok) throw new Error('Network response was not OK');
+					return response.json();
+				}).then(json => {
+					this.loaded++;
+					this.data[name][code] = json;
+					if(this.loaded==this.toload && typeof cb==="function") cb.call(this);
+				}).catch(e => {
+					msg.error('There has been a problem loading CSV data from <em>%c'+url+'%c</em>. It may not be publicly accessible or have some other issue.','font-style:italic;','font-style:normal;');
+				});
+			}
+			return this;
+		}
+		this.load = function(name,cb){
+			if(name){
+				if(this.lookup[name]){
+					this.loaded = 0;
+					this.toload = 0;
+					if(!this.data[name]) this.data[name] = {};
+					for(var i = 0; i < this.lookup[name].length; i++){
+						if(!this.data[name][this.lookup[name][i]]){ this.toload++; }
+					}
+					for(var i = 0; i < this.lookup[name].length; i++) this.getCode(name,this.lookup[name][i],cb);
+				}else{
+					msg.warn('No known geography of type <em>'+name+'</em>.');
+				}
+			}
+			return this;
+		}
 		return this;
 	}
 
@@ -217,6 +284,7 @@
 
 })(window || this);
 
+var app;
 OI.ready(function(){
-	var app = new OI.Application({});
+	app = new OI.Application({});
 });
