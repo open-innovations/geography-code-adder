@@ -8,10 +8,11 @@
 	<link rel="StyleSheet" href="resources/leaflet.css" type="text/css" />
 	<link rel="StyleSheet" href="resources/style.css" type="text/css" />
 	<style>
-	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; }
+	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; margin-bottom: 0.5rem; }
 	.chooser input { font-size:1em; }
 	.chooser .vs { font-family: serif; font-style: italic; color: #666666; align-self: center; }
 	.chooser .part { flex-grow: 1; position: relative; margin: 0px; }
+	.chooser .part > *:last-child { margin-bottom: 0; }
 	.chooser .part input { padding: 0px 2px; }
 	.chooser .part label { display: block; }
 	.chooser .choose { display: inline; }
@@ -51,6 +52,7 @@
 	}
 	#output { width: 100%; aspect-ratio: 2 / 1; margin-top: 1rem; }
 	select,input { font-size: 1em; line-height: 2em; height: 2em; }
+	#messages .msg:first-child { margin-top: 1rem; }
 	</style>
 </head>
 <body class="b1-bg">
@@ -77,6 +79,7 @@
 					<div class="part padded b5-bg">
 						<!--<label for="url">URL</label><input id="url" type="url" name="url" class="" placeholder="e.g. https://odileeds.github.io/hexmaps/data/wards-leeds.csv" pattern="https://.*" />-->
 						<label for="url"><strong>Load URL</strong> (CSV or Google Sheet)</label><input id="url" type="text" name="url" class="" placeholder="e.g. OpenDataBidsAprtoJun2024.csv">
+						<p>Or load an <a href="OpenDataBidsAprtoJun2024.csv" class="example">example of Leeds wards</a> (<a href="https://datamillnorth.org/dataset/20jjj/council-house-bids">from Data Mill North</a>)</p>
 					</div>
 					<div class="vs">or</div>
 					<div class="part padded b5-bg dropzone" id="drop_zone">
@@ -86,7 +89,6 @@
 						<div class="info"></div>
 					</div>
 				</div>
-				<p>Or load an <a href="OpenDataBidsAprtoJun2024.csv" class="example">example of Leeds wards</a> (<a href="https://datamillnorth.org/dataset/20jjj/council-house-bids">from Data Mill North</a>)</p>
 				<button id="btnSubmit" type="submit" class="button c10-bg" style="float:right;">Process</button>
 				<button id="reset" type="reset" class="b2-bg">Reset</button>
 			</form>

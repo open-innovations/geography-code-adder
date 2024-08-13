@@ -19,17 +19,16 @@
 		this.name = "Geography Code Adder";
 		this.version = "0.1";
 
-		let msg = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'padded'});
+		let msg = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
 
 		msg.log();
 
 		var _obj = this;
 
 		this.buildOutput = function(csv){
-			msg.info('buildOutput',csv);
 			this.data = CSV2JSON(csv);
+			msg.log('Build output',this.data);
 			document.getElementById('output').innerHTML = csv;
-			console.log(this.data);
 
 			// Update select and options
 			if(!this.select){
@@ -72,13 +71,21 @@
 			return this;
 		}
 		this.readFile = function(myFile){
-			document.querySelector('#drop_zone .info').innerHTML = 'Size: '+niceSize(myFile.size);
 			var reader = new FileReader();
 			reader.readAsText(myFile, "UTF-8");
 			reader.addEventListener('load',function(e){ _obj.buildOutput(e.target.result); });
 			reader.onerror = function(e){ msg.error('Failed to read file'); }
 			return this;
 		}
+		this.updateFileDetails = function(){
+			msg.log('Update file details');
+			var el = document.getElementById('standard_files');
+			if(el.files && el.files[0]){
+				var myFile = el.files[0];
+				document.querySelector('#drop_zone .info').innerHTML = 'File: <em>'+myFile.name+'</em><br />Size: '+niceSize(myFile.size);
+			}
+			return this;
+		};
 		this.updateColumn = function(c){
 			msg.info('Column',c);
 		}
@@ -86,18 +93,23 @@
 		// Add callbacks
 		document.getElementById('btnSubmit').addEventListener('click',function(e){
 			e.preventDefault();
+			// Remove any existing warning message
+			var el = document.getElementById('no-file');
+			if(el) el.parentNode.remove(el);
+			// If we have a file we read that
 			var file = document.getElementById('standard_files').files[0];
 			if(file) _obj.readFile(file);
-			else _obj.getURL(document.getElementById('url').value);
+			else{
+				// Try to read a URL
+				var url = document.getElementById('url').value;
+				if(url) _obj.getURL(url);
+				else msg.warn('No input CSV provided. Please provide a URL or a file.',{'id':'no-file'});
+			}
 		});
 		document.getElementById('url').addEventListener('change',function(e){ _obj.getURL(e.target.value); });
-		document.getElementById('standard_files').addEventListener('change',function(e){
-			msg.log('Update file');
-			if(e.target.files && e.target.files[0]){
-				_obj.readFile(e.target.files[0]);
-			}
-			return this;
-		});
+		document.getElementById('standard_files').addEventListener('change',function(e){ _obj.updateFileDetails(); });
+		this.updateFileDetails();
+
 
 		// Build any examples
 		var exs = document.querySelectorAll('a.example');
