@@ -1,0 +1,872 @@
+Address1,Addess2,Address3,Ward Code,Property_Type_Code,Commencement_Date,Number of Expressions of Interest
+Swarcliffe Green,Stanks,Leeds,Cross Gates & Whinmoor,1BF,03/04/2024,1
+Cobden Road,Farnley,Leeds,Farnley & Wortley,3BH,08/05/2024,1263
+The Broadwalk,Otley,Leeds,Otley & Yeadon,1BF,10/06/2024,295
+Melville Gardens,Woodhouse,Leeds,Little London & Woodhouse,2BH,05/04/2024,525
+Upper Wortley Road,Upper Wortley,Leeds,Farnley & Wortley,2BF,25/04/2024,1151
+Robertsgate,Lofthouse,Wakefield,Ardsley & Robin Hood,3BH,10/04/2024,581
+Henshaw Crescent,Yeadon,Leeds,Otley & Yeadon,2BH,16/04/2024,528
+North Farm Road,Gipton,Leeds,Gipton & Harehills,1BF,17/04/2024,999
+Lea Farm Road,Kirkstall,Leeds,Kirkstall,2BH,20/06/2024,1051
+Hall Park Orchards,Kippax,Leeds,Kippax & Methley,3BH,15/05/2024,683
+Woodnook Garth,Cookridge,Leeds,Weetwood,3BH,21/05/2024,1
+William Street,Churwell,Morley,Morley North,1BF,15/04/2024,401
+Sissons Road,Middleton,Leeds,Middleton Park,3BH,18/04/2024,694
+Cranmore Garth,Middleton,Leeds,Middleton Park,3BH,06/05/2024,763
+West Avenue,Boston Spa,Wetherby,Wetherby,2BB,14/05/2024,381
+Leeds And Bradford Road,Bramley,Leeds,Bramley & Stanningley,3BH,04/04/2024,1
+Lea Farm Road,Kirkstall,Leeds,Kirkstall,3BH,28/05/2024,901
+Bawn Drive,Farnley,Leeds,Farnley & Wortley,2BH,19/06/2024,379
+Otley Old Road,Cookridge,Leeds,Weetwood,2BH,10/06/2024,1240
+Fairfield Road,Bramley,Leeds,Bramley & Stanningley,3BH,10/06/2024,1026
+Latchmere Drive,West Park,Leeds,Kirkstall,2BH,26/04/2024,1154
+Heights Drive,Armley,Leeds,Farnley & Wortley,1BF,26/04/2024,695
+Brander Close,Gipton,Leeds,Gipton & Harehills,4BH,26/06/2024,1
+Holtdale Garth,Adel,Leeds,Adel & Wharfedale,1BF,06/06/2024,1
+Kirklands Close,Yeadon,Leeds,Guiseley & Rawdon,1BF,08/04/2024,596
+Claremont Grove,Pudsey,Leeds,Pudsey,1BF,14/05/2024,47
+Bangor Grove,Farnley,Leeds,Farnley & Wortley,2BH,24/05/2024,250
+Kepstorn Close,Kirkstall,Leeds,Kirkstall,2BF,04/04/2024,281
+Stainmore Close,Seacroft,Leeds,Killingbeck & Seacroft,4BH,17/06/2024,1
+Valley Ridge,Kippax,Leeds,Kippax & Methley,2BB,10/04/2024,115
+Halton Moor Avenue,Halton,Leeds,Temple Newsam,2BF,12/06/2024,1
+Hansby Place,Seacroft,Leeds,Killingbeck & Seacroft,1BF,14/05/2024,1
+Wyther Park Close,Armley,Leeds,Armley,1BF,17/06/2024,829
+Gildersome Lane,Gildersome,Morley,Morley North,3BH,03/06/2024,1054
+Spencer Place,Chapeltown,Leeds,Chapel Allerton,1BF,10/06/2024,839
+Garden House Close,Methley,Leeds,Kippax & Methley,1BF,16/04/2024,11
+Midland House,Oulton,Leeds,Rothwell,1BF,22/04/2024,26
+Crescent Grange,Beeston,Leeds,Hunslet & Riverside,2BMSF,25/04/2024,8
+Walton Road,Wetherby,Leeds,Wetherby,1BF,03/05/2024,34
+Lidgett Towers,Gledhow,Leeds,Roundhay,1BMSF,13/05/2024,302
+Crescent Grange,Beeston,Leeds,Hunslet & Riverside,2BMSF,28/05/2024,3
+Maryfield Gardens,Cross Gates,Leeds,Killingbeck & Seacroft,4BH,25/05/2024,594
+Wyther Park Close,Armley,Leeds,Armley,1BF,07/05/2024,732
+Holtdale Way,Adel,Leeds,Adel & Wharfedale,3BH,24/06/2024,476
+Grove Crescent South,Boston Spa,Wetherby,Wetherby,1BB,23/05/2024,95
+Tinshill View,Cookridge,Leeds,Weetwood,1BF,15/05/2024,687
+Cowper Street,Chapeltown,Leeds,Chapel Allerton,3BH,24/06/2024,396
+Tennyson Street,Guiseley,Leeds,Guiseley & Rawdon,1BF,25/05/2024,354
+Fairleigh Road,West Ardsley,Wakefield,Ardsley & Robin Hood,3BH,10/04/2024,809
+White Laithe Croft,Whinmoor,Leeds,Cross Gates & Whinmoor,1BB,18/06/2024,96
+Lovell Park Court,Sheepscar,Leeds,Little London & Woodhouse,1BF,22/04/2024,17
+Alexandra Grove,Hyde Park,Leeds,Headingley & Hyde Park,3BH,21/06/2024,826
+Adams Croft,Otley,Leeds,Otley & Yeadon,1BF,22/05/2024,46
+Kirkfield Avenue,Thorner,Leeds,Harewood,3BH,16/04/2024,859
+Fairfield Avenue,Bramley,Leeds,Bramley & Stanningley,2BB,24/06/2024,1
+Tennyson Street,Guiseley,Leeds,Guiseley & Rawdon,1BF,07/05/2024,388
+Sissons Road,Middleton,Leeds,Middleton Park,3BH,05/06/2024,640
+Bawn Lane,Farnley,Leeds,Farnley & Wortley,1BF,02/05/2024,582
+Holtdale Place,Adel,Leeds,Adel & Wharfedale,3BH,22/04/2024,495
+Helston Walk,Middleton,Leeds,Middleton Park,2BH,12/04/2024,611
+Throstle Road,Middleton,Leeds,Middleton Park,3BH,09/04/2024,1012
+Ley Lane,Armley,Leeds,Armley,4BH,13/05/2024,458
+Alston Lane,Seacroft,Leeds,Killingbeck & Seacroft,4BH,09/05/2024,487
+Kendal Drive,Halton,Leeds,Temple Newsam,3BH,09/05/2024,758
+Newlands Drive,Morley,Leeds,Morley South,1BB,06/06/2024,546
+Manor Farm Drive,Middleton,Leeds,Middleton Park,1BH,26/04/2024,615
+Calverley Lane,Bramley,Leeds,Bramley & Stanningley,3BH,05/06/2024,1349
+West End,Boston Spa,Wetherby,Wetherby,3BB,15/05/2024,647
+White Laithe Grove,Whinmoor,Leeds,Cross Gates & Whinmoor,1BB,19/04/2024,1
+Gascoigne House,Middleton,Leeds,Middleton Park,2BF,12/05/2024,1
+Tarnside Drive,Seacroft,Leeds,Killingbeck & Seacroft,2BH,05/06/2024,513
+Monkswood Bank,Seacroft,Leeds,Killingbeck & Seacroft,1BF,26/06/2024,1
+Eastleigh Drive,West Ardsley,Wakefield,Ardsley & Robin Hood,2BH,29/05/2024,778
+Ironwood Approach,Seacroft,Leeds,Killingbeck & Seacroft,4BH,20/05/2024,1
+Low Moorside Court,New Farnley,Leeds,Farnley & Wortley,1BF,01/05/2024,329
+Moor Avenue,Clifford,Wetherby,Wetherby,1BF,26/06/2024,43
+Highbury Terrace,Headingley,Leeds,Weetwood,1BH,05/04/2024,852
+Boggart Hill Crescent,Seacroft,Leeds,Killingbeck & Seacroft,2BH,26/04/2024,1
+Monkswood Hill,Seacroft,Leeds,Killingbeck & Seacroft,2BH,15/04/2024,1
+Westdale Drive,Pudsey,Leeds,Calverley & Farsley,1BF,30/05/2024,38
+Cross Hills Drive,Kippax,Leeds,Kippax & Methley,3BH,17/04/2024,1
+Seacroft Gate,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,25/06/2024,1
+Monkswood Avenue,Seacroft,Leeds,Killingbeck & Seacroft,1BF,23/05/2024,697
+Stanks Parade,Stanks,Leeds,Cross Gates & Whinmoor,2BH,18/04/2024,933
+Gipton Square,Gipton,Leeds,Gipton & Harehills,3BH,24/04/2024,1194
+Belle Isle Road,Belle Isle,Leeds,Middleton Park,2BH,12/04/2024,516
+Tong Way,Farnley,Leeds,Farnley & Wortley,3BH,18/06/2024,682
+Woodsley Road,Hyde Park,Leeds,Little London & Woodhouse,5BH,04/06/2024,124
+Intake View,Middleton,Leeds,Middleton Park,3BH,31/05/2024,1205
+Cottingley Heights,Beeston,Leeds,Beeston & Holbeck,2BMSF,31/05/2024,515
+Crescent Towers,Beeston,Leeds,Hunslet & Riverside,2BF,19/06/2024,72
+Johnston Street,Woodhouse,Leeds,Little London & Woodhouse,2BF,09/05/2024,446
+Fearnley Place,Armley,Leeds,Armley,2BF,16/05/2024,355
+Oatland Drive,Sheepscar,Leeds,Little London & Woodhouse,3BH,16/04/2024,94
+Beech Mount,Gipton,Leeds,Gipton & Harehills,2BH,17/04/2024,899
+Malvern Rise,Beeston,Leeds,Beeston & Holbeck,1BF,28/05/2024,927
+Pudsey Road,Bramley,Leeds,Farnley & Wortley,3BH,16/04/2024,1349
+Queenshill Drive,Moortown,Leeds,Moortown,3BH,24/06/2024,1
+Eastleigh Court,West Ardsley,Wakefield,Ardsley & Robin Hood,1BB,08/05/2024,513
+Shakespeare Grange,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BMSF,30/05/2024,484
+Walmer Grove,Pudsey,Leeds,Pudsey,3BH,09/05/2024,82
+Cherry Tree Walk,East Ardsley,Wakefield,Ardsley & Robin Hood,1BF,22/05/2024,1
+Newhall Chase,Belle Isle,Leeds,Middleton Park,1BB,22/05/2024,78
+Gamble Hill Grange,Bramley,Leeds,Farnley & Wortley,1BEDMSB,15/05/2024,216
+Church Hill Green,Stanningley,Pudsey,Bramley & Stanningley,2BH,24/06/2024,69
+Sissons Road,Middleton,Leeds,Middleton Park,2BH,08/04/2024,694
+Fieldhouse Walk,Moortown,Leeds,Moortown,1BB,04/04/2024,108
+Enfield,Yeadon,Leeds,Otley & Yeadon,2BH,15/04/2024,600
+Marsden Court,Farsley,Pudsey,Calverley & Farsley,2BMSF,18/04/2024,1
+Third Avenue,Rothwell,Leeds,Rothwell,3BH,17/06/2024,875
+Blake Crescent,Guiseley,Leeds,Guiseley & Rawdon,3BH,23/04/2024,957
+Sherburn Close,Swarcliffe,Leeds,Cross Gates & Whinmoor,3BH,04/06/2024,1080
+Foundry Mill Walk,Seacroft,Leeds,Killingbeck & Seacroft,4BH,29/04/2024,463
+Maryfield Avenue,Cross Gates,Leeds,Killingbeck & Seacroft,3BH,25/06/2024,836
+King George Avenue,Horsforth,Leeds,Horsforth,3BH,03/04/2024,1004
+Fairfield Crescent,Bramley,Leeds,Bramley & Stanningley,3BH,05/06/2024,723
+Parkway Towers,Seacroft,Leeds,Killingbeck & Seacroft,2BMSF,14/06/2024,157
+Myers Croft,Otley,Leeds,Otley & Yeadon,1BB,29/04/2024,171
+Tong Road,Farnley,Leeds,Armley,2BF,04/04/2024,1
+The Garth,Richmond Hill,Leeds,Burmantofts & Richmond Hill,2BMSF,16/05/2024,1001
+Redwood Avenue,West Ardsley,Wakefield,Ardsley & Robin Hood,3BH,11/06/2024,984
+Asket Drive,Seacroft,Leeds,Killingbeck & Seacroft,1BF,30/04/2024,2
+Bronte House,Chapeltown,Leeds,Chapel Allerton,1BF,02/05/2024,1
+Queenshill Avenue,Moortown,Leeds,Moortown,3BM,01/05/2024,235
+South Parkway,Seacroft,Leeds,Killingbeck & Seacroft,1BF,10/06/2024,1
+The Towers,Armley,Leeds,Armley,2BF,04/04/2024,3
+Ruskin Crescent,Guiseley,Leeds,Guiseley & Rawdon,3BH,20/06/2024,356
+Sholebroke Mount,Potternewton,Leeds,Chapel Allerton,3BF,22/04/2024,266
+Crimbles Court,Pudsey,Leeds,Pudsey,1BB,07/05/2024,170
+Church Drive,East Keswick,Leeds,Harewood,1BF,08/05/2024,444
+Houghley Lane,Bramley,Leeds,Armley,1BF,22/05/2024,1
+Meynell Heights,Holbeck,Leeds,Beeston & Holbeck,2BMSF,09/05/2024,42
+Smeaton Grove,West Park,Leeds,Kirkstall,4BH,03/06/2024,1
+Queenshill Avenue,Moortown,Leeds,Moortown,3BM,03/06/2024,98
+Crescent Towers,Beeston,Leeds,Hunslet & Riverside,2BMSF,28/06/2024,256
+Ganners Way,Bramley,Leeds,Bramley & Stanningley,2BF,17/06/2024,652
+West Grange Close,Belle Isle,Leeds,Middleton Park,1BF,02/05/2024,535
+Sandford Road,Kirkstall,Leeds,Kirkstall,2BH,10/04/2024,570
+Barncroft Heights,Seacroft,Leeds,Killingbeck & Seacroft,2BMSF,11/06/2024,1
+Farrow Vale,Armley,Leeds,Farnley & Wortley,2BH,10/05/2024,825
+Brooklands Avenue,Seacroft,Leeds,Killingbeck & Seacroft,3BH,02/04/2024,1
+Cottingley Approach,Beeston,Leeds,Beeston & Holbeck,2BH,30/04/2024,256
+Third Avenue,Wetherby,Leeds,Wetherby,2BH,08/05/2024,468
+Farrow Vale,Armley,Leeds,Farnley & Wortley,3BH,24/05/2024,1062
+New Street Grove,Pudsey,Leeds,Pudsey,1BB,17/05/2024,843
+Halton Moor Avenue,Halton,Leeds,Temple Newsam,2BF,13/05/2024,183
+Sherburn Close,Swarcliffe,Leeds,Cross Gates & Whinmoor,3BH,26/06/2024,675
+Queenshill Avenue,Moortown,Leeds,Moortown,2BH,09/04/2024,1
+Oakwell Close,Drighlington,Bradford,Morley North,2BH,12/06/2024,668
+The Cote,Farsley,Pudsey,Calverley & Farsley,2BH,11/04/2024,543
+Brooklands Close,Seacroft,Leeds,Killingbeck & Seacroft,3BH,18/04/2024,917
+Burnsall Grange,Armley,Leeds,Armley,2BMSF,13/06/2024,162
+Henshaw Avenue,Yeadon,Leeds,Otley & Yeadon,2BH,17/06/2024,983
+Third Avenue,Armley,Leeds,Armley,2BF,05/04/2024,911
+Ramshead Drive,Seacroft,Leeds,Killingbeck & Seacroft,2BH,17/05/2024,693
+Cromwell Heights,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BF,09/05/2024,90
+Atha Crescent,Cross Flatts,Leeds,Beeston & Holbeck,2BH,11/04/2024,532
+Wyther Park Crescent,Armley,Leeds,Armley,3BH,03/04/2024,1
+Westerton Road,Tingley,Wakefield,Ardsley & Robin Hood,3BH,19/06/2024,505
+West Grange Road,Belle Isle,Leeds,Middleton Park,2BH,01/05/2024,750
+Regent Crescent,Horsforth,Leeds,Horsforth,2BF,27/06/2024,1
+St James Walk,Horsforth,Leeds,Horsforth,3BH,10/04/2024,913
+Cotswold Drive,Rothwell,Leeds,Rothwell,2BH,20/05/2024,823
+Broadlea Terrace,Bramley,Leeds,Bramley & Stanningley,1BF,12/04/2024,1
+Brayton Terrace,Swarcliffe,Leeds,Cross Gates & Whinmoor,2BH,03/04/2024,636
+Woodbridge Lawn,Headingley,Leeds,Kirkstall,3BH,07/05/2024,767
+Gamble Hill Grange,Bramley,Leeds,Farnley & Wortley,1BMSF,18/06/2024,321
+Hawkshead Crescent,Seacroft,Leeds,Killingbeck & Seacroft,4BH,06/06/2024,1
+Gilbert Close,Kirkstall,Leeds,Kirkstall,1BF,05/04/2024,495
+The Heights West,Armley,Leeds,Farnley & Wortley,1BMSF,18/04/2024,410
+Bedford Mount,Cookridge,Leeds,Weetwood,3BH,23/04/2024,1094
+Gilbert Mount,Kirkstall,Leeds,Kirkstall,1BF,24/06/2024,1
+Ramshead Hill,Seacroft,Leeds,Killingbeck & Seacroft,1BF,05/06/2024,1
+Sissons Road,Middleton,Leeds,Middleton Park,3BH,02/05/2024,569
+Neville Approach,Osmondthorpe,Leeds,Temple Newsam,2BH,28/06/2024,924
+Wyther Park Crescent,Armley,Leeds,Armley,1BF,05/06/2024,1
+Cross Grasmere Street,Armley,Leeds,Armley,1BB,10/06/2024,76
+Main Street,Methley,Leeds,Kippax & Methley,1BF,04/04/2024,43
+Belle Isle Road,Belle Isle,Leeds,Middleton Park,2BH,24/04/2024,687
+Latchmere View,West Park,Leeds,Kirkstall,2BF,26/04/2024,1
+Ashlea Court,Bramley,Leeds,Bramley & Stanningley,1BF,17/05/2024,45
+Harold Place,Hyde Park,Leeds,Headingley & Hyde Park,1BH,10/05/2024,666
+Snowden Lawn,Bramley,Leeds,Bramley & Stanningley,2BM,03/04/2024,231
+Stocks Road,Seacroft,Leeds,Killingbeck & Seacroft,2BH,18/06/2024,1
+Victoria Close,Allerton Bywater,Castleford,Kippax & Methley,1BF,08/04/2024,30
+Temple Avenue,Rothwell,Leeds,Rothwell,3BH,23/04/2024,738
+Oak Crescent,Garforth,Leeds,Garforth & Swillington,3BH,17/04/2024,680
+Copperfield View,Cross Green,Leeds,Burmantofts & Richmond Hill,3BH,13/06/2024,342
+Sissons Green,Middleton,Leeds,Middleton Park,1BF,30/04/2024,1
+Newhall Crescent,Middleton,Leeds,Middleton Park,3BH,02/04/2024,982
+Springbank Road,Gildersome,Morley,Morley North,1BF,23/04/2024,714
+Swarcliffe Drive,Swarcliffe,Leeds,Cross Gates & Whinmoor,3BH,28/05/2024,1251
+Belinda Street,Hunslet,Leeds,Hunslet & Riverside,1BF,26/06/2024,25
+Hartley Street,Morley,Leeds,Morley South,2BH,17/05/2024,1
+Swarcliffe Drive,Swarcliffe,Leeds,Cross Gates & Whinmoor,1BF,03/04/2024,1
+Sissons View,Middleton,Leeds,Middleton Park,3BH,12/06/2024,946
+Grange Crescent,Chapeltown,Leeds,Chapel Allerton,1BF,24/05/2024,1
+Tennyson Street,Guiseley,Leeds,Guiseley & Rawdon,1BF,08/05/2024,305
+Harley Drive,Swinnow,Leeds,Pudsey,2BH,07/05/2024,550
+Newlands Drive,Morley,Leeds,Morley South,2BH,09/04/2024,432
+Hyde Park Close,Hyde Park,Leeds,Little London & Woodhouse,1BF,10/04/2024,24
+Lay Garth Place,Rothwell,Leeds,Rothwell,2BH,12/04/2024,669
+Longthorpe Lane,Lofthouse,Wakefield,Ardsley & Robin Hood,3BH,05/04/2024,1
+Clayton Court,West Park,Leeds,Kirkstall,3BMSF,31/05/2024,108
+Poplar Way,Bramley,Leeds,Armley,2BH,12/04/2024,469
+Barncroft Grange,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,30/05/2024,1
+Parkway Towers,Seacroft,Leeds,Killingbeck & Seacroft,2BMSF,25/04/2024,1
+Gledhow Towers,Gledhow,Leeds,Roundhay,1BMSF,11/06/2024,481
+Outgang Lane,Bramley,Leeds,Armley,3BH,23/04/2024,1
+Tarnside Drive,Seacroft,Leeds,Killingbeck & Seacroft,2BH,09/05/2024,725
+Cardinal Road,Beeston,Leeds,Beeston & Holbeck,1BF,08/04/2024,1
+Sixth Avenue,Rothwell,Leeds,Rothwell,3BH,17/06/2024,967
+Larkfield Mount,Rawdon,Leeds,Guiseley & Rawdon,1BB,28/05/2024,155
+Barncroft Road,Seacroft,Leeds,Killingbeck & Seacroft,1BF,08/05/2024,1
+Lovell Park Court,Sheepscar,Leeds,Little London & Woodhouse,1BF,17/04/2024,27
+Scott Hall Drive ,Chapeltown,Leeds,Chapel Allerton,3BH,12/06/2024,765
+Whincover Cross,Farnley,Leeds,Farnley & Wortley,3BH,18/06/2024,530
+Holborn Street,Woodhouse,Leeds,Headingley & Hyde Park,4BH,15/05/2024,403
+Thackray Street,Morley,Leeds,Morley South,3BH,04/04/2024,803
+Lovell Park Heights,Sheepscar,Leeds,Little London & Woodhouse,2BMSF,25/06/2024,132
+St Lukes Green,Beeston,Leeds,Beeston & Holbeck,3BH,17/06/2024,813
+Sholebroke Street,Chapeltown,Leeds,Chapel Allerton,2BH,25/06/2024,904
+Tennyson Close,Pudsey,Leeds,Pudsey,2BH,17/05/2024,661
+Scott Hall Avenue,Chapeltown,Leeds,Chapel Allerton,2BH,21/05/2024,855
+Cottingley Approach,Beeston,Leeds,Beeston & Holbeck,2BH,02/05/2024,240
+Blackburn Court,Rothwell,Leeds,Rothwell,BED,25/06/2024,528
+Middleton Park Green,Middleton,Leeds,Middleton Park,1BB,22/05/2024,805
+Gledhow Towers,Gledhow,Leeds,Roundhay,1BF,26/06/2024,1
+Clifton Mount,Harehills,Leeds,Burmantofts & Richmond Hill,2BH,26/06/2024,1
+Lingfield Gardens,Moortown,Leeds,Alwoodley,2BH,10/05/2024,1
+Wood Lane,Rothwell,Leeds,Rothwell,2BF,24/04/2024,1025
+Gray House,Wetherby,Leeds,Wetherby,2BM,17/04/2024,82
+Parkway Towers,Seacroft,Leeds,Killingbeck & Seacroft,2BMSF,20/06/2024,1
+All Saints Circle,Woodlesford,Leeds,Rothwell,1BF,01/05/2024,479
+Helston Walk,Middleton,Leeds,Middleton Park,2BH,16/05/2024,300
+Broad Lane,Bramley,Leeds,Bramley & Stanningley,2BH,22/04/2024,751
+Meanwood Valley Grove,Meanwood,Leeds,Weetwood,2BH,15/04/2024,1044
+Easterly Cross,Harehills,Leeds,Gipton & Harehills,3BH,04/04/2024,737
+Throstle Walk,Middleton,Leeds,Middleton Park,3BH,29/05/2024,555
+Harrogate Road,Moortown,Leeds,Chapel Allerton,3BH,02/05/2024,1
+Carlton Garth,Sheepscar,Leeds,Little London & Woodhouse,1BMSF,19/06/2024,1
+Wortley Towers,Farnley,Leeds,Armley,2BMSF,11/06/2024,127
+Silk Mill Bank,Cookridge,Leeds,Weetwood,3BH,02/04/2024,1055
+Winrose Hill,Belle Isle,Leeds,Middleton Park,1BF,08/04/2024,694
+Dulverton Close,Beeston,Leeds,Beeston & Holbeck,2BF,11/06/2024,229
+Rosgill Drive,Seacroft,Leeds,Killingbeck & Seacroft,1BF,03/04/2024,923
+Mitford View,Armley,Leeds,Armley,2BH,05/04/2024,173
+Greengate,Oulton,Leeds,Rothwell,1BB,02/05/2024,122
+Ganners Grove,Bramley,Leeds,Bramley & Stanningley,2BF,26/06/2024,480
+Foundry Mill Street,Seacroft,Leeds,Killingbeck & Seacroft,3BH,04/04/2024,925
+Throstle Road,Middleton,Leeds,Middleton Park,2BH,10/04/2024,571
+Kirkstall Hill,Burley,Leeds,Kirkstall,3BM,07/05/2024,422
+Beckhill Gate,Miles Hill,Leeds,Chapel Allerton,2BH,25/04/2024,728
+Holtdale Way,Adel,Leeds,Adel & Wharfedale,3BH,01/05/2024,805
+Hallfield Crescent,Wetherby,Leeds,Wetherby,3BH,31/05/2024,909
+Nursery Garth,Wetherby,Leeds,Wetherby,1BH,03/06/2024,75
+Town Gate,Calverley,Pudsey,Calverley & Farsley,2BB,23/05/2024,149
+Trafford Avenue,Harehills,Leeds,Gipton & Harehills,3BH,10/04/2024,259
+Manor Close,Yeadon,Leeds,Otley & Yeadon,1BF,01/05/2024,558
+Nutting Grove Terrace,Farnley,Leeds,Farnley & Wortley,1BF,17/06/2024,575
+St Alban Approach,Harehills,Leeds,Burmantofts & Richmond Hill,2BH,24/05/2024,773
+Houghley Lane,Bramley,Leeds,Armley,1BF,18/06/2024,2
+Halliday Road,Garforth,Leeds,Garforth & Swillington,2BM,18/06/2024,194
+Hemishor Drive,Great Preston,Leeds,Garforth & Swillington,3BH,16/05/2024,850
+Pigeon Cote Road,Seacroft,Leeds,Killingbeck & Seacroft,1BF,12/06/2024,1
+Hill Crest,Swillington,Leeds,Garforth & Swillington,1BB,03/06/2024,142
+Britannia Close,Stanningley,Pudsey,Bramley & Stanningley,2BH,08/05/2024,51
+Leeds And Bradford Road,Bramley,Leeds,Bramley & Stanningley,1BF,28/06/2024,606
+Carlton Grove,Sheepscar,Leeds,Little London & Woodhouse,2BH,19/04/2024,461
+Belle Isle Road,Belle Isle,Leeds,Middleton Park,3BH,01/04/2024,1
+Broadlea Mount,Bramley,Leeds,Bramley & Stanningley,4BH,25/06/2024,537
+Spen Crescent,West Park,Leeds,Kirkstall,1BF,03/04/2024,1259
+Eastdean Grange,Seacroft,Leeds,Killingbeck & Seacroft,3BM,22/05/2024,270
+Enfield,Yeadon,Leeds,Otley & Yeadon,2BH,07/06/2024,344
+Belle Isle Road,Belle Isle,Leeds,Middleton Park,4BH,18/06/2024,1
+Blenheim Square,Woodhouse,Leeds,Little London & Woodhouse,1BF,18/04/2024,650
+Holtdale Way,Adel,Leeds,Adel & Wharfedale,1BF,09/04/2024,690
+Newhall Chase,Belle Isle,Leeds,Middleton Park,1BB,25/06/2024,77
+Wellstone Garth,Swinnow,Leeds,Pudsey,3BH,10/04/2024,1
+Haslewood Drive,Burmantofts,Leeds,Burmantofts & Richmond Hill,1BF,29/04/2024,1008
+Queenswood Court,Headingley,Leeds,Kirkstall,2BMSF,23/05/2024,19
+Wortley Heights,Upper Wortley,Leeds,Armley,2BMSF,09/05/2024,49
+Kelsall Avenue,Hyde Park,Leeds,Little London & Woodhouse,1BH,05/04/2024,899
+Burmantofts Street,Burmantofts,Leeds,Burmantofts & Richmond Hill,1BF,16/05/2024,970
+Cragside Walk,Kirkstall,Leeds,Kirkstall,3BH,29/04/2024,904
+Beckhill Fold,Miles Hill,Leeds,Chapel Allerton,1BF,16/04/2024,350
+Scott Hall Avenue,Chapeltown,Leeds,Chapel Allerton,2BH,03/06/2024,808
+Eastdean Road,Seacroft,Leeds,Killingbeck & Seacroft,1BF,26/04/2024,765
+Westfield Avenue,Yeadon,Leeds,Guiseley & Rawdon,3BH,19/06/2024,858
+Gascoigne House,Middleton,Leeds,Middleton Park,2BF,14/04/2024,1
+Fairview House,Wetherby,Leeds,Wetherby,BED,07/06/2024,8
+Fir Tree Approach,Moortown,Leeds,Alwoodley,3BM,02/05/2024,159
+Meagill Rise,Otley,Leeds,Otley & Yeadon,2BH,17/06/2024,1041
+Queenswood Drive,Headingley,Leeds,Kirkstall,1BF,08/04/2024,762
+Shakespeare Close,Burmantofts,Leeds,Burmantofts & Richmond Hill,1BF,22/05/2024,701
+Winrose Crescent,Belle Isle,Leeds,Middleton Park,1BF,29/05/2024,715
+Gilbert Close,Kirkstall,Leeds,Kirkstall,1BF,19/06/2024,781
+Heights Way,Armley,Leeds,Farnley & Wortley,3BH,19/06/2024,681
+St James Walk,Horsforth,Leeds,Horsforth,1BF,01/05/2024,910
+Whingate Green,Armley,Leeds,Farnley & Wortley,2BF,03/04/2024,643
+Deanswood Hill,Moortown,Leeds,Alwoodley,2BH,06/06/2024,1
+Woodbridge Vale,Headingley,Leeds,Kirkstall,2BH,02/04/2024,784
+Grange Avenue,Chapeltown,Leeds,Chapel Allerton,5BH,14/05/2024,1
+The Flats,Yeadon,Leeds,Otley & Yeadon,1BF,12/06/2024,316
+Westfield Avenue,Yeadon,Leeds,Guiseley & Rawdon,3BH,12/04/2024,632
+Monkswood Hill,Seacroft,Leeds,Killingbeck & Seacroft,3BH,02/04/2024,1
+Farndale View,Swarcliffe,Leeds,Cross Gates & Whinmoor,1BF,16/05/2024,616
+Wortley Heights,Upper Wortley,Leeds,Armley,2BMSF,15/04/2024,66
+The Garth,Richmond Hill,Leeds,Burmantofts & Richmond Hill,2BMSF,20/06/2024,5
+Beevers Court,Lawnswood,Leeds,Weetwood,1BMSF,08/04/2024,137
+King Alfreds Walk,Meanwood,Leeds,Moortown,2BH,20/05/2024,2
+Home Lea,Rothwell,Leeds,Rothwell,1BB,31/05/2024,122
+Hyde Park Close,Hyde Park,Leeds,Little London & Woodhouse,3BH,02/05/2024,776
+Butterbowl Drive,Farnley,Leeds,Farnley & Wortley,2BF,30/04/2024,708
+Greengate,Oulton,Leeds,Rothwell,1BB,29/05/2024,154
+Royal Court,Hunslet,Leeds,Hunslet & Riverside,2BF,23/04/2024,202
+Bondgate,Harewood,Leeds,Harewood,1BF,21/05/2024,1
+Clayton Court,West Park,Leeds,Kirkstall,3BMSF,17/06/2024,191
+Burnsall Grange,Armley,Leeds,Armley,2BMSF,26/04/2024,110
+Hebden Walk,Whinmoor,Leeds,Cross Gates & Whinmoor,3BH,30/05/2024,1
+Clifton Terrace,Harehills,Leeds,Burmantofts & Richmond Hill,2BH,11/06/2024,271
+Baildon Walk,Whinmoor,Leeds,Cross Gates & Whinmoor,2BH,24/05/2024,564
+Delph Mount,Woodhouse,Leeds,Headingley & Hyde Park,3BH,27/06/2024,650
+Compton Row,Harehills,Leeds,Burmantofts & Richmond Hill,2BH,15/05/2024,203
+Cromwell Heights,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BMSF,19/06/2024,375
+Sissons Road,Middleton,Leeds,Middleton Park,2BF,14/06/2024,336
+The Grove,Gildersome,Morley,Morley North,BED,26/04/2024,17
+Glen Road,Morley,Leeds,Morley South,1BF,23/04/2024,363
+Broadway,Horsforth,Leeds,Horsforth,2BF,22/05/2024,424
+Scott Hall Avenue,Chapeltown,Leeds,Chapel Allerton,2BH,19/06/2024,912
+Andrew House,Farsley,Pudsey,Calverley & Farsley,2BM,17/05/2024,285
+Whiteley Croft,Otley,Leeds,Otley & Yeadon,1BB,11/04/2024,123
+Lidgett Towers,Gledhow,Leeds,Roundhay,2BMSF,08/05/2024,90
+Parkway Court,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,02/05/2024,1
+Torre View,Harehills,Leeds,Burmantofts & Richmond Hill,2BF,15/05/2024,719
+Poplar Way,Bramley,Leeds,Armley,2BH,15/04/2024,281
+Nutting Grove Terrace,Farnley,Leeds,Farnley & Wortley,1BF,05/06/2024,641
+Inglewood Drive,Seacroft,Leeds,Killingbeck & Seacroft,1BF,30/05/2024,751
+Thornhill Court,Upper Wortley,Leeds,Farnley & Wortley,1BF,23/05/2024,23
+Aberfield Drive,Belle Isle,Leeds,Middleton Park,1BF,22/04/2024,1128
+Bismarck Drive,Beeston,Leeds,Hunslet & Riverside,1BF,09/05/2024,423
+Windsor Crescent,Rothwell,Leeds,Rothwell,3BH,04/04/2024,594
+Ashlea Court,Bramley,Leeds,Bramley & Stanningley,1BF,10/06/2024,29
+Stocks Rise,Seacroft,Leeds,Killingbeck & Seacroft,1BF,04/06/2024,654
+St James Drive,Horsforth,Leeds,Horsforth,2BF,21/06/2024,133
+Parkway Court,Seacroft,Leeds,Killingbeck & Seacroft,2BMSF,27/05/2024,415
+North Lane,Oulton,Leeds,Rothwell,3BH,08/05/2024,751
+Wellstone Road,Swinnow,Leeds,Pudsey,2BH,24/04/2024,698
+Intake Lane,Middleton,Leeds,Middleton Park,3BH,15/04/2024,773
+Hallfield Lane,Wetherby,Leeds,Wetherby,1BB,13/05/2024,114
+Beeston Park Terrace,Beeston,Leeds,Beeston & Holbeck,1BF,18/06/2024,575
+Hawkswood View,Kirkstall,Leeds,Kirkstall,3BH,21/06/2024,1122
+Rossefield Approach,Bramley,Leeds,Bramley & Stanningley,2BH,23/04/2024,1
+Brown Hill Avenue,Harehills,Leeds,Burmantofts & Richmond Hill,2BH,17/06/2024,2
+Farrow Green,Armley,Leeds,Farnley & Wortley,1BF,28/05/2024,564
+Holtdale Place,Adel,Leeds,Adel & Wharfedale,1BF,30/04/2024,714
+Stocks Rise,Seacroft,Leeds,Killingbeck & Seacroft,2BH,10/06/2024,566
+Durrant Close,Wetherby,Leeds,Wetherby,1BF,09/05/2024,36
+The Garth,Richmond Hill,Leeds,Burmantofts & Richmond Hill,2BMSF,20/06/2024,8
+Holtdale Place,Adel,Leeds,Adel & Wharfedale,1BF,05/04/2024,614
+Potternewton Crescent,Miles Hill,Leeds,Chapel Allerton,2BH,23/04/2024,1
+Wellington Grove,Bramley,Leeds,Bramley & Stanningley,2BF,13/06/2024,1004
+Woodbridge Green,Headingley,Leeds,Kirkstall,2BH,30/05/2024,1036
+Parkway Court,Seacroft,Leeds,Killingbeck & Seacroft,2BMSF,04/06/2024,83
+Cherry Court,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BMSF,12/06/2024,352
+Wortley Park,Upper Wortley,Leeds,Armley,1BMSF,24/04/2024,295
+Rycroft Green,Swinnow,Leeds,Pudsey,1BMSF,31/05/2024,7
+Kitson Street,Cross Green,Leeds,Burmantofts & Richmond Hill,2BH,19/04/2024,282
+Stanks Drive,Stanks,Leeds,Cross Gates & Whinmoor,2BH,23/04/2024,1005
+Broadway,Horsforth,Leeds,Horsforth,2BF,09/04/2024,213
+Gamble Hill Grange,Bramley,Leeds,Farnley & Wortley,1BMSF,05/06/2024,468
+Parkway Towers,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,14/06/2024,1
+Coppice Wood Grove,Guiseley,Leeds,Guiseley & Rawdon,2BF,26/06/2024,225
+Langley Mount,Bramley,Leeds,Bramley & Stanningley,1BF,28/06/2024,712
+Wood Lane,Rothwell,Leeds,Rothwell,1BF,03/05/2024,1
+Hawkswood Crescent,Kirkstall,Leeds,Kirkstall,3BH,03/05/2024,2
+Ganners Way,Bramley,Leeds,Bramley & Stanningley,3BH,28/05/2024,605
+Buller Court,Harehills,Leeds,Burmantofts & Richmond Hill,3BH,22/05/2024,1
+Well Croft,Otley,Leeds,Otley & Yeadon,1BB,10/05/2024,1041
+Fairfield Terrace,Bramley,Leeds,Bramley & Stanningley,4BH,17/05/2024,1
+Pontefract Lane,Richmond Hill,Leeds,Burmantofts & Richmond Hill,3BH,31/05/2024,750
+Carlton Lane,Rothwell,Leeds,Rothwell,1BF,09/04/2024,370
+Park Avenue,Allerton Bywater,Castleford,Kippax & Methley,2BH,24/05/2024,658
+Shaw Royd,Yeadon,Leeds,Otley & Yeadon,3BH,24/04/2024,1
+The Close,Richmond Hill,Leeds,Burmantofts & Richmond Hill,3BF,29/05/2024,262
+Flax Place,Richmond Hill,Leeds,Burmantofts & Richmond Hill,1BMSF,31/05/2024,791
+Brookleigh,Calverley,Pudsey,Calverley & Farsley,1BB,25/06/2024,116
+Dawsons Corner,Stanningley,Pudsey,Calverley & Farsley,1BB,20/05/2024,51
+Milner Gardens,Cross Green,Leeds,Burmantofts & Richmond Hill,2BH,20/06/2024,1
+Carlton Close,Sheepscar,Leeds,Little London & Woodhouse,1BMSF,24/06/2024,906
+Queensway,Guiseley,Leeds,Guiseley & Rawdon,2BF,30/04/2024,183
+Louis Street,Chapeltown,Leeds,Chapel Allerton,3BH,20/05/2024,363
+Whincover Road,Farnley,Leeds,Farnley & Wortley,1BF,29/04/2024,845
+Mount Pleasent Gardens,Kippax,Leeds,Kippax & Methley,BED,02/05/2024,276
+Old Oak Garth,West Park,Leeds,Kirkstall,2BF,15/05/2024,240
+Torre Green,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BMSF,09/05/2024,601
+Monkswood Bank,Seacroft,Leeds,Killingbeck & Seacroft,2BH,26/06/2024,1
+Kentmere Gardens,Seacroft,Leeds,Killingbeck & Seacroft,2BH,30/05/2024,1
+Spen Approach,West Park,Leeds,Kirkstall,2BF,19/06/2024,206
+All Saints Road,Woodlesford,Leeds,Rothwell,1BF,04/04/2024,1
+Boggart Hill Road,Seacroft,Leeds,Killingbeck & Seacroft,2BH,03/04/2024,647
+Lea Farm Grove,Kirkstall,Leeds,Kirkstall,1BF,24/04/2024,858
+Royal Gardens,Hunslet,Leeds,Hunslet & Riverside,2BF,08/05/2024,199
+Crowtrees Court,Rawdon,Leeds,Guiseley & Rawdon,1BB,29/04/2024,163
+Fairfield Road,Bramley,Leeds,Bramley & Stanningley,2BH,14/05/2024,616
+Northcote Green,Beeston,Leeds,Hunslet & Riverside,1BF,14/06/2024,1
+Second Avenue,Armley,Leeds,Armley,2BF,18/06/2024,1
+Esmond Terrace,Armley,Leeds,Armley,2BH,13/05/2024,1
+Northwell Gate,Otley,Leeds,Otley & Yeadon,3BH,31/05/2024,824
+Greenthorpe Mount,Armley,Leeds,Farnley & Wortley,2BH,13/06/2024,470
+Woodhouse Hill Avenue,Hunslet,Leeds,Hunslet & Riverside,2BF,14/05/2024,6
+Aberfield Rise,Belle Isle,Leeds,Middleton Park,2BF,20/05/2024,291
+Poplar Court,Bramley,Leeds,Armley,2BMSF,27/06/2024,95
+Houghley Lane,Bramley,Leeds,Armley,1BF,08/04/2024,2
+Kepstorn Close,Kirkstall,Leeds,Kirkstall,2BF,16/04/2024,1
+Farrow Vale,Armley,Leeds,Farnley & Wortley,2BF,24/04/2024,379
+Langley Crescent,Bramley,Leeds,Bramley & Stanningley,1BF,07/05/2024,378
+Woodbridge Garth,Headingley,Leeds,Kirkstall,1BB,16/04/2024,1158
+Stanks Drive,Stanks,Leeds,Cross Gates & Whinmoor,2BF,21/05/2024,141
+Forsythia Avenue,East Ardsley,Wakefield,Ardsley & Robin Hood,2BH,21/05/2024,1
+Town Street,Middleton,Leeds,Middleton Park,1BF,13/05/2024,1030
+Torre Place,Burmantofts,Leeds,Burmantofts & Richmond Hill,3BH,28/05/2024,831
+Holborn Towers,Woodhouse,Leeds,Headingley & Hyde Park,1BMSF,02/04/2024,411
+Throstle Drive,Middleton,Leeds,Middleton Park,2BF,18/04/2024,350
+Stanks Grove,Stanks,Leeds,Cross Gates & Whinmoor,2BF,21/06/2024,93
+Dib Lane,Roundhay,Leeds,Killingbeck & Seacroft,1BF,22/05/2024,1
+Bedford Mount,Cookridge,Leeds,Weetwood,2BF,15/04/2024,1
+Melville Gardens,Woodhouse,Leeds,Little London & Woodhouse,1BB,05/04/2024,87
+Sandford Road,Kirkstall,Leeds,Kirkstall,2BH,09/04/2024,467
+Beech Walk,Gipton,Leeds,Gipton & Harehills,2BH,16/05/2024,661
+Leasowe Avenue,Hunslet,Leeds,Hunslet & Riverside,1BF,11/04/2024,526
+Town Street,Middleton,Leeds,Middleton Park,1BF,16/04/2024,596
+Well Croft,Otley,Leeds,Otley & Yeadon,1BB,10/04/2024,159
+Kingsway,Drighlington,Bradford,Morley North,1BF,13/05/2024,442
+Manorfield,Beeston,Leeds,Beeston & Holbeck,1BB,23/04/2024,1
+Belle Isle Circus,Belle Isle,Leeds,Middleton Park,1BF,07/05/2024,32
+Cardinal Avenue,Beeston,Leeds,Beeston & Holbeck,2BH,03/06/2024,1064
+Rossington Grove,Chapeltown,Leeds,Gipton & Harehills,2BH,13/05/2024,319
+Glossop Street,Woodhouse,Leeds,Headingley & Hyde Park,2BH,07/06/2024,341
+Lindsey Mount,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BF,18/06/2024,617
+Clyde Court,New Wortley,Leeds,Armley,2BMSF,09/04/2024,50
+Greenlea Avenue,Yeadon,Leeds,Guiseley & Rawdon,1BF,08/04/2024,300
+Raynville Rise,Bramley,Leeds,Armley,2BH,19/04/2024,527
+Windmill Green,Rothwell,Leeds,Rothwell,1BB,18/06/2024,116
+Claremont Grove,Pudsey,Leeds,Pudsey,1BB,26/04/2024,116
+Springfield Mount,Horsforth,Leeds,Horsforth,2BH,22/04/2024,1120
+St James Walk,Horsforth,Leeds,Horsforth,2BF,26/04/2024,241
+Burnsall Gardens,Armley,Leeds,Armley,2BMSF,04/04/2024,94
+Greenside,Pudsey,Leeds,Pudsey,1BF,08/05/2024,48
+Stanmore Grove,Burley,Leeds,Kirkstall,2BF,18/04/2024,269
+Clyde Chase,New Wortley,Leeds,Armley,2BH,25/06/2024,385
+Moresdale Lane,Seacroft,Leeds,Killingbeck & Seacroft,2BH,04/04/2024,879
+The Garth,Richmond Hill,Leeds,Burmantofts & Richmond Hill,2BMSF,20/06/2024,426
+Hansby Avenue,Seacroft,Leeds,Killingbeck & Seacroft,2BH,30/05/2024,1
+Shadwell Lane,Moortown,Leeds,Alwoodley,1BF,23/05/2024,658
+Whingate Green,Armley,Leeds,Farnley & Wortley,2BF,01/05/2024,751
+Rossefield Approach,Bramley,Leeds,Bramley & Stanningley,1BF,28/05/2024,683
+Coppice Wood Grove,Guiseley,Leeds,Guiseley & Rawdon,2BF,13/06/2024,273
+Hepworth Avenue,Churwell,Morley,Morley North,1BF,29/05/2024,470
+Bodmin Road,Middleton,Leeds,Middleton Park,2BH,18/04/2024,588
+Cardinal Avenue,Beeston,Leeds,Beeston & Holbeck,2BF,29/05/2024,199
+Sissons Terrace,Middleton,Leeds,Middleton Park,3BH,24/06/2024,1
+Sissons Road,Middleton,Leeds,Middleton Park,2BF,24/05/2024,289
+Gascoigne House,Middleton,Leeds,Middleton Park,1BF,02/06/2024,1
+Latchmere Drive,West Park,Leeds,Kirkstall,6BH,26/04/2024,1
+Wyther Park Close,Armley,Leeds,Armley,1BF,07/06/2024,490
+Barncroft Court,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,26/06/2024,643
+Northcote Drive,Beeston,Leeds,Hunslet & Riverside,2BH,24/04/2024,339
+Beevers Court,Lawnswood,Leeds,Weetwood,2BMSF,10/04/2024,82
+Neville Avenue,Osmondthorpe,Leeds,Temple Newsam,2BF,06/06/2024,256
+Manorfield,Beeston,Leeds,Beeston & Holbeck,1BB,07/05/2024,1
+Bodmin Road,Middleton,Leeds,Middleton Park,2BH,06/06/2024,435
+The Crescent,East Ardsley,Wakefield,Ardsley & Robin Hood,1BB,05/04/2024,91
+Holly Road,Boston Spa,Wetherby,Wetherby,1BH,26/06/2024,76
+Kendal Drive,Halton,Leeds,Temple Newsam,3BH,20/05/2024,1
+Saville Green,Burmantofts,Leeds,Burmantofts & Richmond Hill,1BMSF,30/05/2024,479
+Halliday Court,Garforth,Leeds,Garforth & Swillington,1BF,22/05/2024,31
+Lingfield Crescent,Moortown,Leeds,Alwoodley,2BF,07/05/2024,198
+White Laithe Court,Whinmoor,Leeds,Cross Gates & Whinmoor,1BF,18/06/2024,58
+Beeston Park Terrace,Beeston,Leeds,Beeston & Holbeck,1BF,01/05/2024,656
+West Grange Drive,Belle Isle,Leeds,Middleton Park,1BB,17/06/2024,88
+Millshaw Road,Beeston,Leeds,Beeston & Holbeck,2BF,31/05/2024,260
+Melrose Grove,Horsforth,Leeds,Horsforth,1BF,26/04/2024,475
+Foundry Mill Drive,Seacroft,Leeds,Killingbeck & Seacroft,2BH,12/06/2024,495
+Holtdale View,Adel,Leeds,Adel & Wharfedale,1BF,13/05/2024,754
+Poplar Mount,Bramley,Leeds,Armley,2BMSF,26/06/2024,98
+Tinshill Lane,Cookridge,Leeds,Weetwood,2BF,17/06/2024,233
+Glencoe Gardens,Kippax,Leeds,Garforth & Swillington,2BF,17/04/2024,404
+Gilbert Close,Kirkstall,Leeds,Kirkstall,1BF,20/06/2024,972
+Sissons Road,Middleton,Leeds,Middleton Park,2BF,04/04/2024,278
+Beckhill Approach,Miles Hill,Leeds,Chapel Allerton,2BH,16/05/2024,658
+Gascoigne House,Middleton,Leeds,Middleton Park,2BF,14/04/2024,1
+Blackburn Court,Rothwell,Leeds,Rothwell,3BM,08/05/2024,109
+Spencer Place,Chapeltown,Leeds,Chapel Allerton,BED,05/06/2024,842
+Denbigh Croft,Gipton,Leeds,Gipton & Harehills,2BMSF,23/05/2024,327
+Holborn Street,Woodhouse,Leeds,Headingley & Hyde Park,1BF,29/04/2024,619
+Westerly Rise,Armley,Leeds,Armley,2BMSF,17/04/2024,96
+Garden House Lane,West Ardsley,Wakefield,Ardsley & Robin Hood,2BH,08/04/2024,569
+Rossefield Terrace,Bramley,Leeds,Bramley & Stanningley,2BM,04/04/2024,181
+Lovell Park Heights,Sheepscar,Leeds,Little London & Woodhouse,1BMSF,15/05/2024,1024
+Calvert Crescent,Middleton,Leeds,Middleton Park,1BB,17/04/2024,1
+Queenswood Drive,Headingley,Leeds,Kirkstall,1BF,22/05/2024,912
+Beckhill Chase,Miles Hill,Leeds,Chapel Allerton,1BF,30/05/2024,622
+Aviary Row,Armley,Leeds,Armley,1BH,28/06/2024,1
+Green Lea,Oulton,Leeds,Rothwell,1BF,05/04/2024,506
+Clyde Court,New Wortley,Leeds,Armley,1BMSF,19/04/2024,284
+Harold Terrace,Hyde Park,Leeds,Headingley & Hyde Park,2BH,09/05/2024,167
+Nursery Garth,Wetherby,Leeds,Wetherby,1BH,08/04/2024,68
+Rossefield Terrace,Bramley,Leeds,Bramley & Stanningley,BED,04/06/2024,387
+Wyther Park Mount,Armley,Leeds,Armley,1BF,09/04/2024,318
+Sunbeam Grove,Beeston,Leeds,Hunslet & Riverside,1BB,18/04/2024,669
+Main Street,Methley,Leeds,Kippax & Methley,1BF,04/06/2024,21
+Rombalds Grove,Armley,Leeds,Armley,2BH,05/06/2024,296
+Sandhurst Terrace,Harehills,Leeds,Gipton & Harehills,1BH,20/06/2024,822
+Dulverton Place,Beeston,Leeds,Beeston & Holbeck,2BH,13/06/2024,451
+Middleton Park Court,Middleton,Leeds,Middleton Park,1BF,13/05/2024,26
+Nowell Lane,Harehills,Leeds,Burmantofts & Richmond Hill,2BH,17/04/2024,208
+Askey Crescent,Morley,Leeds,Morley South,3BH,29/04/2024,1
+Arthington Court,Hunslet,Leeds,Hunslet & Riverside,1BF,12/04/2024,19
+Fieldhouse Drive,Moortown,Leeds,Moortown,1BB,23/05/2024,1
+Churchville Terrace,Micklefield,Leeds,Kippax & Methley,1BB,16/04/2024,108
+St James Drive,Horsforth,Leeds,Horsforth,2BF,29/04/2024,1
+Manor Farm Way,Middleton,Leeds,Middleton Park,2BH,29/05/2024,628
+Smalewell Road,Pudsey,Leeds,Pudsey,1BF,04/04/2024,65
+Melville Gardens,Woodhouse,Leeds,Little London & Woodhouse,1BB,19/06/2024,97
+Baildon Close,Whinmoor,Leeds,Cross Gates & Whinmoor,1BF,07/05/2024,802
+Cardinal Avenue,Beeston,Leeds,Beeston & Holbeck,2BF,09/05/2024,300
+Newlands Drive,Morley,Leeds,Morley South,1BB,15/04/2024,501
+Lewisham Court,Morley,Leeds,Morley South,2BF,22/04/2024,55
+Old Oak Garth,West Park,Leeds,Kirkstall,2BF,04/04/2024,200
+Hawkins Drive,Woodhouse,Leeds,Little London & Woodhouse,3BH,23/04/2024,128
+Monkswood Bank,Seacroft,Leeds,Killingbeck & Seacroft,3BH,26/06/2024,1
+Otley Lane,Yeadon,Leeds,Otley & Yeadon,1BB,25/06/2024,147
+Newhall Gardens,Middleton,Leeds,Middleton Park,2BH,08/05/2024,987
+Appleby Place,Halton,Leeds,Temple Newsam,3BH,19/06/2024,1
+Sissons Road,Middleton,Leeds,Middleton Park,2BF,22/05/2024,249
+Sissons Crescent,Middleton,Leeds,Middleton Park,2BH,17/04/2024,617
+Town Street,Middleton,Leeds,Middleton Park,2BM,04/04/2024,184
+Glensdale Grove,Richmond Hill,Leeds,Burmantofts & Richmond Hill,2BH,05/06/2024,303
+Margetson Road,Drighlington,Bradford,Morley North,2BH,24/05/2024,545
+Meanwood Valley Drive,Meanwood,Leeds,Weetwood,2BH,03/06/2024,1
+Wykebeck Avenue,Osmondthorpe,Leeds,Temple Newsam,2BH,07/06/2024,420
+Conway Mount,Harehills,Leeds,Gipton & Harehills,2BH,07/05/2024,325
+Baildon Close,Whinmoor,Leeds,Cross Gates & Whinmoor,1BF,22/05/2024,31
+Crescent Towers,Beeston,Leeds,Hunslet & Riverside,1BMSF,22/05/2024,285
+Fairview House,Wetherby,Leeds,Wetherby,1BF,16/05/2024,19
+All Saints Circle,Woodlesford,Leeds,Rothwell,1BF,13/05/2024,1
+Woodlea Mount,Yeadon,Leeds,Guiseley & Rawdon,1BB,08/04/2024,1
+North Parkway,Seacroft,Leeds,Killingbeck & Seacroft,1BF,04/06/2024,572
+Tofts House Close,Pudsey,Leeds,Pudsey,2BF,04/04/2024,498
+Moresdale Lane,Seacroft,Leeds,Killingbeck & Seacroft,3BH,08/05/2024,675
+Lincombe Drive,Gledhow,Leeds,Roundhay,2BF,04/04/2024,164
+Woodview Mount,Beeston,Leeds,Hunslet & Riverside,2BH,19/04/2024,226
+Briarsdale Heights,Gipton,Leeds,Gipton & Harehills,2BMSF,09/05/2024,395
+Cranmer Bank,Moortown,Leeds,Alwoodley,1BF,29/04/2024,1
+Moresdale Lane,Seacroft ,Leeds,Killingbeck & Seacroft,3BH,24/05/2024,1
+Grayson Crest,Burley,Leeds,Kirkstall,1BF,12/06/2024,1
+Broughton Drive,Seacroft,Leeds,Killingbeck & Seacroft,2BH,30/05/2024,1189
+Tong Drive,Farnley,Leeds,Farnley & Wortley,2BF,31/05/2024,571
+Saxon Mount,Moortown,Leeds,Alwoodley,2BF,17/05/2024,184
+Cranmore Road,Middleton,Leeds,Middleton Park,2BH,30/04/2024,594
+Old Farm Drive,West Park,Leeds,Kirkstall,1BF,04/04/2024,622
+St Wilfrids Avenue,Harehills,Leeds,Gipton & Harehills,1BF,09/05/2024,859
+Kirklands Close,Yeadon,Leeds,Guiseley & Rawdon,1BF,20/06/2024,548
+Christopher Road,Woodhouse,Leeds,Headingley & Hyde Park,2BH,21/05/2024,391
+Aberfield Drive,Belle Isle,Leeds,Middleton Park,2BF,23/05/2024,108
+Inglewood Drive,Seacroft,Leeds,Killingbeck & Seacroft,1BF,29/04/2024,381
+Nightingale Gardens,Middleton,Leeds,Middleton Park,1BB,16/06/2024,1
+Town Street,Middleton,Leeds,Middleton Park,1BF,08/05/2024,1
+Holborn Towers,Woodhouse,Leeds,Headingley & Hyde Park,1BMSF,24/06/2024,493
+Marlborough Towers,Woodhouse,Leeds,Little London & Woodhouse,1BMSF,23/04/2024,350
+The Broadwalk,Otley,Leeds,Otley & Yeadon,2BF,20/05/2024,148
+Farrow Vale,Armley,Leeds,Farnley & Wortley,2BF,22/04/2024,449
+Crescent Bungalows,Thorpe,Wakefield,Ardsley & Robin Hood,1BB,20/06/2024,525
+Wortley Towers,Farnley,Leeds,Armley,1BMSF,11/06/2024,502
+Greenmount Terrace,Beeston,Leeds,Hunslet & Riverside,2BF,17/04/2024,181
+South Farm Road,Gipton,Leeds,Gipton & Harehills,1BF,26/04/2024,861
+Grange Crescent,Chapeltown,Leeds,Chapel Allerton,1BF,03/06/2024,901
+Belinda Street,Hunslet,Leeds,Hunslet & Riverside,1BF,08/05/2024,783
+East Grange Rise,Belle Isle,Leeds,Middleton Park,1BF,26/06/2024,376
+Holmsley Field Court,Oulton,Leeds,Rothwell,1BB,30/05/2024,137
+Gamble Hill Grange,Bramley,Leeds,Farnley & Wortley,2BMSF,07/05/2024,382
+Billing View,Rawdon,Leeds,Horsforth,1BB,18/04/2024,1
+Fawcett Place,Wortley,Leeds,Farnley & Wortley,3BH,07/05/2024,1
+Fink Hill,Horsforth,Leeds,Horsforth,1BF,03/04/2024,36
+Bowland Close,Halton,Leeds,Temple Newsam,2BH,14/06/2024,566
+Kitson Street,Cross Green,Leeds,Burmantofts & Richmond Hill,2BH,17/04/2024,245
+Acres Hall Avenue,Pudsey,Leeds,Pudsey,2BF,04/04/2024,559
+Helston Street,Middleton,Leeds,Middleton Park,2BH,14/06/2024,555
+Parsons Green,Wetherby,Leeds,Wetherby,1BF,24/06/2024,33
+Hepworth Avenue,Churwell,Morley,Morley North,1BF,16/05/2024,362
+Clayton Court,West Park,Leeds,Kirkstall,1BMSF,22/04/2024,372
+Asquith Close,Morley,Leeds,Morley North,1BB,11/04/2024,698
+Newhall Chase,Belle Isle,Leeds,Middleton Park,1BB,29/04/2024,1
+Woodlea Approach,Yeadon,Leeds,Guiseley & Rawdon,1BB,19/04/2024,137
+Foundry Drive,Harehills,Leeds,Gipton & Harehills,1BB,27/06/2024,1
+Stonebridge Grove,Farnley,Leeds,Farnley & Wortley,2BF,13/05/2024,390
+Holtdale Road,Adel,Leeds,Adel & Wharfedale,1BF,03/04/2024,396
+Foundry Drive,Harehills,Leeds,Gipton & Harehills,1BB,13/06/2024,1
+O Grady Square,Cross Green,Leeds,Burmantofts & Richmond Hill,2BH,01/05/2024,1
+Whingate Court,Armley,Leeds,Farnley & Wortley,1BF,30/04/2024,7
+Poplar Mount,Bramley,Leeds,Armley,1BF,22/04/2024,3
+Foundry Walk,Harehills,Leeds,Gipton & Harehills,1BF,23/05/2024,1
+Birch Court,Morley,Leeds,Morley South,1BF,04/04/2024,571
+Sherburn Square,Swarcliffe,Leeds,Cross Gates & Whinmoor,1BF,19/04/2024,502
+Sissons Road,Middleton,Leeds,Middleton Park,2BF,02/05/2024,198
+Pembroke Grange,Gipton,Leeds,Gipton & Harehills,2BMSF,29/04/2024,1
+Belle Vue Road,Scholes,Leeds,Harewood,2BB,10/06/2024,36
+Harley Gardens,Swinnow,Leeds,Pudsey,1BF,03/04/2024,465
+Stanks Garth,Stanks,Leeds,Cross Gates & Whinmoor,1BF,30/05/2024,677
+Bismarck Drive,Beeston,Leeds,Hunslet & Riverside,1BF,07/05/2024,469
+Cottingley Heights,Beeston,Leeds,Beeston & Holbeck,2BMSF,30/05/2024,36
+Monkswood Bank,Seacroft,Leeds,Killingbeck & Seacroft,1BF,16/04/2024,1
+Northcote Drive,Beeston,Leeds,Hunslet & Riverside,1BF,26/06/2024,459
+Cranmer Bank,Moortown,Leeds,Alwoodley,2BF,17/06/2024,201
+Skelwith Walk,Seacroft,Leeds,Killingbeck & Seacroft,2BH,31/05/2024,625
+Wellstone Avenue,Swinnow,Leeds,Pudsey,2BF,16/04/2024,525
+Lindsey Mount,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BF,21/04/2024,560
+West Park Close,Roundhay,Leeds,Roundhay,1BF,08/04/2024,1
+Cardinal Square,Beeston,Leeds,Beeston & Holbeck,3BH,29/04/2024,13
+Cross Grasmere Street,Armley,Leeds,Armley,2BF,09/04/2024,10
+Weston Drive,Otley,Leeds,Otley & Yeadon,1BF,24/05/2024,26
+St Wilfrids Avenue,Harehills,Leeds,Gipton & Harehills,1BF,10/04/2024,712
+Walton Road,Wetherby,Leeds,Wetherby,1BF,24/06/2024,25
+Cottingley Heights,Beeston,Leeds,Beeston & Holbeck,2BMSF,25/04/2024,73
+Boggart Hill Drive,Seacroft,Leeds,Killingbeck & Seacroft,1BF,15/04/2024,589
+Parkway Grange,Seacroft,Leeds,Killingbeck & Seacroft,2BMSF,11/04/2024,96
+Landseer Way,Bramley,Leeds,Bramley & Stanningley,1BF,21/06/2024,314
+Rossefield Green,Bramley,Leeds,Bramley & Stanningley,3BH,14/05/2024,1
+Rossefield Green,Bramley,Leeds,Bramley & Stanningley,1BF,25/04/2024,392
+Hall Lane,Potternewton,Leeds,Chapel Allerton,1BF,28/05/2024,711
+Nepshaw Lane,Morley,Leeds,Morley North,1BF,17/05/2024,476
+Ireland Crescent,Cookridge,Leeds,Weetwood,2BF,09/04/2024,48
+Dufton Approach,Seacroft,Leeds,Killingbeck & Seacroft,1BF,02/04/2024,419
+Cherry Tree Walk,East Ardsley,Wakefield,Ardsley & Robin Hood,1BF,21/05/2024,466
+Waincliffe Place,Beeston,Leeds,Beeston & Holbeck,1BF,17/06/2024,642
+Claremont Grove,Pudsey,Leeds,Pudsey,1BF,14/06/2024,43
+Wharfedale View,Yeadon,Leeds,Otley & Yeadon,1BF,05/05/2024,1
+Shakespeare Grange,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BMSF,20/06/2024,360
+Moor Avenue,Clifford,Wetherby,Wetherby,1BF,15/05/2024,29
+Atha Crescent,Cross Flatts,Leeds,Beeston & Holbeck,1BB,14/06/2024,1
+Crimbles Place,Pudsey,Leeds,Pudsey,1BF,13/06/2024,69
+Phil May Court ,Armley,Leeds,Armley,1BF,22/04/2024,28
+Meadowhurst Gardens,Pudsey,Leeds,Pudsey,1BF,26/06/2024,416
+Farndale View,Swarcliffe,Leeds,Cross Gates & Whinmoor,1BF,16/04/2024,430
+Greengate,Oulton,Leeds,Rothwell,1BB,15/05/2024,166
+Aberfield Rise,Belle Isle,Leeds,Middleton Park,2BF,10/04/2024,239
+Norman Towers,West Park,Leeds,Kirkstall,1BMSF,28/06/2024,490
+Grove Terrace,Boston Spa,Wetherby,Wetherby,1BB,24/04/2024,82
+Torre Green,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BF,11/04/2024,141
+Northcote Crescent,Beeston,Leeds,Hunslet & Riverside,1BF,31/05/2024,649
+St Matthias Court,Burley,Leeds,Kirkstall,1BF,01/05/2024,24
+Nightingale Gardens,Middleton,Leeds,Middleton Park,1BB,07/04/2024,1
+Westerly Rise,Armley,Leeds,Armley,2BF,08/05/2024,1
+Stanhope Road,Thorpe,Wakefield,Ardsley & Robin Hood,1BB,04/04/2024,68
+Ring Road Middleton,Middleton,Leeds,Middleton Park,1BF,10/06/2024,763
+Francis Street,Chapeltown,Leeds,Chapel Allerton,3BH,14/05/2024,507
+Acres Hall Avenue,Pudsey,Leeds,Pudsey,2BF,08/04/2024,409
+Parkway Towers,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,18/06/2024,162
+Lea Farm Drive,Kirkstall,Leeds,Kirkstall,1BF,05/04/2024,958
+Gascoigne House,Middleton,Leeds,Middleton Park,1BF,26/05/2024,1
+Midland Close,Hunslet,Leeds,Hunslet & Riverside,1BF,07/05/2024,1
+Appleton Court,Burmantofts,Leeds,Burmantofts & Richmond Hill,1BF,26/06/2024,469
+All Saints Drive,Woodlesford,Leeds,Rothwell,1BB,11/04/2024,532
+Baildon Close,Whinmoor,Leeds,Cross Gates & Whinmoor,1BF,17/04/2024,1
+Eltham Court,Woodhouse,Leeds,Little London & Woodhouse,1BF,18/06/2024,31
+Greenside,Pudsey,Leeds,Pudsey,1BF,24/05/2024,78
+Northfield Place,Rothwell,Leeds,Ardsley & Robin Hood,1BB,22/04/2024,94
+Birch Court,Morley,Leeds,Morley South,1BF,07/05/2024,1
+Church Gardens,Garforth,Leeds,Garforth & Swillington,2BF,15/04/2024,60
+Monkswood Bank,Seacroft,Leeds,Killingbeck & Seacroft,2BH,05/06/2024,1
+Queensview,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,18/04/2024,18
+Windmill Chase,Rothwell,Leeds,Rothwell,2BF,15/05/2024,1
+Landseer Drive,Bramley,Leeds,Bramley & Stanningley,1BF,29/05/2024,1
+Cross Ingram Road,Holbeck,Leeds,Beeston & Holbeck,2BF,10/05/2024,37
+Temple Lawn,Rothwell,Leeds,Rothwell,1BF,26/04/2024,60
+Broadlea Hill,Bramley,Leeds,Bramley & Stanningley,1BF,23/04/2024,366
+Bodmin Street,Middleton,Leeds,Middleton Park,1BF,04/04/2024,1
+Naseby Grange,Burmantofts,Leeds,Burmantofts & Richmond Hill,2BMSF,19/06/2024,422
+The Grove,Gildersome,Morley,Morley North,BED,02/05/2024,13
+Victoria Close,Allerton Bywater,Castleford,Kippax & Methley,2BF,09/05/2024,41
+Fink Hill,Horsforth,Leeds,Horsforth,1BF,18/06/2024,47
+Lay Garth Gardens,Rothwell,Leeds,Rothwell,1BF,08/04/2024,444
+Parkway Court,Seacroft,Leeds,Killingbeck & Seacroft,2BMSF,04/04/2024,79
+Ashton Crescent,Carlton,Wakefield,Rothwell,2BB,11/06/2024,166
+Arthington Court,Hunslet,Leeds,Hunslet & Riverside,1BF,04/06/2024,36
+Newton Close,Rothwell,Leeds,Ardsley & Robin Hood,1BB,17/04/2024,57
+The Broadwalk,Otley,Leeds,Otley & Yeadon,1BF,05/04/2024,451
+Henshaw Crescent,Yeadon,Leeds,Otley & Yeadon,2BH,14/06/2024,702
+Lea Croft,Otley,Leeds,Otley & Yeadon,1BB,12/04/2024,146
+Throstle Road North,Middleton,Leeds,Middleton Park,1BF,16/04/2024,458
+Middleton Park Court,Middleton,Leeds,Middleton Park,1BF,07/06/2024,32
+Sissons Green,Middleton,Leeds,Middleton Park,1BF,02/05/2024,731
+Westfield Avenue,Kippax,Leeds,Kippax & Methley,2BB,17/04/2024,159
+Cranmore Grove,Middleton,Leeds,Middleton Park,1BB,13/05/2024,70
+Manor Close,Yeadon,Leeds,Otley & Yeadon,1BF,01/05/2024,505
+Union Court,Otley,Leeds,Otley & Yeadon,1BF,12/06/2024,35
+Summerfield Drive,Bramley,Leeds,Bramley & Stanningley,2BF,26/06/2024,319
+Manorfield,Beeston,Leeds,Beeston & Holbeck,1BB,08/05/2024,94
+The Oval,Garforth,Leeds,Garforth & Swillington,1BB,25/04/2024,1
+Jumbles Lane,Lofthouse,Wakefield,Ardsley & Robin Hood,1BF,09/04/2024,31
+Crimbles Court,Pudsey,Leeds,Pudsey,1BB,01/05/2024,1
+Church Close,Swillington,Leeds,Garforth & Swillington,1BB,22/05/2024,1
+St Matthias Court,Burley,Leeds,Kirkstall,1BF,10/06/2024,23
+Elmfield Court,Morley,Leeds,Morley South,2BF,09/04/2024,106
+Gamble Hill Croft,Bramley,Leeds,Farnley & Wortley,1BF,13/05/2024,233
+Poplar Mount,Bramley,Leeds,Armley,1BMSF,12/04/2024,1
+Queensview,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,07/06/2024,1
+Queenswood Heights,Headingley,Leeds,Kirkstall,1BMSF,24/05/2024,381
+Stead Lane,Thorner,Leeds,Harewood,1BF,29/05/2024,43
+North Farm Road,Gipton,Leeds,Gipton & Harehills,2BH,07/06/2024,1053
+Kentmere Avenue,Seacroft,Leeds,Killingbeck & Seacroft,1BF,21/05/2024,599
+Kendal Lane,Woodhouse,Leeds,Little London & Woodhouse,1BF,05/05/2024,972
+Newton Close,Rothwell,Leeds,Ardsley & Robin Hood,1BB,04/06/2024,115
+Stonebridge Grove,Farnley,Leeds,Farnley & Wortley,1BF,14/05/2024,1
+Burnsall Grange,Armley,Leeds,Armley,2BMSF,17/06/2024,93
+Hollins Grove,Allerton Bywater,Castleford,Kippax & Methley,1BF,05/04/2024,13
+Water Lane,Farsley,Pudsey,Calverley & Farsley,1BMSF,26/04/2024,19
+Asquith Drive,Morley,Leeds,Morley North,1BF,03/06/2024,816
+Stanks Drive,Stanks,Leeds,Cross Gates & Whinmoor,1BF,11/04/2024,1
+Winrose Crescent,Belle Isle,Leeds,Middleton Park,1BF,21/06/2024,823
+Fink Hill,Horsforth,Leeds,Horsforth,1BF,24/06/2024,22
+Queensview,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,22/05/2024,1
+Gascoigne House,Middleton,Leeds,Middleton Park,1BF,09/06/2024,1
+Baildon Close,Whinmoor,Leeds,Cross Gates & Whinmoor,1BF,09/04/2024,446
+Freemont Street,Bramley,Leeds,Bramley & Stanningley,1BB,31/05/2024,39
+Gascoigne House,Middleton,Leeds,Middleton Park,1BF,12/05/2024,1
+Ganners Road,Bramley,Leeds,Bramley & Stanningley,1BF,18/06/2024,1
+Saville Green,Burmantofts,Leeds,Burmantofts & Richmond Hill,1BMSF,12/06/2024,580
+Holborn Gardens,Woodhouse,Leeds,Headingley & Hyde Park,1BF,17/05/2024,1
+Thornhill Court,Upper Wortley,Leeds,Farnley & Wortley,1BF,28/06/2024,24
+Parsonage Road,Methley,Leeds,Kippax & Methley,1BB,20/05/2024,1
+Holtdale Avenue,Adel,Leeds,Adel & Wharfedale,1BF,08/04/2024,566
+Cottingley Heights,Beeston,Leeds,Beeston & Holbeck,2BMSF,23/05/2024,8
+Royds Court,Rothwell,Leeds,Rothwell,1BF,17/04/2024,32
+Redhall Crescent,Beeston,Leeds,Beeston & Holbeck,1BF,18/04/2024,1
+Sir Karl Cohen Square,Armley,Leeds,Armley,1BF,30/05/2024,27
+Eastleigh Drive,West Ardsley,Wakefield,Ardsley & Robin Hood,2BH,24/06/2024,348
+Winrose Grove,Belle Isle,Leeds,Middleton Park,1BF,07/06/2024,475
+Sledmere Croft,Swarcliffe,Leeds,Cross Gates & Whinmoor,1BF,19/04/2024,1
+Clyde Grange,New Wortley,Leeds,Armley,3BF,08/04/2024,1
+Manor Farm Gardens,Middleton,Leeds,Middleton Park,2BH,04/06/2024,506
+Seacroft Gate,Seacroft,Leeds,Killingbeck & Seacroft,1BMSF,31/05/2024,1
+Tofts House Close,Pudsey,Leeds,Pudsey,1BF,08/05/2024,423
+Silk Mill Drive,Cookridge,Leeds,Weetwood,2BF,18/06/2024,192
+Gibson Lane,Kippax,Leeds,Kippax & Methley,1BB,21/05/2024,1
+Northcote Crescent,Beeston,Leeds,Hunslet & Riverside,1BF,14/06/2024,50
+North Farm Road,Gipton,Leeds,Gipton & Harehills,1BF,14/05/2024,632
+Otley Lane,Yeadon,Leeds,Otley & Yeadon,1BB,27/06/2024,1
+Cherry Tree Walk,East Ardsley,Wakefield,Ardsley & Robin Hood,1BF,12/06/2024,469
+Cross Hills Court,Kippax,Leeds,Kippax & Methley,BED,20/05/2024,1
+Claremont Grove,Pudsey,Leeds,Pudsey,1BF,24/06/2024,44
+Gascoigne House,Middleton,Leeds,Middleton Park,1BF,21/04/2024,1
+Hollins Grove,Allerton Bywater,Castleford,Kippax & Methley,1BF,15/05/2024,12
+Gascoigne House,Middleton,Leeds,Middleton Park,1BF,14/04/2024,1
+Gascoigne House,Middleton,Leeds,Middleton Park,2BF,16/06/2024,1
+Lowell Place,Swinnow,Leeds,Pudsey,1BF,12/06/2024,786
+Gascoigne House,Middleton,Leeds,Middleton Park,1BF,14/04/2024,1
+Cross Flatts Parade,Cross Flatts,Leeds,Beeston & Holbeck,2BH,17/06/2024,1
+Church Street,Hunslet,Leeds,Hunslet & Riverside,1BF,26/06/2024,5
+Saville Green,Burmantofts,Leeds,Burmantofts & Richmond Hill,1BMSF,03/06/2024,1
+Middleton,Middleton,Leeds,Middleton Park,1BF,19/05/2024,1
+Gascoigne House,Middleton,Leeds,Middleton Park,1BF,02/06/2024,1
+Crescent Grange,Beeston,Leeds,Hunslet & Riverside,1BMSF,11/06/2024,2
+Gascoigne House,Middleton,Leeds,Middleton Park,2BF,16/06/2024,1
+Crescent Grange,Beeston,Leeds,Hunslet & Riverside,2BF,13/06/2024,1
+Beech Mount,Gipton,Leeds,Gipton & Harehills,3BH,20/06/2024,1
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
