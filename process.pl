@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# Usage: perl process.pl --dir src/data --format=JSON --file raw/Code_History_Database_(July_2024)/ChangeHistory.csv --equivalents raw/Code_History_Database_(July_2024)/Equivalents.csv
+# Usage: perl process.pl --dir docs/data --format=JSON --file raw/Code_History_Database_(July_2024)/ChangeHistory.csv --equivalents raw/Code_History_Database_(July_2024)/Equivalents.csv
 use strict;
 use warnings;
 use utf8;
