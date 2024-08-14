@@ -84,6 +84,10 @@
 			return this;
 		};
 
+		this.getCell = function(r,c){
+			return table.querySelector('tr:nth-child('+(r+2)+') td:nth-child('+(c+1)+')');
+		};
+
 		this.deleteEmptyRows = function(){
 			for(var r = this._emptyrows.length-1; r >= 0; r--) this.deleteRow(this._emptyrows[r]);
 			this.updateRowNumbers();

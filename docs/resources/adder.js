@@ -162,11 +162,32 @@
 				document.body.appendChild(dl);
 			}
 			dl.click();
+			this.stopEdit();
+			return this;
+		};
+
+		this.startEdit = function(){
+			if(!this._unsaved){
+				this._unsaved = true;
+				document.getElementById('msg-start-edit').innerHTML = 'Unsaved changes';
+				if(document.getElementById('btn-save')) document.getElementById('btn-save').style.display = 'block';
+			}
+			return this;
+		};
+
+		this.stopEdit = function(){
 			if(document.getElementById('msg-start-edit')) document.getElementById('msg-start-edit').innerHTML = '';
 			if(document.getElementById('btn-save')) document.getElementById('btn-save').style.display = 'none';
 			this._unsaved = false;
 			return this;
-		};
+		}
+
+		this.updateButtons = function(me){
+			if(document.getElementById('btn-delete')) document.getElementById('btn-delete').disabled = (me.selected.cols.length>0 || me.selected.rows.length>0) ? false : true;
+			if(document.getElementById('btn-add-gss')) document.getElementById('btn-add-gss').disabled = (me.selected.cols.length!=1);
+			document.getElementById('btn-remove-empty-rows').disabled = (me._emptyrows.length==0);
+			if(document.getElementById('btn-isodate')) document.getElementById('btn-isodate').disabled = (me.selected.cols.length==0);
+		}
 
 		this.init = function(){
 
@@ -195,9 +216,40 @@
 			}).addButton({
 				'id':'btn-remove-empty-rows',
 				'class':'c5-bg',
-				'text':'Remove empty rows',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2 5h12v5h-12v-5M6 5v5M10 5v5M14 2l-12 12" fill="transparent" /><title>Remove empty rows</title></svg>',
 				'on':{
 					'click': function(e){ _obj.csvedit.deleteEmptyRows(); }
+				}
+			}).addButton({
+				'id':'btn-isodate',
+				'class':'c5-bg',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16"><path d="M8 5.5m 5.5,0 a 5.5,5.5 0 1,0 -11,0 a 5.5,5.5 0 1,0 11,0M 8 5.5m-0.5 -0.5v-3.5h1v4.5h-4v-1h3z"/><text x="8" y="12" text-anchor="middle" dominant-baseline="hanging" font-size="4" font-family="Poppins">ISO8601</text><title>Convert dates to ISO8601</title></svg>',
+				'on':{
+					'click': function(e){
+						_obj.startEdit();
+						var me = _obj.csvedit;
+						var i,c,r,cell,otxt,txt,yy,mm,dd;
+						if(me.selected.cols.length > 0){
+							for(r = 0; r < me.data.length; r++){
+								for(i = 0; i < me.selected.cols.length; i++){
+									c = me.selected.cols[i];
+									otxt = me.data[r][me.order[c-1]];
+									txt = "";
+									if(otxt){
+										if(otxt.match(/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/)){
+											txt = otxt.replace(/^([0-9]{2})[\/\-]([0-9]{2})[\/\-]([0-9]{4})$/,function(m,p1,p2,p3){ return p3+'-'+p2+'-'+p1; });
+										}
+									}
+									if(txt!=otxt){
+										// Update data and cell
+										me.data[r][me.order[c-1]] = txt;
+										cell = me.getCell(r,c);
+										cell.innerHTML = txt;
+									}
+								}
+							}
+						}
+					}
 				}
 			});
 
@@ -236,14 +288,10 @@
 					//console.log('select',this);
 				},
 				'update': function(){
-					document.getElementById('btn-delete').style.display = (this.selected.cols.length>0 || this.selected.rows.length>0) ? '' : 'none';
-					if(document.getElementById('btn-add-gss')) document.getElementById('btn-add-gss').style.display = (this.selected.cols.length==1) ? '' : 'none';
-					document.getElementById('btn-remove-empty-rows').style.display = (this._emptyrows.length>0) ? '' : 'none';
+					_obj.updateButtons(this);
 				},
 				'edit': function(){
-					_obj._unsaved = true;
-					document.getElementById('msg-start-edit').innerHTML = 'Unsaved changes';
-					if(document.getElementById('btn-save')) document.getElementById('btn-save').style.display = 'block';
+					_obj.startEdit();
 				}
 			});
 			this.csvedit.update();
