@@ -10,8 +10,10 @@
 	html {
 		scroll-behavior: smooth;
 	}
+	#main { min-height: calc(100vh - 133px); }
+
 	button:disabled { background: #999; }
-	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; }
+	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; margin-bottom: 1rem; }
 	.chooser input { font-size:1em; }
 	.chooser .vs { font-family: serif; font-style: italic; color: #666666; align-self: center; }
 	.chooser .part { flex-grow: 1; position: relative; margin: 0px; }
@@ -60,15 +62,16 @@
 	#messages .msg:first-child { margin-top: 1rem; }
 	textarea { font-size: 1em; padding: 0.5rem; }
 
-	.table-holder { width: 100%; max-height: calc(100vh - 133px); overflow-x: auto; margin: 0 0 1rem 0; border-bottom: 1px solid #222; }
+	.table-holder { width: 100%; max-height: calc(100vh - 133px); overflow-x: auto; margin: 0; border-bottom: 1px solid #222; }
 	table th { border-top: 0px; }
+	table th:focus { outline: 2px solid #1DD3A7; }
 	table th:first-child, table td:first-child { border-left: 0; }
 	table th:last-child, table td:last-child { border-right: 0; }
 	table, table .row { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 	table th, table .row { cursor: pointer; background: #ddd; }
 	table td, table th { min-height: 1em; padding: 0.125em 0.25em; line-height: 1.25em; }
-	.sel { background: rgba(249, 188, 38,0.4); }
-	th.sel, .row.sel { background: rgba(249, 188, 38,0.7); }
+	.selected { background: rgba(249, 188, 38,0.4); }
+	th.selected, .row.selected { background: rgba(249, 188, 38,0.7); }
 	nav button { line-height: 1.5rem; margin-right: 1px; }
 	nav button.icon { line-height: 0; }
 	nav button svg { height: 1.5rem; }
@@ -84,6 +87,8 @@
 		width: 1em;
 		height: 1em;
 	}
+	svg.bi { width: 1.5em; height: 1.5em; vertical-align:middle; cursor: pointer; }
+	.modal { padding-block: 3rem; }
 	</style>
 	<script type="text/javascript" src="resources/adder.js"></script>
 	<script type="text/javascript" src="resources/oi.csveditor.js"></script>
@@ -98,77 +103,72 @@
 		<header class="b1-bg">
 			<h1><a href="https://open-innovations.org/projects/hexmaps/"><img src="https://open-innovations.org/resources/images/logos/oi-square-5.svg" style="height: 1em;"></a> Add UK geography codes</h1>
 		</header>
-		<nav id="navigation" class="b2-bg">
-			<button id="new" class="icon c5-bg">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-plus-fill" viewBox="0 0 16 16">
-					<path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M8.5 7v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 1 0"/>
-					<title>New</title>
-				</svg>
-			</button><button id="add-gss" class="c5-bg">
-				Add GSS codes
-			</button><button id="delete" class="icon c5-bg">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-					<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
-				</svg>
-			</button>
-		</nav>
-		<div id="messages-step1">
-		</div>
-		<div id="output">
-			<div class="padded holder">
 
-				<p>If you have a CSV file that has a column with named UK geographies and want to add a column of GSS codes, this tool can help. For example, say you have a column that lists "Leeds", "Birmingham", "Salford" etc, it would add a column with the codes <code>E08000035</code>, <code>E08000025</code> and <code>E08000006</code>.</p>
-				<form id="validation_form" name="validation_form" submit="return true;" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
-					<div class="chooser">
-						<div class="part padded b5-bg">
-							<!--<label for="url">URL</label><input id="url" type="url" name="url" class="" placeholder="e.g. https://odileeds.github.io/hexmaps/data/wards-leeds.csv" pattern="https://.*" />-->
-							<label for="url"><strong>Load URL</strong> (CSV or Google Sheet)</label><input id="url" type="text" name="url" class="" placeholder="e.g. OpenDataBidsAprtoJun2024.csv">
-							<p>Or load an <a href="OpenDataBidsAprtoJun2024.csv" class="example">example of Leeds wards</a> (<a href="https://datamillnorth.org/dataset/20jjj/council-house-bids">from Data Mill North</a>)</p>
+		<nav id="navigation" class="b2-bg"></nav>
+
+		<div id="main" class="b6-bg">
+			<div id="messages"></div>
+
+			<div id="output">
+				<div class="holder padded cen modal">
+					<p>If you have a CSV file that has a column with named UK geographies and want to add a column of GSS codes, this tool can help. For example, say you have a column that lists "Leeds", "Birmingham", "Salford" etc, it would add a column with the codes <code>E08000035</code>, <code>E08000025</code> and <code>E08000006</code>.</p>
+					<p>Press <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" class="btn-open bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/></svg> to load a CSV file.</p>
+				</div>
+			</div>
+			
+			<div role="dialog" id="dialog-open" aria-labelledby="dialog-open-label" style="display:none;">
+				<div class="tallpadded padded holder modal">
+					<h2 id="dialog-open-label">Load a CSV</h2>
+					<form id="validation_form" name="validation_form" submit="return true;" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
+						<div class="chooser">
+							<div class="part padded b5-bg">
+								<!--<label for="url">URL</label><input id="url" type="url" name="url" class="" placeholder="e.g. https://odileeds.github.io/hexmaps/data/wards-leeds.csv" pattern="https://.*" />-->
+								<label for="url"><strong>Load URL</strong> (CSV or Google Sheet)</label><input id="url" type="text" name="url" class="" placeholder="e.g. OpenDataBidsAprtoJun2024.csv">
+								<p>Or load an <a href="OpenDataBidsAprtoJun2024.csv" class="example">example of Leeds wards</a> (<a href="https://datamillnorth.org/dataset/20jjj/council-house-bids">from Data Mill North</a>)</p>
+							</div>
+							<div class="vs">or</div>
+							<div class="part padded b5-bg dropzone" id="drop_zone">
+								<label for="standard_files"><strong>Load file</strong></label>
+								<div class="helpertext">Drop a .csv or .hexjson file here (or click to browse files)</div>
+								<input id="standard_files" class="fileselect" type="file" title="browse" name="file" accept=".csv, .hexjson">
+								<div class="info"></div>
+							</div>
 						</div>
-						<div class="vs">or</div>
-						<div class="part padded b5-bg dropzone" id="drop_zone">
-							<label for="standard_files"><strong>Load file</strong></label>
-							<div class="helpertext">Drop a .csv or .hexjson file here (or click to browse files)</div>
-							<input id="standard_files" class="fileselect" type="file" title="browse" name="file" accept=".csv, .hexjson">
-							<div class="info"></div>
+						<button id="cancel" class="b2-bg">Cancel</button>
+						<button id="reset" type="reset" class="b2-bg">Reset</button>
+						<button id="btnSubmit" type="submit" class="button c5-bg">Load data</button>
+					</form>
+				</div>
+			</div>
+
+			<div role="dialog" id="dialog-config" aria-labelledby="dialog-config-label" style="display:none;">
+				<div class="holder tallpadded padded">
+					<h2 id="dialog-config-label">Step 2 - configuration</h2>
+					<div class="b5-bg">
+						<div id="config" class="padded">
+							<div class="row">
+								<label for="geography-type">Geography type:</label>
+								<select id="geography-type">
+									<option value=""></option>
+									<option value="LAD">Local Authorities</option>
+									<option value="WD">Wards</option>
+									<option value="PCON">Constituencies</option>
+								</select>
+							</div>
+							<div class="row">
+								<label for="geography-year">Geography year:</label>
+								<input type="number" min="2010" max="2024" id="geography-year">
+							</div>
 						</div>
 					</div>
-					<button id="btnSubmit" type="submit" class="button c5-bg">Load data</button>
-					<button id="reset" type="reset" class="b2-bg">Reset</button>
-				</form>
+					<button id="process" type="submit" class="button c5-bg">Add codes</button>
+				</div>
 			</div>
 		</div>
-
-		<div class="holder tallpadded padded">
-			
-			<section>
-				<h2>Step 2 - configuration</h2>
-				<div class="b5-bg">
-					<div id="config" class="padded">
-						<div class="row">
-							<label for="geography-type">Geography type:</label>
-							<select id="geography-type">
-								<option value=""></option>
-								<option value="LAD">Local Authorities</option>
-								<option value="WD">Wards</option>
-								<option value="PCON">Constituencies</option>
-							</select>
-						</div>
-						<div class="row">
-							<label for="geography-year">Geography year:</label>
-							<input type="number" min="2010" max="2024" id="geography-year">
-						</div>
-					</div>
-				</div>
-				<button id="process" type="submit" class="button c5-bg">Add codes</button>
-				<div id="messages-step2"></div>
-			</section>
-
 			<!--<div class="spinner" style="text-align:center;">
 				<img src="https://open-innovations.org/resources/images/loader.svg" alt="Loading..." />
 			</div>-->
 
-		</div>
 	</div>
 	
 	<footer class="b1-bg">

@@ -19,41 +19,19 @@
 		this.name = "Geography Code Adder";
 		this.version = "0.1";
 
-		let msg1 = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages-step1'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
-		let msg2 = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages-step2'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
+		let msg = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
 		var _obj = this;
-
-		function updateButtons(){
-			console.log('updateButtons',_obj.csvedit.selected);
-			document.getElementById('delete').style.display = (_obj.csvedit.selected.cols.length>0 || _obj.csvedit.selected.rows.length>0) ? '' : 'none';
-			document.getElementById('add-gss').style.display = (_obj.csvedit.selected.cols.length==1) ? '' : 'none';
-		}
-
-		this.lookup = new GeographyLookup({'dir':'data/'});
-		this.csvedit = new OI.CSVEditor(document.getElementById('output'),{
-			'delete': function(){
-				console.log('delete',this);
-				updateButtons();
-			},
-			'select': function(){
-				console.log('select',this);
-				updateButtons();
-			}
-		});
-		updateButtons();
-
 
 		this.buildOutput = function(csv){
 			this.data = CSV2JSON(csv);
-			msg2.log('Build output',this.data);
+			msg.log('Build output',this.data);
 			
 			this.csvedit.updateData(this.data,this.data[0].order);
-			console.log(this.data);
-
 
 			document.getElementById('process').disabled = false;
 			return this;
-		}
+		};
+
 		this.getURL = function(url){
 			var m = url.match("https://docs.google.com/spreadsheets/d/([^\/]*)");
 			if(m) url = "https://docs.google.com/spreadsheets/d/"+m[1]+"/gviz/tq?tqx=out:csv";
@@ -63,21 +41,24 @@
 					return response.text();
 				}).then(txt => {
 					this.buildOutput(txt);
+					this.toggleOpenDialog();
 				}).catch(e => {
-					msg1.error('There has been a problem loading CSV data from <em>%c'+url+'%c</em>. It may not be publicly accessible or have some other issue.','font-style:italic;','font-style:normal;');
+					msg.error('There has been a problem loading CSV data from <em>%c'+url+'%c</em>. It may not be publicly accessible or have some other issue.','font-style:italic;','font-style:normal;');
 				});
 			}
 			return this;
-		}
+		};
+
 		this.readFile = function(myFile){
 			var reader = new FileReader();
 			reader.readAsText(myFile, "UTF-8");
-			reader.addEventListener('load',function(e){ _obj.buildOutput(e.target.result); });
-			reader.onerror = function(e){ msg1.error('Failed to read file'); }
+			reader.addEventListener('load',function(e){ _obj.buildOutput(e.target.result); _obj.toggleOpenDialog(); });
+			reader.onerror = function(e){ msg.error('Failed to read file'); }
 			return this;
-		}
+		};
+
 		this.updateFileDetails = function(){
-			msg1.log('Update file details');
+			msg.log('Update file details');
 			var el = document.getElementById('standard_files');
 			if(el.files && el.files[0]){
 				var myFile = el.files[0];
@@ -85,16 +66,68 @@
 			}
 			return this;
 		};
+
 		this.updateType = function(){
-			msg2.log('Type',document.getElementById('geography-type').value);
-			this.lookup.load(document.getElementById('geography-type').value,function(){ msg2.log('loaded all',this); });
+			msg.log('Type',document.getElementById('geography-type').value);
+			this.lookup.load(document.getElementById('geography-type').value,function(){ msg.log('loaded all',this); });
 		};
+
 		this.updateColumn = function(c){
-			msg2.log('Column',c);
+			msg.log('Column',c);
 		};
+
+		this.toggleOpenDialog = function(){
+			msg.info('toggle',window.getComputedStyle(document.getElementById('dialog-open'))['display'])
+			var o = (window.getComputedStyle(document.getElementById('dialog-open'))['display']=="none");
+			document.getElementById('output').style.display = (o ? 'none' : 'block');
+			document.getElementById('dialog-open').style.display = (o ? 'block' : 'none');
+			return this;
+		};
+
 		this.init = function(){
 			document.getElementById('process').disabled = true;
 			this.data = {};
+
+			this.lookup = new GeographyLookup({'dir':'data/'});
+
+			// Create a navigation bar
+			this.nav = new NavBar(document.getElementById('navigation'));
+			this.nav.addButton({
+				'id':'btn-open',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/></svg>',
+				'class':'icon c5-bg',
+				'on':{
+					'click': _obj.toggleOpenDialog
+				}
+			}).addButton({
+				'id':'btn-add-gss',
+				'class':'c5-bg',
+				'text': 'Add GSS codes'
+			}).addButton({
+				'id':'btn-delete',
+				'class':'icon c5-bg',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/></svg>',
+				'on':{
+					'click': function(e){ _obj.csvedit.delete(); }
+				}
+			});
+			document.querySelectorAll('.btn-open').forEach(function(el){ el.addEventListener('click',function(){ _obj.toggleOpenDialog(); }); });
+
+			// Build the CSV editor - must be after the navbar
+			this.csvedit = new OI.CSVEditor(document.getElementById('output'),{
+				'delete': function(){
+					console.log('delete',this);
+				},
+				'select': function(){
+					console.log('select',this);
+				},
+				'update': function(){
+					document.getElementById('btn-delete').style.display = (this.selected.cols.length>0 || this.selected.rows.length>0) ? '' : 'none';
+					document.getElementById('btn-add-gss').style.display = (this.selected.cols.length==1) ? '' : 'none';
+				}
+			});
+			this.csvedit.update();
+
 			this.updateFileDetails();
 			this.updateType();
 
@@ -127,7 +160,7 @@
 				// Try to read a URL
 				var url = document.getElementById('url').value;
 				if(url) _obj.getURL(url);
-				else msg1.warn('No input CSV provided. Please provide a URL or a file.',{'id':'no-file'});
+				else msg.warn('No input CSV provided. Please provide a URL or a file.',{'id':'no-file'});
 			}
 		});
 
@@ -155,17 +188,35 @@
 			});
 		}
 
-		document.getElementById('delete').addEventListener('click',function(e){ _obj.csvedit.delete(); })
-
 		this.init();
 
+		return this;
+	}
+
+	function NavBar(el,opt){
+		this.buttons = [];
+		this.addButton = function(opts){
+			if(!opts) opts = {};
+			var btn = document.createElement('button');
+			if(opts.id) btn.setAttribute('id',opts.id);
+			if(opts.class) btn.classList.add(...opts.class.split(/ /));
+			if(opts.on){
+				for(ev in opts.on){
+					btn.addEventListener(ev,opts.on[ev]);
+				}
+			}
+			btn.innerHTML = opts.text;
+			this.buttons.push(btn);
+			el.append(btn);
+			return this;
+		}
 		return this;
 	}
 
 	function GeographyLookup(opt){
 		if(!opt) opt = {};
 		if(!opt.dir) opt.dir = "";
-		var msg = new OI.logger('Geography Lookup',{el:document.getElementById('messages-step2'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
+		var msg = new OI.logger('Geography Lookup',{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
 		this.data = {};
 		this.lookup = {
 			'LAD':['E06','E07','E08','E09','N09','S12','W06'],
