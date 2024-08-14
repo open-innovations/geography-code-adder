@@ -170,14 +170,14 @@
 			if(!this._unsaved){
 				this._unsaved = true;
 				document.getElementById('msg-start-edit').innerHTML = 'Unsaved changes';
-				if(document.getElementById('btn-save')) document.getElementById('btn-save').style.display = 'block';
+				if(document.getElementById('btn-save')) document.getElementById('btn-save').disabled = false;
 			}
 			return this;
 		};
 
 		this.stopEdit = function(){
 			if(document.getElementById('msg-start-edit')) document.getElementById('msg-start-edit').innerHTML = '';
-			if(document.getElementById('btn-save')) document.getElementById('btn-save').style.display = 'none';
+			if(document.getElementById('btn-save')) document.getElementById('btn-save').disabled = true;
 			this._unsaved = false;
 			return this;
 		}
@@ -264,7 +264,7 @@
 						}
 					}
 				});
-				document.getElementById('btn-save').style.display = 'none';
+				_obj.stopEdit();
 				window.addEventListener("beforeunload", function (e) {
 					if(_obj._unsaved){
 						var confirmationMessage = 'It looks like you have unsaved changes.';
