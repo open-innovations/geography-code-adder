@@ -97,6 +97,16 @@
 			return this;
 		};
 
+		this.resize = function(){
+			var main = document.getElementById('main');
+			var head = document.querySelector('header');
+			var nav = document.querySelector('nav');
+			var h = window.outerHeight - head.offsetHeight - nav.offsetHeight;
+			main.style['max-height'] = h+'px';
+			main.style['overflow-y'] = 'auto';
+			return this;
+		};
+
 		this.init = function(){
 
 			this.lookup = new GeographyLookup({'dir':'data/'});
@@ -121,6 +131,13 @@
 				'on':{
 					'click': function(e){ _obj.csvedit.delete(); }
 				}
+			}).addButton({
+				'id':'btn-remove-empty-rows',
+				'class':'c5-bg',
+				'text':'Remove empty rows',
+				'on':{
+					'click': function(e){ _obj.csvedit.deleteEmptyRows(); }
+				}
 			});
 			document.querySelectorAll('.btn-open').forEach(function(el){ el.addEventListener('click',function(){ _obj.toggleOpenDialog(); }); });
 
@@ -135,6 +152,7 @@
 				'update': function(){
 					document.getElementById('btn-delete').style.display = (this.selected.cols.length>0 || this.selected.rows.length>0) ? '' : 'none';
 					document.getElementById('btn-add-gss').style.display = (this.selected.cols.length==1) ? '' : 'none';
+					document.getElementById('btn-remove-empty-rows').style.display = (this._emptyrows.length>0) ? '' : 'none';
 				}
 			});
 			this.csvedit.update();
@@ -147,7 +165,10 @@
 				year.setAttribute('max',year.value)
 			}
 
-			document.getElementById('reset').addEventListener('click',function(e){ document.getElementById('standard_files').value = ''; _obj.reset(); });
+			document.getElementById('reset').addEventListener('click',function(e){
+				document.getElementById('standard_files').value = '';
+				_obj.reset();
+			});
 
 			// Add callbacks
 			document.getElementById('btnSubmit').addEventListener('click',function(e){
@@ -186,11 +207,33 @@
 				exs[i].addEventListener('click',function(e){
 					e.preventDefault();
 					document.getElementById('url').value = e.target.getAttribute('href');
-					//_obj.getURL(e.target.getAttribute('href'));
 				});
 			}
 
+			// Add info button
+			
+			var info = document.createElement('div');
+			info.classList.add('info');
+			info.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg>';
+			info.addEventListener('click',function(e){
+				var foot = document.querySelector('footer');
+				var main = document.getElementById('main');
+				var o = window.getComputedStyle(foot)['display'];
+				if(o=="none"){
+					foot.style.display = "block";
+					main.style.display = "none";
+				}else{
+					foot.style.display = "none";
+					main.style.display = "block";
+				}
+				console.log(o);
+			});
+			document.querySelector('header').append(info);
+
 			this.reset();
+
+			window.addEventListener('resize',this.resize);
+			this.resize();
 
 			return this;
 		};
@@ -268,6 +311,17 @@
 			}
 			return this;
 		}
+		
+		/*
+		First pass to look for matches. Keep all matches for a given name.
+
+		For unique matches, add to a parent counter.
+
+		Second pass of geographies (with multiple matches) to see which ones share a parent.
+
+		If there are still multiple matches we produce an error and leave blank?
+		*/
+
 		return this;
 	}
 

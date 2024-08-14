@@ -21,6 +21,7 @@
 		var table;
 		this.data = [];
 		this.selected = {'cols':[],'rows':[]};
+		this._emptyrows = [];
 		var _obj = this;
 
 		this.update = function(){
@@ -63,12 +64,22 @@
 			return this;
 		};
 
-		function selectEl(el){
-			el.setAttribute('aria-multiselectable','true');
+		this.findEmptyRows = function(){
+			var r,c,v;
+			this._emptyrows = [];
+			for(r = 0; r < this.data.length; r++){
+				v = '';
+				for(c in this.data[r]) v += this.data[r][c];
+				if(v=='') this._emptyrows.push(r+1);
+			}
+			return this;
 		}
-		function deselectEl(el){
-			el.removeAttribute('aria-multiselectable');
-		}
+		this.deleteEmptyRows = function(){
+			this.selected = {'cols':[],'rows':this._emptyrows};
+			this._emptyrows = [];
+			this.delete();
+			return this;
+		};
 
 		this.select = function(dir,i,shift,ctrl){
 			var c,min,max,str;
@@ -165,10 +176,20 @@
 			}else{
 				msg1.log('No data loaded.');
 			}
+			this.findEmptyRows();
 			this.update();
 			return this;
 		}
 	}
+
+	function selectEl(el){
+		el.setAttribute('aria-multiselectable','true');
+	}
+
+	function deselectEl(el){
+		el.removeAttribute('aria-multiselectable');
+	}
+
 
 	OI.CSVEditor = CSVEditor;
 
