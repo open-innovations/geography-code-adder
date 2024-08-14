@@ -193,7 +193,7 @@
 		};
 
 		this.processGeography = function(){
-			var typ,yyyy,d,geo,r,part,cd,colname,lookup,i,datum,nm,cd,parents,matches,m,gooddate,ok,j,cdcol;
+			var typ,yyyy,d,geo,r,part,cd,colname,lookup,i,datum,nm,cd,parents,matches,m,gooddate,ok,j,cdcol,unique,matched;
 			typ = document.getElementById('geography-type').value;
 			yyyy = document.getElementById('geography-year').value;
 			d = yyyy+'-04-01';
@@ -209,23 +209,33 @@
 			colname = this.csvedit.order[this.csvedit.selected.cols[0]-1];
 			// First get all the geography values
 			geo = new Array(this.csvedit.data.length);
-			for(r = 0; r < this.csvedit.data.length; r++) geo[r] = {'v':this.csvedit.data[r][colname],'code':''};
+			for(r = 0; r < this.csvedit.data.length; r++) geo[r] = {'v':this.csvedit.data[r][colname].toLowerCase(),'code':''};
 
 			// Get data into a nicer structure based on names
 			lookup = {};
 			for(part in this.lookup.data[typ]){
 				for(cd in this.lookup.data[typ][part].areas){
 					for(j = 0; j < this.lookup.data[typ][part].areas[cd].length; j++){
-						nm = this.lookup.data[typ][part].areas[cd][j].nm;
+						nm = this.lookup.data[typ][part].areas[cd][j].nm.toLowerCase();
 						if(!lookup[nm]) lookup[nm] = [];
 						datum = {'code':cd,'date':this.lookup.data[typ][part].areas[cd][j].date,'parent':this.lookup.data[typ][part].areas[cd][j].parent};
 						lookup[nm].push(datum);
+						if(nm.match(/ and /)){
+							nm = nm.replace(/ and /," & ");
+							if(!lookup[nm]) lookup[nm] = [];
+							lookup[nm].push(datum);
+						}
 						if(this.lookup.data[typ][part].areas[cd][j].nm_alt){
 							// Loop over alternate names
 							for(i = 0; i < this.lookup.data[typ][part].areas[cd][j].nm_alt.length; i++){
-								nm = this.lookup.data[typ][part].areas[cd][j].nm_alt[i];
+								nm = this.lookup.data[typ][part].areas[cd][j].nm_alt[i].toLowerCase();
 								if(!lookup[nm]) lookup[nm] = [];
 								if(nm) lookup[nm].push(datum);
+								if(nm.match(/ and /)){
+									nm = nm.replace(/ and /," & ");
+									if(!lookup[nm]) lookup[nm] = [];
+									lookup[nm].push(datum);
+								}
 							}
 						}
 					}
@@ -250,19 +260,29 @@
 			}
 
 			// Second pass to look for those without codes and then work out if there is a good match based on parent
+			matched = {};
+			var bad = 0;
 			for(r = 0; r < geo.length; r++){
 				nm = geo[r].v
+				// Use our lookup table that we build as we go (to save some time)
+				if(nm in matched) geo[r].code = matched[nm];
 				if(!geo[r].code){
 					if(nm){
 						if(nm in lookup){
 							matches = [];
-							gooddate = [];
-							for(m = 0; m < lookup[nm].length; m++){
-								if(lookup[nm][m].parent in parents){
-									matches.push(lookup[nm][m]);
+							if(Object.keys(parents).length <= 3){
+								// If we have a limited number of parents we limit by parents (or no parent)
+								for(m = 0; m < lookup[nm].length; m++){
+									if(typeof lookup[nm][m].parent==="undefined" || lookup[nm][m].parent in parents){
+										matches.push(lookup[nm][m]);
+									}
 								}
+							}else{
+								// Otherwise keep all the matches
+								for(m = 0; m < lookup[nm].length; m++) matches.push(lookup[nm][m]);
 							}
 							// Now go through matches and see how many are valid in time
+							gooddate = [];
 							for(m = 0; m < matches.length; m++){
 								ok = true;
 								if(matches[m].date.s && d < matches[m].date.s) ok = false; 
@@ -271,13 +291,28 @@
 							}
 							if(gooddate.length==1){
 								geo[r].code = gooddate[0].code;
+								matched[nm] = geo[r].code;
 							}else{
-								msg.warn('No match for %c'+nm+'%c on row %c'+(r+1)+'%c','font-style:italic;','','font-weight:bold','');
+								unique = {};
+								// Check how many codes we actually have left;
+								for(m = 0; m < gooddate.length; m++){
+									unique[gooddate[m].code] = true;
+								}
+								unique = Object.keys(unique);
+								
+								if(unique.length==1){
+									geo[r].code = unique[0];
+									matched[nm] = geo[r].code;
+								}else{
+									msg.warn('No match for %c'+nm+'%c on row %c'+(r+1)+'%c','font-style:italic;','','font-weight:bold','',matches,gooddate,unique);
+								}
 							}
 						}
 					}
 				}
+				if(!geo[r].code) bad++;
 			}
+			if(bad > 0) msg.warn('Failed to match %c'+bad+'%c rows','font-weight:bold','');
 
 			this.startEdit();
 
@@ -543,7 +578,7 @@
 		this.lookup = {
 			'LAD':['E06','E07','E08','E09','N09','S12','W06'],
 			'WD':['E05','N08','W05','S13'],
-			'PCON':['E14','N05','W07','S14']
+			'PCON':['E14','N05','N06','W07','S14']
 		};
 		this.setOpt = function(i,o){
 			opt[i] = o;
