@@ -58,11 +58,13 @@
 		};
 
 		this.updateFileDetails = function(){
-			msg.log('Update file details');
+			msg.log('Update file details',document.getElementById('standard_files').files);
 			var el = document.getElementById('standard_files');
 			if(el.files && el.files[0]){
 				var myFile = el.files[0];
 				document.querySelector('#drop_zone .info').innerHTML = 'File: <em>'+myFile.name+'</em><br />Size: '+niceSize(myFile.size);
+			}else{
+				document.querySelector('#drop_zone .info').innerHTML = '';
 			}
 			return this;
 		};
@@ -77,16 +79,25 @@
 		};
 
 		this.toggleOpenDialog = function(){
-			msg.info('toggle',window.getComputedStyle(document.getElementById('dialog-open'))['display'])
+			msg.log('toggle',window.getComputedStyle(document.getElementById('dialog-open'))['display'])
 			var o = (window.getComputedStyle(document.getElementById('dialog-open'))['display']=="none");
 			document.getElementById('output').style.display = (o ? 'none' : 'block');
 			document.getElementById('dialog-open').style.display = (o ? 'block' : 'none');
 			return this;
 		};
 
-		this.init = function(){
+		this.reset = function(){
 			document.getElementById('process').disabled = true;
 			this.data = {};
+			var el = document.getElementById('no-file');
+			if(el) el.remove();
+			this.updateFileDetails();
+			this.updateType();
+
+			return this;
+		};
+
+		this.init = function(){
 
 			this.lookup = new GeographyLookup({'dir':'data/'});
 
@@ -128,12 +139,6 @@
 			});
 			this.csvedit.update();
 
-			this.updateFileDetails();
-			this.updateType();
-
-			var el = document.getElementById('no-file');
-			if(el) el.remove();
-
 			// Update year
 			var year = document.getElementById('geography-year');
 			if(year.value==""){
@@ -142,51 +147,54 @@
 				year.setAttribute('max',year.value)
 			}
 
+			document.getElementById('reset').addEventListener('click',function(e){ document.getElementById('standard_files').value = ''; _obj.reset(); });
+
+			// Add callbacks
+			document.getElementById('btnSubmit').addEventListener('click',function(e){
+				e.preventDefault();
+				// Remove any existing warning message
+				var el = document.getElementById('no-file');
+				if(el) el.remove();
+				// If we have a file we read that
+				var file = document.getElementById('standard_files').files[0];
+				if(file) _obj.readFile(file);
+				else{
+					// Try to read a URL
+					var url = document.getElementById('url').value;
+					if(url) _obj.getURL(url);
+					else msg.warn('No input CSV provided. Please provide a URL or a file.',{'id':'no-file'});
+				}
+			});
+
+			document.getElementById('url').addEventListener('change',function(e){ _obj.getURL(e.target.value); });
+			function dropOver(evt){
+				evt.stopPropagation();
+				evt.preventDefault();
+				dropZone.classList.add('drop');
+			}
+			function dragOff(){ dropZone.classList.remove('drop'); }
+			var dropZone = document.getElementById('drop_zone');
+			dropZone.addEventListener('dragover', dropOver, false);
+			dropZone.addEventListener('dragout', dragOff, false);
+			document.getElementById('standard_files').addEventListener('change',function(e){ dragOff(); _obj.updateFileDetails(); });
+
+			document.getElementById('geography-type').addEventListener('change',function(){ _obj.updateType(); });
+
+			// Build any examples
+			var exs = document.querySelectorAll('a.example');
+			for(var i = 0; i < exs.length ; i++){
+				exs[i].addEventListener('click',function(e){
+					e.preventDefault();
+					document.getElementById('url').value = e.target.getAttribute('href');
+					//_obj.getURL(e.target.getAttribute('href'));
+				});
+			}
+
+			this.reset();
+
 			return this;
 		};
 
-		document.getElementById('reset').addEventListener('click',function(e){ _obj.init(); });
-
-		// Add callbacks
-		document.getElementById('btnSubmit').addEventListener('click',function(e){
-			e.preventDefault();
-			// Remove any existing warning message
-			var el = document.getElementById('no-file');
-			if(el) el.remove();
-			// If we have a file we read that
-			var file = document.getElementById('standard_files').files[0];
-			if(file) _obj.readFile(file);
-			else{
-				// Try to read a URL
-				var url = document.getElementById('url').value;
-				if(url) _obj.getURL(url);
-				else msg.warn('No input CSV provided. Please provide a URL or a file.',{'id':'no-file'});
-			}
-		});
-
-		document.getElementById('url').addEventListener('change',function(e){ _obj.getURL(e.target.value); });
-		function dropOver(evt){
-			evt.stopPropagation();
-			evt.preventDefault();
-			dropZone.classList.add('drop');
-		}
-		function dragOff(){ dropZone.classList.remove('drop'); }
-		var dropZone = document.getElementById('drop_zone');
-		dropZone.addEventListener('dragover', dropOver, false);
-		dropZone.addEventListener('dragout', dragOff, false);
-		document.getElementById('standard_files').addEventListener('change',function(e){ dragOff(); _obj.updateFileDetails(); });
-
-		document.getElementById('geography-type').addEventListener('change',function(){ _obj.updateType(); });
-
-		// Build any examples
-		var exs = document.querySelectorAll('a.example');
-		for(var i = 0; i < exs.length ; i++){
-			exs[i].addEventListener('click',function(e){
-				e.preventDefault();
-				document.getElementById('url').value = e.target.getAttribute('href');
-				//_obj.getURL(e.target.getAttribute('href'));
-			});
-		}
 
 		this.init();
 

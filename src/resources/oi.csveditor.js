@@ -17,19 +17,19 @@
 		if(!opts) opts = {};
 		this.name = "CSV Editor";
 		this.version = "0.1";
-		var msg = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages-step2'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
+		var msg = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
 		var table;
 		this.data = [];
 		this.selected = {'cols':[],'rows':[]};
 		var _obj = this;
 
 		this.update = function(){
-			msg.info("update");
+			msg.log("update");
 			if(typeof opts.update==="function") opts.update.call(this);
 		}
 
 		this.delete = function(){
-			msg.info("delete");
+			msg.log("delete");
 			// Delete all selected
 			var rows = this.selected.rows.sort().reverse();
 			var cols = this.selected.cols.sort().reverse();
@@ -124,9 +124,11 @@
 
 		this.updateData = function(data,order){
 			var c,r,th,tr,nc,html;
-			msg.info("updateData");
-			el.innerHTML = '<div class="table-holder"><table></table></div>';
-			table = el.querySelector('table');
+			msg.log("updateData");
+			if(!table){
+				el.innerHTML = '<div class="table-holder"><table></table></div>';
+				table = el.querySelector('table');
+			}
 			this.order = order;
 			this.data = new Array(data.length);
 			for(r = 0; r < data.length; r++) this.data[r] = data[r].cols;

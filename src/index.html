@@ -10,7 +10,7 @@
 	html {
 		scroll-behavior: smooth;
 	}
-	#main { min-height: calc(100vh - 133px); }
+	#main { min-height: calc(100vh - 94px); }
 
 	button:disabled { background: #999; }
 	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; margin-bottom: 1rem; }
@@ -59,10 +59,11 @@
 	#config { margin-top: 1rem; display: flex; gap: 1rem; }
 	#output { position: relative; width: 100%; }
 	select,input { font-size: 1em; line-height: 2em; height: 2em; border-radius: 4px; border: 1px solid #999; }
+	input.button { height: 2.25em; border-radius: 0; }
 	#messages .msg:first-child { margin-top: 1rem; }
 	textarea { font-size: 1em; padding: 0.5rem; }
 
-	.table-holder { width: 100%; max-height: calc(100vh - 133px); overflow-x: auto; margin: 0; border-bottom: 1px solid #222; }
+	.table-holder { width: 100%; max-height: calc(100vh - 94px); overflow-x: auto; margin: 0; border-bottom: 1px solid #222; }
 	table th { border-top: 0px; }
 	table th:focus { outline: 2px solid #1DD3A7; }
 	table th:first-child, table td:first-child { border-left: 0; }
@@ -97,9 +98,6 @@
 
 	<div class="b6-bg">
 
-		<div class="warning msg message">
-			<div class="holder cen">This is very much under development and isn't yet fully functional.</div>
-		</div>
 		<header class="b1-bg">
 			<h1><a href="https://open-innovations.org/projects/hexmaps/"><img src="https://open-innovations.org/resources/images/logos/oi-square-5.svg" style="height: 1em;"></a> Add UK geography codes</h1>
 		</header>
@@ -111,6 +109,10 @@
 
 			<div id="output">
 				<div class="holder padded cen modal">
+					<div class="warning msg message padded-bottom">
+						<div class="holder cen">This is very much under development and isn't yet fully functional.</div>
+					</div>
+
 					<p>If you have a CSV file that has a column with named UK geographies and want to add a column of GSS codes, this tool can help. For example, say you have a column that lists "Leeds", "Birmingham", "Salford" etc, it would add a column with the codes <code>E08000035</code>, <code>E08000025</code> and <code>E08000006</code>.</p>
 					<p>Press <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" class="btn-open bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/></svg> to load a CSV file.</p>
 				</div>
@@ -135,7 +137,7 @@
 							</div>
 						</div>
 						<button id="cancel" class="b2-bg">Cancel</button>
-						<button id="reset" type="reset" class="b2-bg">Reset</button>
+						<input id="reset" type="reset" class="b2-bg button" value="Reset"/>
 						<button id="btnSubmit" type="submit" class="button c5-bg">Load data</button>
 					</form>
 				</div>
@@ -177,8 +179,8 @@
 			<p>This open source project is made possible thanks to other open source and open data projects:</p>
 
 			<ul>
-				<li>Created by Stuart Lowe / Open Innovations 2024 / <a href="https://github.com/open-innovations/geography-code-adder/">code on GitHub</a> (MIT licence).</li>
-				<li>Data from the Office of National Statistics' <a href="https://geoportal.statistics.gov.uk/datasets/d7be63c8bd144ae0a26c6593eb5e00b7/about">Code History Database (July 2024) for the UK</a></li>
+				<li>&copy; 2024 Stuart Lowe, Open Innovations (MIT licence). <a href="https://github.com/open-innovations/geography-code-adder/">Code on GitHub</a>.</li>
+				<li>Data from the Office of National Statistics' <a href="https://geoportal.statistics.gov.uk/datasets/d7be63c8bd144ae0a26c6593eb5e00b7/about">Code History Database (July 2024) for the UK</a> (<a href="https://www.ons.gov.uk/methodology/geography/licences">OGL v.3.0</a>)</li>
 			</ul>
 		</div>
 	</footer>
