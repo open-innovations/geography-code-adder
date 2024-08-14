@@ -13,7 +13,7 @@ binmode STDERR, 'utf8';
 my $basedir = "./";
 if(abs_path($0) =~ /^(.*\/)[^\/]*/){ $basedir = $1; }
 
-my (%geotypes,$r,$typ,$cd,$nm,$file,$fh,$args,@rows,@cols,@header,$c,%head,$ext,%equivalents,%types,@check,$str,@alts);
+my (%geotypes,$r,$typ,$cd,$nm,$file,$fh,$args,@rows,@cols,@header,$c,%head,$ext,%equivalents,%types,@check,$str,@alts,$tmp,$g);
 
 # Get the command line arguments
 $args = ParseCommandLine({
@@ -67,27 +67,36 @@ while(<FILE>){
 		$nm = $cols[$head{'GEOGNM'}];
 		$nm =~ s/(^\"|\"$)//g;
 		if(!defined($geotypes{$typ})){ $geotypes{$typ} = {}; }
-		if(!defined($geotypes{$typ}{'areas'})){ $geotypes{$typ}{'areas'} = (); }
-		$geotypes{$typ}{'areas'}{$cd} = {};
-		if($nm){ $geotypes{$typ}{'areas'}{$cd}{'nm'} = $nm; }
+		if(!defined($geotypes{$typ}{'areas'})){ $geotypes{$typ}{'areas'} = {}; }
+		# There can be multiple entries for each area ID due to
+		# things like reflecting a change to parent geography
+		if(!defined($geotypes{$typ}{'areas'}{$cd})){ $geotypes{$typ}{'areas'}{$cd} = (); }
+
+		$tmp = {};
+
+		if($nm){ $tmp->{'nm'} = $nm; }
 		$geotypes{$typ}{'source'} = sanitiseFilename($args->{'file'});
 
+		if($cols[$head{'STATUS'}]){
+			$tmp->{'status'} = $cols[$head{'STATUS'}];
+		}
+
 		if($cols[$head{'PARENTCD'}]){
-			$geotypes{$typ}{'areas'}{$cd}{'parent'} = $cols[$head{'PARENTCD'}];
+			$tmp->{'parent'} = $cols[$head{'PARENTCD'}];
 		}
 		if($cols[$head{'OPER_DATE'}] || $cols[$head{'TERM_DATE'}]){
-			$geotypes{$typ}{'areas'}{$cd}{'date'} = {};
+			$tmp->{'date'} = {};
 			if($cols[$head{'OPER_DATE'}]){
-				$geotypes{$typ}{'areas'}{$cd}{'date'}{'s'} = fixDate($cols[$head{'OPER_DATE'}]);
+				$tmp->{'date'}{'s'} = fixDate($cols[$head{'OPER_DATE'}]);
 			}
 			if($cols[$head{'TERM_DATE'}]){
-				$geotypes{$typ}{'areas'}{$cd}{'date'}{'e'} = fixDate($cols[$head{'TERM_DATE'}]);
+				$tmp->{'date'}{'e'} = fixDate($cols[$head{'TERM_DATE'}]);
 			}
 		}
+		push(@{$geotypes{$typ}{'areas'}{$cd}},$tmp);
 	}
 }
 close(FILE);
-
 
 $typ = "";
 @header = ();
@@ -108,18 +117,20 @@ while(<FILE>){
 			if(!defined($equivalents{$cd})){
 				$equivalents{$cd} = {};
 			}
-			if($geotypes{$typ}{'areas'}{$cd}{'nm'}){
-				for($c = 0; $c < @cols; $c++){
-					if($header[$c] =~ /^GEOGNM/ && $cols[$c] ne ""){
-						$cols[$c] =~ s/(^\"|\"$)//g;
-						if($cols[$c] ne $geotypes{$typ}{'areas'}{$cd}{'nm'}){
-							$equivalents{$cd}{$cols[$c]} = 1;
+			for($g = 0; $g < @{$geotypes{$typ}{'areas'}{$cd}}; $g++){
+				if($geotypes{$typ}{'areas'}{$cd}[$g]{'nm'}){
+					for($c = 0; $c < @cols; $c++){
+						if($header[$c] =~ /^GEOGNM/ && $cols[$c] ne ""){
+							$cols[$c] =~ s/(^\"|\"$)//g;
+							if($cols[$c] ne $geotypes{$typ}{'areas'}{$cd}[$g]{'nm'}){
+								$equivalents{$cd}{$cols[$c]} = 1;
+							}
 						}
 					}
-				}
-				@alts = keys(%{$equivalents{$cd}});
-				if(@alts > 0){
-					@{$geotypes{$typ}{'areas'}{$cd}{'nm_alt'}} = sort(@alts);
+					@alts = keys(%{$equivalents{$cd}});
+					if(@alts > 0){
+						@{$geotypes{$typ}{'areas'}{$cd}[$g]{'nm_alt'}} = sort(@alts);
+					}
 				}
 			}
 		}
@@ -131,9 +142,11 @@ close(FILE);
 
 
 
-
 #########################
 # Save outputs
+if($args->{'format'}){
+	warning("The CSV format will only keep one entry per code so some data loss may occur.\n");
+}
 foreach $typ (sort(keys(%geotypes))){
 	msg("Processing geography type <yellow>$typ<none>\n");
 	if($args->{'format'} eq "CSV"){
@@ -155,10 +168,11 @@ foreach $typ (sort(keys(%geotypes))){
 
 		foreach $cd (sort(keys(%{$geotypes{$typ}{'areas'}}))){
 
-			print $fh ",".($geotypes{$typ}{'areas'}{$cd}{'nm'} =~ /,/ ? '"':'').$geotypes{$typ}{'areas'}{$cd}{'nm'}.($geotypes{$typ}{'areas'}{$cd}{'nm'} =~ /,/ ? '"':'');
-			print $fh ",".$geotypes{$typ}{'areas'}{$cd}{'start_date'};
-			print $fh ",".$geotypes{$typ}{'areas'}{$cd}{'end_date'};
-			print $fh ",".$geotypes{$typ}{'areas'}{$cd}{'parent'};
+			# Only print the first in the array
+			print $fh ",".($geotypes{$typ}{'areas'}{$cd}[0]{'nm'} =~ /,/ ? '"':'').$geotypes{$typ}{'areas'}{$cd}[0]{'nm'}.($geotypes{$typ}{'areas'}{$cd}[0]{'nm'} =~ /,/ ? '"':'');
+			print $fh ",".$geotypes{$typ}{'areas'}{$cd}[0]{'start_date'};
+			print $fh ",".$geotypes{$typ}{'areas'}{$cd}[0]{'end_date'};
+			print $fh ",".$geotypes{$typ}{'areas'}{$cd}[0]{'parent'};
 			print $fh "\n";
 
 		}
