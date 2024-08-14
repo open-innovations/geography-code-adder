@@ -1,9 +1,9 @@
 {
 	"areas":{
-		"W15000001":{"date":{"s":"2009-01-01"},"nm":"North Wales","nm_alt":["Heddlu Gogledd Cymru"]},
-		"W15000002":{"date":{"s":"2009-01-01"},"nm":"Gwent","nm_alt":["Heddlu Gwent"]},
-		"W15000003":{"date":{"s":"2009-01-01"},"nm":"South Wales","nm_alt":["Heddlu De Cymru"]},
-		"W15000004":{"date":{"s":"2009-01-01"},"nm":"Dyfed-Powys","nm_alt":["Heddlu Dyfed-Powys"]}
+		"W15000001":[{"date":{"s":"2009-01-01"},"nm":"North Wales","nm_alt":["Heddlu Gogledd Cymru"],"status":"live"}],
+		"W15000002":[{"date":{"s":"2009-01-01"},"nm":"Gwent","nm_alt":["Heddlu Gwent"],"status":"live"}],
+		"W15000003":[{"date":{"s":"2009-01-01"},"nm":"South Wales","nm_alt":["Heddlu De Cymru"],"status":"live"}],
+		"W15000004":[{"date":{"s":"2009-01-01"},"nm":"Dyfed-Powys","nm_alt":["Heddlu Dyfed-Powys"],"status":"live"}]
 	},
 	"description":"Police Force Areas",
 	"source":"Code History Database (July 2024) ChangeHistory"

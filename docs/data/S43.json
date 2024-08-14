@@ -1,8 +1,8 @@
 {
 	"areas":{
-		"S43000001":{"date":{"s":"2019-04-01"},"nm":"East"},
-		"S43000002":{"date":{"s":"2019-04-01"},"nm":"North"},
-		"S43000003":{"date":{"s":"2019-04-01"},"nm":"West"}
+		"S43000001":[{"date":{"s":"2019-04-01"},"nm":"East","status":"live"}],
+		"S43000002":[{"date":{"s":"2019-04-01"},"nm":"North","status":"live"}],
+		"S43000003":[{"date":{"s":"2019-04-01"},"nm":"West","status":"live"}]
 	},
 	"description":"Scottish Regional Resilience Partnerships",
 	"source":"Code History Database (July 2024) ChangeHistory"

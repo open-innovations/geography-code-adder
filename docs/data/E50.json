@@ -1,14 +1,14 @@
 {
 	"areas":{
-		"E50000001":{"date":{"s":"2016-04-01"},"nm":"East London Waste Authority"},
-		"E50000002":{"date":{"s":"2016-04-01"},"nm":"North London Waste Authority"},
-		"E50000003":{"date":{"s":"2016-04-01"},"nm":"West London Waste Authority"},
-		"E50000004":{"date":{"s":"2016-04-01"},"nm":"Western Riverside Waste Authority"},
-		"E50000005":{"date":{"e":"2016-07-31","s":"2016-04-01"},"nm":"Greater Manchester WDA"},
-		"E50000006":{"date":{"e":"2016-07-31","s":"2016-04-01"},"nm":"Merseyside WDA"},
-		"E50000007":{"date":{"s":"2016-12-01"},"nm":"Chiltern and Wycombe District Councils"},
-		"E50000008":{"date":{"s":"2016-04-01"},"nm":"Cambridge City and South Cambridgeshire"},
-		"E50000009":{"date":{"s":"2017-04-01"},"nm":"Somerset Waste Partnership"}
+		"E50000001":[{"date":{"s":"2016-04-01"},"nm":"East London Waste Authority","status":"live"}],
+		"E50000002":[{"date":{"s":"2016-04-01"},"nm":"North London Waste Authority","status":"live"}],
+		"E50000003":[{"date":{"s":"2016-04-01"},"nm":"West London Waste Authority","status":"live"}],
+		"E50000004":[{"date":{"s":"2016-04-01"},"nm":"Western Riverside Waste Authority","status":"live"}],
+		"E50000005":[{"date":{"s":"2016-08-01"},"nm":"Greater Manchester Waste Disposal Authority","status":"live"},{"date":{"e":"2016-07-31","s":"2016-04-01"},"nm":"Greater Manchester WDA","status":"terminated"}],
+		"E50000006":[{"date":{"s":"2016-08-01"},"nm":"Merseyside Recycling and Waste Authority","status":"live"},{"date":{"e":"2016-07-31","s":"2016-04-01"},"nm":"Merseyside WDA","status":"terminated"}],
+		"E50000007":[{"date":{"s":"2016-12-01"},"nm":"Chiltern and Wycombe District Councils","status":"live"}],
+		"E50000008":[{"date":{"s":"2016-04-01"},"nm":"Cambridge City and South Cambridgeshire","status":"live"}],
+		"E50000009":[{"date":{"s":"2017-04-01"},"nm":"Somerset Waste Partnership","status":"live"}]
 	},
 	"description":"Waste Authorities",
 	"source":"Code History Database (July 2024) ChangeHistory"

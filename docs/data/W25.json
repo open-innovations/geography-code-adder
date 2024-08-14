@@ -1,8 +1,8 @@
 {
 	"areas":{
-		"W25000001":{"date":{"s":"2009-01-01"},"nm":"North Wales"},
-		"W25000002":{"date":{"s":"2009-01-01"},"nm":"Mid and West Wales"},
-		"W25000003":{"date":{"s":"2009-01-01"},"nm":"South Wales"}
+		"W25000001":[{"date":{"s":"2009-01-01"},"nm":"North Wales","status":"live"}],
+		"W25000002":[{"date":{"s":"2009-01-01"},"nm":"Mid and West Wales","status":"live"}],
+		"W25000003":[{"date":{"s":"2009-01-01"},"nm":"South Wales","status":"live"}]
 	},
 	"description":"Fire and Rescue Authorities",
 	"source":"Code History Database (July 2024) ChangeHistory"

@@ -1,11 +1,11 @@
 {
 	"areas":{
-		"S09000001":{"date":{"s":"2007-09-26"},"nm":"Aberdeen City and Shire"},
-		"S09000002":{"date":{"s":"2007-09-26"},"nm":"East of Scotland"},
-		"S09000003":{"date":{"s":"2007-09-26"},"nm":"Highlands and Islands Enterprise"},
-		"S09000004":{"date":{"s":"2007-09-26"},"nm":"South of Scotland"},
-		"S09000005":{"date":{"s":"2007-09-26"},"nm":"Tayside"},
-		"S09000006":{"date":{"s":"2007-09-26"},"nm":"West of Scotland"}
+		"S09000001":[{"date":{"s":"2007-09-26"},"nm":"Aberdeen City and Shire","status":"live"}],
+		"S09000002":[{"date":{"s":"2007-09-26"},"nm":"East of Scotland","status":"live"}],
+		"S09000003":[{"date":{"s":"2007-09-26"},"nm":"Highlands and Islands Enterprise","status":"live"}],
+		"S09000004":[{"date":{"s":"2007-09-26"},"nm":"South of Scotland","status":"live"}],
+		"S09000005":[{"date":{"s":"2007-09-26"},"nm":"Tayside","status":"live"}],
+		"S09000006":[{"date":{"s":"2007-09-26"},"nm":"West of Scotland","status":"live"}]
 	},
 	"description":"Enterprise Regions",
 	"source":"Code History Database (July 2024) ChangeHistory"

@@ -1,14 +1,14 @@
 {
 	"areas":{
-		"W10000001":{"date":{"s":"2009-01-01"},"nm":"North Wales","nm_alt":["Gogledd Cymru"]},
-		"W10000002":{"date":{"e":"2011-12-31","s":"2009-01-01"},"nm":"Mid and West Wales","nm_alt":["Canolbarth a Gorllewin Cymru"]},
-		"W10000003":{"date":{"e":"2011-12-31","s":"2009-01-01"},"nm":"South Wales West","nm_alt":["Gorllewin De Cymru"]},
-		"W10000004":{"date":{"e":"2011-12-31","s":"2009-01-01"},"nm":"South Wales Central","nm_alt":["Canol De Cymru"]},
-		"W10000005":{"date":{"e":"2011-12-31","s":"2009-01-01"},"nm":"South Wales East","nm_alt":["Dwyrain De Cymru"]},
-		"W10000006":{"date":{"s":"2012-01-01"},"nm":"Mid and West Wales","nm_alt":["Canolbarth a Gorllewin Cymru"]},
-		"W10000007":{"date":{"s":"2012-01-01"},"nm":"South Wales Central","nm_alt":["Canol De Cymru"]},
-		"W10000008":{"date":{"s":"2012-01-01"},"nm":"South Wales East","nm_alt":["Dwyrain De Cymru"]},
-		"W10000009":{"date":{"s":"2012-01-01"},"nm":"South Wales West","nm_alt":["Gorllewin De Cymru"]}
+		"W10000001":[{"date":{"s":"2009-01-01"},"nm":"North Wales","nm_alt":["Gogledd Cymru"],"status":"live"}],
+		"W10000002":[{"date":{"e":"2011-12-31","s":"2009-01-01"},"nm":"Mid and West Wales","nm_alt":["Canolbarth a Gorllewin Cymru"],"status":"terminated"}],
+		"W10000003":[{"date":{"e":"2011-12-31","s":"2009-01-01"},"nm":"South Wales West","nm_alt":["Gorllewin De Cymru"],"status":"terminated"}],
+		"W10000004":[{"date":{"e":"2011-12-31","s":"2009-01-01"},"nm":"South Wales Central","nm_alt":["Canol De Cymru"],"status":"terminated"}],
+		"W10000005":[{"date":{"e":"2011-12-31","s":"2009-01-01"},"nm":"South Wales East","nm_alt":["Dwyrain De Cymru"],"status":"terminated"}],
+		"W10000006":[{"date":{"s":"2012-01-01"},"nm":"Mid and West Wales","nm_alt":["Canolbarth a Gorllewin Cymru"],"status":"live"}],
+		"W10000007":[{"date":{"s":"2012-01-01"},"nm":"South Wales Central","nm_alt":["Canol De Cymru"],"status":"live"}],
+		"W10000008":[{"date":{"s":"2012-01-01"},"nm":"South Wales East","nm_alt":["Dwyrain De Cymru"],"status":"live"}],
+		"W10000009":[{"date":{"s":"2012-01-01"},"nm":"South Wales West","nm_alt":["Gorllewin De Cymru"],"status":"live"}]
 	},
 	"description":"Welsh Assembly; Scottish Parliament Electoral Region",
 	"source":"Code History Database (July 2024) ChangeHistory"

@@ -1,9 +1,9 @@
 {
 	"areas":{
-		"W19000001":{"date":{"s":"2009-01-01"},"nm":"North Wales","nm_alt":["Gogledd Cymru"]},
-		"W19000002":{"date":{"s":"2009-01-01"},"nm":"Mid Wales","nm_alt":["Canolbarth Cymru"]},
-		"W19000003":{"date":{"s":"2009-01-01"},"nm":"South West Wales","nm_alt":["De-orllewin Cymru"]},
-		"W19000004":{"date":{"s":"2009-01-01"},"nm":"South East Wales","nm_alt":["De-ddwyrain Cymru"]}
+		"W19000001":[{"date":{"s":"2009-01-01"},"nm":"North Wales","nm_alt":["Gogledd Cymru"],"status":"live"}],
+		"W19000002":[{"date":{"s":"2009-01-01"},"nm":"Mid Wales","nm_alt":["Canolbarth Cymru"],"status":"live"}],
+		"W19000003":[{"date":{"s":"2009-01-01"},"nm":"South West Wales","nm_alt":["De-orllewin Cymru"],"status":"live"}],
+		"W19000004":[{"date":{"s":"2009-01-01"},"nm":"South East Wales","nm_alt":["De-ddwyrain Cymru"],"status":"live"}]
 	},
 	"description":"National Assembly Economic Regions",
 	"source":"Code History Database (July 2024) ChangeHistory"

@@ -1,19 +1,19 @@
 {
 	"areas":{
-		"E47000001":{"date":{"e":"2016-02-29","s":"2011-04-01"},"nm":"Greater Manchester Combined Authority"},
-		"E47000002":{"date":{"s":"2021-09-01"},"nm":"South Yorkshire"},
-		"E47000003":{"date":{"s":"2016-03-01"},"nm":"West Yorkshire"},
-		"E47000004":{"date":{"s":"2016-03-01"},"nm":"Liverpool City Region"},
-		"E47000005":{"date":{"e":"2018-10-31","s":"2016-03-01"},"nm":"North East"},
-		"E47000006":{"date":{"s":"2016-04-01"},"nm":"Tees Valley"},
-		"E47000007":{"date":{"s":"2016-06-17"},"nm":"West Midlands"},
-		"E47000008":{"date":{"s":"2017-03-03"},"nm":"Cambridgeshire and Peterborough"},
-		"E47000009":{"date":{"s":"2017-03-03"},"nm":"West of England"},
-		"E47000010":{"date":{"e":"2024-05-01","s":"2018-11-01"},"nm":"North East"},
-		"E47000011":{"date":{"e":"2024-05-01","s":"2018-11-01"},"nm":"North of Tyne"},
-		"E47000012":{"date":{"s":"2024-05-02"},"nm":"York and North Yorkshire"},
-		"E47000013":{"date":{"s":"2024-05-02"},"nm":"East Midlands"},
-		"E47000014":{"date":{"s":"2024-05-02"},"nm":"North East"}
+		"E47000001":[{"date":{"s":"2016-03-01"},"nm":"Greater Manchester","status":"live"},{"date":{"e":"2016-02-29","s":"2011-04-01"},"nm":"Greater Manchester Combined Authority","status":"terminated"}],
+		"E47000002":[{"date":{"e":"2016-02-29","s":"2015-04-01"},"nm":"Barnsley, Doncaster, Rotherham and Sheffield Combined Authority","status":"terminated"},{"date":{"e":"2021-08-31","s":"2016-03-01"},"nm":"Sheffield City Region","status":"terminated"},{"date":{"s":"2021-09-01"},"nm":"South Yorkshire","status":"live"}],
+		"E47000003":[{"date":{"e":"2016-02-29","s":"2015-04-01"},"nm":"West Yorkshire Combined Authority","status":"terminated"},{"date":{"s":"2016-03-01"},"nm":"West Yorkshire","status":"live"}],
+		"E47000004":[{"date":{"e":"2016-02-29","s":"2015-04-01"},"nm":"Halton, Knowsley, Liverpool, St Helens, Sefton and Wirral Combined Authority","status":"terminated"},{"date":{"s":"2016-03-01"},"nm":"Liverpool City Region","status":"live"}],
+		"E47000005":[{"date":{"e":"2016-02-29","s":"2015-04-15"},"nm":"Durham, Gateshead, Newcastle Upon Tyne, North Tyneside, Northumberland, South Tyneside and Sunderland Combined Authority","status":"terminated"},{"date":{"e":"2018-10-31","s":"2016-03-01"},"nm":"North East","status":"terminated"}],
+		"E47000006":[{"date":{"s":"2016-04-01"},"nm":"Tees Valley","status":"live"}],
+		"E47000007":[{"date":{"s":"2016-06-17"},"nm":"West Midlands","status":"live"}],
+		"E47000008":[{"date":{"s":"2017-03-03"},"nm":"Cambridgeshire and Peterborough","status":"live"}],
+		"E47000009":[{"date":{"s":"2017-03-03"},"nm":"West of England","status":"live"}],
+		"E47000010":[{"date":{"e":"2024-05-01","s":"2018-11-01"},"nm":"North East","status":"terminated"}],
+		"E47000011":[{"date":{"e":"2024-05-01","s":"2018-11-01"},"nm":"North of Tyne","status":"terminated"}],
+		"E47000012":[{"date":{"s":"2024-05-02"},"nm":"York and North Yorkshire","status":"live"}],
+		"E47000013":[{"date":{"s":"2024-05-02"},"nm":"East Midlands","status":"live"}],
+		"E47000014":[{"date":{"s":"2024-05-02"},"nm":"North East","status":"live"}]
 	},
 	"description":"Combined Authorities",
 	"source":"Code History Database (July 2024) ChangeHistory"

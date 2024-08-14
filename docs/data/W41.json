@@ -1,8 +1,8 @@
 {
 	"areas":{
-		"W41000001":{"date":{"s":"2015-08-01"},"nm":"Dyfed-Powys"},
-		"W41000002":{"date":{"s":"2015-08-01"},"nm":"Gwent"},
-		"W41000003":{"date":{"s":"2015-08-01"},"nm":"North Wales"},
-		"W41000004":{"date":{"s":"2015-08-01"},"nm":"South Wales"}},
+		"W41000001":[{"date":{"s":"2015-08-01"},"nm":"Dyfed-Powys","status":"live"}],
+		"W41000002":[{"date":{"s":"2015-08-01"},"nm":"Gwent","status":"live"}],
+		"W41000003":[{"date":{"s":"2015-08-01"},"nm":"North Wales","status":"live"}],
+		"W41000004":[{"date":{"s":"2015-08-01"},"nm":"South Wales","status":"live"}]},
 	"source":"Code History Database (July 2024) ChangeHistory"
 }

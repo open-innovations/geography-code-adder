@@ -1,19 +1,19 @@
 {
 	"areas":{
-		"E40000001":{"date":{"e":"2019-03-31","s":"2013-04-01"},"nm":"North Of England"},
-		"E40000002":{"date":{"e":"2019-03-31","s":"2013-04-01"},"nm":"Midlands and East of England"},
-		"E40000003":{"date":{"s":"2013-04-01"},"nm":"London"},
-		"E40000004":{"date":{"e":"2018-03-31","s":"2013-04-01"},"nm":"South of England"},
-		"E40000005":{"date":{"s":"2018-04-01"},"nm":"South East"},
-		"E40000006":{"date":{"s":"2018-04-01"},"nm":"South West"},
-		"E40000007":{"date":{"e":"2024-03-31","s":"2019-04-01"},"nm":"East of England"},
-		"E40000008":{"date":{"e":"2022-06-30","s":"2019-04-01"},"nm":"Midlands"},
-		"E40000009":{"date":{"e":"2022-06-30","s":"2019-04-01"},"nm":"North East and Yorkshire"},
-		"E40000010":{"date":{"e":"2024-03-31","s":"2019-04-01"},"nm":"North West"},
-		"E40000011":{"date":{"s":"2022-07-01"},"nm":"Midlands"},
-		"E40000012":{"date":{"s":"2022-07-01"},"nm":"North East and Yorkshire"},
-		"E40000013":{"date":{"s":"2024-01-01"},"nm":"East of England"},
-		"E40000014":{"date":{"s":"2024-01-01"},"nm":"North West"}
+		"E40000001":[{"date":{"e":"2019-03-31","s":"2013-04-01"},"nm":"North Of England","status":"terminated"}],
+		"E40000002":[{"date":{"e":"2019-03-31","s":"2013-04-01"},"nm":"Midlands and East of England","status":"terminated"}],
+		"E40000003":[{"date":{"s":"2013-04-01"},"nm":"London","status":"live"}],
+		"E40000004":[{"date":{"e":"2018-03-31","s":"2013-04-01"},"nm":"South of England","status":"terminated"}],
+		"E40000005":[{"date":{"s":"2018-04-01"},"nm":"South East","status":"live"}],
+		"E40000006":[{"date":{"s":"2018-04-01"},"nm":"South West","status":"live"}],
+		"E40000007":[{"date":{"e":"2024-03-31","s":"2019-04-01"},"nm":"East of England","status":"terminated"}],
+		"E40000008":[{"date":{"e":"2022-06-30","s":"2019-04-01"},"nm":"Midlands","status":"terminated"}],
+		"E40000009":[{"date":{"e":"2022-06-30","s":"2019-04-01"},"nm":"North East and Yorkshire","status":"terminated"}],
+		"E40000010":[{"date":{"e":"2024-03-31","s":"2019-04-01"},"nm":"North West","status":"terminated"}],
+		"E40000011":[{"date":{"s":"2022-07-01"},"nm":"Midlands","status":"live"}],
+		"E40000012":[{"date":{"s":"2022-07-01"},"nm":"North East and Yorkshire","status":"live"}],
+		"E40000013":[{"date":{"s":"2024-01-01"},"nm":"East of England","status":"live"}],
+		"E40000014":[{"date":{"s":"2024-01-01"},"nm":"North West","status":"live"}]
 	},
 	"description":"NHS England Regions",
 	"source":"Code History Database (July 2024) ChangeHistory"

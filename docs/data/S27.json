@@ -1,7 +1,7 @@
 {
 	"areas":{
-		"S27000001":{"date":{"s":"2011-12-05"},"nm":"Non-NHS Provider/Location"},
-		"S27000002":{"date":{"s":"2011-12-05"},"nm":"Not applicable"}
+		"S27000001":[{"date":{"s":"2011-12-05"},"nm":"Non-NHS Provider/Location","status":"live"}],
+		"S27000002":[{"date":{"s":"2011-12-05"},"nm":"Not applicable","status":"live"}]
 	},
 	"description":"ISD Health Board of Treatment",
 	"source":"Code History Database (July 2024) ChangeHistory"

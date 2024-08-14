@@ -1,11 +1,11 @@
 {
 	"areas":{
-		"W23000001":{"date":{"s":"2009-01-01"},"nm":"North West Wales","nm_alt":["Gogledd-orllewin Cymru"]},
-		"W23000002":{"date":{"s":"2009-01-01"},"nm":"North East Wales","nm_alt":["Gogledd-ddwryrain Cymru"]},
-		"W23000003":{"date":{"s":"2009-01-01"},"nm":"Central Wales","nm_alt":["Canol Cymru"]},
-		"W23000004":{"date":{"s":"2009-01-01"},"nm":"Pembrokeshire Haven","nm_alt":["Hafan Sir Benfro"]},
-		"W23000005":{"date":{"s":"2009-01-01"},"nm":"Swansea Bay","nm_alt":["Bae Abertawe"]},
-		"W23000006":{"date":{"s":"2009-01-01"},"nm":"South East Wales","nm_alt":["De-ddwyrain Cymru"]}
+		"W23000001":[{"date":{"s":"2009-01-01"},"nm":"North West Wales","nm_alt":["Gogledd-orllewin Cymru"],"status":"live"}],
+		"W23000002":[{"date":{"s":"2009-01-01"},"nm":"North East Wales","nm_alt":["Gogledd-ddwryrain Cymru"],"status":"live"}],
+		"W23000003":[{"date":{"s":"2009-01-01"},"nm":"Central Wales","nm_alt":["Canol Cymru"],"status":"live"}],
+		"W23000004":[{"date":{"s":"2009-01-01"},"nm":"Pembrokeshire Haven","nm_alt":["Hafan Sir Benfro"],"status":"live"}],
+		"W23000005":[{"date":{"s":"2009-01-01"},"nm":"Swansea Bay","nm_alt":["Bae Abertawe"],"status":"live"}],
+		"W23000006":[{"date":{"s":"2009-01-01"},"nm":"South East Wales","nm_alt":["De-ddwyrain Cymru"],"status":"live"}]
 	},
 	"description":"Spatial Plan Areas",
 	"source":"Code History Database (July 2024) ChangeHistory"

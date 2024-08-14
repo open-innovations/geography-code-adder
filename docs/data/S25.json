@@ -1,13 +1,13 @@
 {
 	"areas":{
-		"S25000001":{"date":{"s":"2009-01-01"},"nm":"Northern"},
-		"S25000002":{"date":{"s":"2009-01-01"},"nm":"Tayside"},
-		"S25000003":{"date":{"s":"2009-01-01"},"nm":"Fife and Forth Valley"},
-		"S25000004":{"date":{"s":"2009-01-01"},"nm":"North Strathclyde"},
-		"S25000005":{"date":{"s":"2009-01-01"},"nm":"Glasgow"},
-		"S25000006":{"date":{"s":"2009-01-01"},"nm":"Lanarkshire"},
-		"S25000007":{"date":{"s":"2009-01-01"},"nm":"South West Scotland"},
-		"S25000008":{"date":{"s":"2009-01-01"},"nm":"Lothian and Borders"}
+		"S25000001":[{"date":{"s":"2009-01-01"},"nm":"Northern","status":"live"}],
+		"S25000002":[{"date":{"s":"2009-01-01"},"nm":"Tayside","status":"live"}],
+		"S25000003":[{"date":{"s":"2009-01-01"},"nm":"Fife and Forth Valley","status":"live"}],
+		"S25000004":[{"date":{"s":"2009-01-01"},"nm":"North Strathclyde","status":"live"}],
+		"S25000005":[{"date":{"s":"2009-01-01"},"nm":"Glasgow","status":"live"}],
+		"S25000006":[{"date":{"s":"2009-01-01"},"nm":"Lanarkshire","status":"live"}],
+		"S25000007":[{"date":{"s":"2009-01-01"},"nm":"South West Scotland","status":"live"}],
+		"S25000008":[{"date":{"s":"2009-01-01"},"nm":"Lothian and Borders","status":"live"}]
 	},
 	"description":"Community Justice Authorities",
 	"source":"Code History Database (July 2024) ChangeHistory"

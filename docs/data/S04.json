@@ -1,6 +1,6 @@
 {
 	"areas":{
-		"S04000001":{"date":{"s":"2006-03-31"},"nm":"Scotland"}
+		"S04000001":[{"date":{"s":"2006-03-31"},"nm":"Scotland","status":"live"}]
 	},
 	"description":"Regeneration Outcome Agreement Areas - Scotland",
 	"source":"Code History Database (July 2024) ChangeHistory"

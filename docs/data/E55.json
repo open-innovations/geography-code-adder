@@ -1,19 +1,19 @@
 {
 	"areas":{
-		"E55000001":{"date":{"e":"2013-04-02","s":"2013-04-01"},"nm":"North West and South London"},
-		"E55000002":{"date":{"s":"2013-04-01"},"nm":"Cheshire and Merseyside"},
-		"E55000003":{"date":{"s":"2013-04-01"},"nm":"Greater Manchester, Lancashire and South Cumbria"},
-		"E55000004":{"date":{"s":"2013-04-01"},"nm":"Northern England"},
-		"E55000005":{"date":{"s":"2013-04-01"},"nm":"Yorkshire and The Humber"},
-		"E55000006":{"date":{"s":"2013-04-01"},"nm":"East of England"},
-		"E55000007":{"date":{"s":"2013-04-01"},"nm":"East Midlands"},
-		"E55000008":{"date":{"s":"2013-04-01"},"nm":"West Midlands"},
-		"E55000009":{"date":{"s":"2013-04-01"},"nm":"South West"},
-		"E55000010":{"date":{"s":"2013-04-01"},"nm":"South East Coast"},
-		"E55000011":{"date":{"s":"2013-04-01"},"nm":"Thames Valley"},
-		"E55000012":{"date":{"s":"2013-04-01"},"nm":"Wessex"},
-		"E55000013":{"date":{"e":"2013-04-02","s":"2013-04-01"},"nm":"North and East London"},
-		"E55000014":{"date":{"s":"2013-04-03"},"nm":"London"}
+		"E55000001":[{"date":{"e":"2013-04-02","s":"2013-04-01"},"nm":"North West and South London","status":"terminated"}],
+		"E55000002":[{"date":{"s":"2013-04-01"},"nm":"Cheshire and Merseyside","status":"live"}],
+		"E55000003":[{"date":{"s":"2013-04-01"},"nm":"Greater Manchester, Lancashire and South Cumbria","status":"live"}],
+		"E55000004":[{"date":{"s":"2013-04-01"},"nm":"Northern England","status":"live"}],
+		"E55000005":[{"date":{"s":"2013-04-01"},"nm":"Yorkshire and The Humber","status":"live"}],
+		"E55000006":[{"date":{"s":"2013-04-01"},"nm":"East of England","status":"live"}],
+		"E55000007":[{"date":{"s":"2013-04-01"},"nm":"East Midlands","status":"live"}],
+		"E55000008":[{"date":{"s":"2013-04-01"},"nm":"West Midlands","status":"live"}],
+		"E55000009":[{"date":{"s":"2013-04-01"},"nm":"South West","status":"live"}],
+		"E55000010":[{"date":{"s":"2013-04-01"},"nm":"South East Coast","status":"live"}],
+		"E55000011":[{"date":{"s":"2013-04-01"},"nm":"Thames Valley","status":"live"}],
+		"E55000012":[{"date":{"s":"2013-04-01"},"nm":"Wessex","status":"live"}],
+		"E55000013":[{"date":{"e":"2013-04-02","s":"2013-04-01"},"nm":"North and East London","status":"terminated"}],
+		"E55000014":[{"date":{"s":"2013-04-03"},"nm":"London","status":"live"}]
 	},
 	"description":"Strategic Clinical Networks",
 	"source":"Code History Database (July 2024) ChangeHistory"

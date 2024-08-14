@@ -1,9 +1,9 @@
 {
 	"areas":{
-		"W13000001":{"date":{"s":"2009-01-01"},"nm":"North Wales Cancer Network","nm_alt":["Rhwydwaith Canser Gogledd Cymru"]},
-		"W13000002":{"date":{"e":"2011-03-31","s":"2009-01-01"},"nm":"South West Wales Cancer Network","nm_alt":["Rhwydwaith Canser De-orllewin Cymru"]},
-		"W13000003":{"date":{"e":"2011-03-31","s":"2009-01-01"},"nm":"South East Wales Cancer Network","nm_alt":["Rhwydwaith Canser De-ddwyrain Cymru"]},
-		"W13000004":{"date":{"s":"2011-04-01"},"nm":"South Wales Cancer Network","nm_alt":["Rhwydwaith Canser De Cymru"]}
+		"W13000001":[{"date":{"s":"2009-01-01"},"nm":"North Wales Cancer Network","nm_alt":["Rhwydwaith Canser Gogledd Cymru"],"status":"live"}],
+		"W13000002":[{"date":{"e":"2011-03-31","s":"2009-01-01"},"nm":"South West Wales Cancer Network","nm_alt":["Rhwydwaith Canser De-orllewin Cymru"],"status":"terminated"}],
+		"W13000003":[{"date":{"e":"2011-03-31","s":"2009-01-01"},"nm":"South East Wales Cancer Network","nm_alt":["Rhwydwaith Canser De-ddwyrain Cymru"],"status":"terminated"}],
+		"W13000004":[{"date":{"s":"2011-04-01"},"nm":"South Wales Cancer Network","nm_alt":["Rhwydwaith Canser De Cymru"],"status":"live"}]
 	},
 	"description":"Cancer Networks",
 	"source":"Code History Database (July 2024) ChangeHistory"

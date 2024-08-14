@@ -1,6 +1,6 @@
 {
 	"areas":{
-		"E61000001":{"date":{"s":"2000-07-03"},"nm":"Greater London Authority","parent":"E12000007"}
+		"E61000001":[{"date":{"s":"2000-07-03"},"nm":"Greater London Authority","parent":"E12000007","status":"live"}]
 	},
 	"description":"Greater London Authority",
 	"source":"Code History Database (July 2024) ChangeHistory"

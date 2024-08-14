@@ -1,7 +1,7 @@
 {
 	"areas":{
-		"W46000001":{"date":{"s":"2023-04-11"},"nm":"Gwynedd, unassigned parishes"},
-		"W46000002":{"date":{"s":"2023-04-11"},"nm":"Monmouthshire, unassigned parishes"},
-		"W46000003":{"date":{"s":"2023-04-11"},"nm":"Powys, unassigned parishes"}},
+		"W46000001":[{"date":{"s":"2023-04-11"},"nm":"Gwynedd, unassigned parishes","status":"live"}],
+		"W46000002":[{"date":{"s":"2023-04-11"},"nm":"Monmouthshire, unassigned parishes","status":"live"}],
+		"W46000003":[{"date":{"s":"2023-04-11"},"nm":"Powys, unassigned parishes","status":"live"}]},
 	"source":"Code History Database (July 2024) ChangeHistory"
 }

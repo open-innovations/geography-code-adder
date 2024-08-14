@@ -1,19 +1,19 @@
 {
 	"areas":{
-		"N33000001":{"date":{"s":"2016-02-01"},"nm":"North and West Belfast","parent":"N32000001"},
-		"N33000002":{"date":{"s":"2016-02-01"},"nm":"South and East Belfast","parent":"N32000001"},
-		"N33000003":{"date":{"s":"2016-02-01"},"nm":"Ballymena","parent":"N32000002"},
-		"N33000004":{"date":{"s":"2016-02-01"},"nm":"Coleraine","parent":"N32000002"},
-		"N33000005":{"date":{"s":"2016-02-01"},"nm":"Glengormley","parent":"N32000002"},
-		"N33000006":{"date":{"s":"2016-02-01"},"nm":"Lisburn","parent":"N32000002"},
-		"N33000007":{"date":{"s":"2016-02-01"},"nm":"Portadown","parent":"N32000003"},
-		"N33000008":{"date":{"s":"2016-02-01"},"nm":"Bangor","parent":"N32000003"},
-		"N33000009":{"date":{"s":"2016-02-01"},"nm":"Newry","parent":"N32000003"},
-		"N33000010":{"date":{"s":"2016-02-01"},"nm":"Downpatrick","parent":"N32000003"},
-		"N33000011":{"date":{"s":"2016-02-01"},"nm":"Omagh","parent":"N32000004"},
-		"N33000012":{"date":{"s":"2016-02-01"},"nm":"Cookstown","parent":"N32000004"},
-		"N33000013":{"date":{"s":"2016-02-01"},"nm":"Enniskillen","parent":"N32000004"},
-		"N33000014":{"date":{"s":"2016-02-01"},"nm":"Londonderry","parent":"N32000004"}
+		"N33000001":[{"date":{"s":"2016-02-01"},"nm":"North and West Belfast","parent":"N32000001","status":"live"}],
+		"N33000002":[{"date":{"s":"2016-02-01"},"nm":"South and East Belfast","parent":"N32000001","status":"live"}],
+		"N33000003":[{"date":{"s":"2016-02-01"},"nm":"Ballymena","parent":"N32000002","status":"live"}],
+		"N33000004":[{"date":{"s":"2016-02-01"},"nm":"Coleraine","parent":"N32000002","status":"live"}],
+		"N33000005":[{"date":{"s":"2016-02-01"},"nm":"Glengormley","parent":"N32000002","status":"live"}],
+		"N33000006":[{"date":{"s":"2016-02-01"},"nm":"Lisburn","parent":"N32000002","status":"live"}],
+		"N33000007":[{"date":{"s":"2016-02-01"},"nm":"Portadown","parent":"N32000003","status":"live"}],
+		"N33000008":[{"date":{"s":"2016-02-01"},"nm":"Bangor","parent":"N32000003","status":"live"}],
+		"N33000009":[{"date":{"s":"2016-02-01"},"nm":"Newry","parent":"N32000003","status":"live"}],
+		"N33000010":[{"date":{"s":"2016-02-01"},"nm":"Downpatrick","parent":"N32000003","status":"live"}],
+		"N33000011":[{"date":{"s":"2016-02-01"},"nm":"Omagh","parent":"N32000004","status":"live"}],
+		"N33000012":[{"date":{"s":"2016-02-01"},"nm":"Cookstown","parent":"N32000004","status":"live"}],
+		"N33000013":[{"date":{"s":"2016-02-01"},"nm":"Enniskillen","parent":"N32000004","status":"live"}],
+		"N33000014":[{"date":{"s":"2016-02-01"},"nm":"Londonderry","parent":"N32000004","status":"live"}]
 	},
 	"description":"Northern Ireland Fire and Rescue Service Districts",
 	"source":"Code History Database (July 2024) ChangeHistory"

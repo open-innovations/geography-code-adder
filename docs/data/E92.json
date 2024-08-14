@@ -1,6 +1,6 @@
 {
 	"areas":{
-		"E92000001":{"date":{"s":"2009-01-01"},"nm":"England","nm_alt":["Lloegr"]}
+		"E92000001":[{"date":{"s":"2009-01-01"},"nm":"England","nm_alt":["Lloegr"],"status":"live"}]
 	},
 	"description":"Country",
 	"source":"Code History Database (July 2024) ChangeHistory"

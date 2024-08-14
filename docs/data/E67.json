@@ -1,6 +1,6 @@
 {
 	"areas":{
-		"E67000001":{"date":{"s":"2023-04-11"},"nm":"City of London, Hackney"},
-		"E67000002":{"date":{"s":"2023-04-11"},"nm":"Isles of Scilly, Cornwall"}},
+		"E67000001":[{"date":{"s":"2023-04-11"},"nm":"City of London, Hackney","status":"live"}],
+		"E67000002":[{"date":{"s":"2023-04-11"},"nm":"Isles of Scilly, Cornwall","status":"live"}]},
 	"source":"Code History Database (July 2024) ChangeHistory"
 }

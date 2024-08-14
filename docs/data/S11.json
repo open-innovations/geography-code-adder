@@ -1,9 +1,9 @@
 {
 	"areas":{
-		"S11000001":{"date":{"s":"2008-06-25"},"nm":"Aberdeen City and Shire"},
-		"S11000002":{"date":{"s":"2008-06-25"},"nm":"Dundee, Perth, Angus and North Fife"},
-		"S11000003":{"date":{"s":"2008-06-25"},"nm":"Edinburgh and South East Scotland"},
-		"S11000004":{"date":{"s":"2008-06-25"},"nm":"Glasgow and Clyde Valley"}
+		"S11000001":[{"date":{"s":"2008-06-25"},"nm":"Aberdeen City and Shire","status":"live"}],
+		"S11000002":[{"date":{"s":"2008-06-25"},"nm":"Dundee, Perth, Angus and North Fife","status":"live"}],
+		"S11000003":[{"date":{"s":"2008-06-25"},"nm":"Edinburgh and South East Scotland","status":"live"}],
+		"S11000004":[{"date":{"s":"2008-06-25"},"nm":"Glasgow and Clyde Valley","status":"live"}]
 	},
 	"description":"Strategic Development Plan Areas",
 	"source":"Code History Database (July 2024) ChangeHistory"

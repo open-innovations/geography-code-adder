@@ -1,8 +1,8 @@
 {
 	"areas":{
-		"W44000001":{"date":{"s":"2022-02-21"},"nm":"Clwydian Range and Dee Valley"},
-		"W44000002":{"date":{"s":"2022-02-21"},"nm":"Gower"},
-		"W44000003":{"date":{"s":"2022-02-21"},"nm":"Llyn"},
-		"W44000004":{"date":{"s":"2022-02-21"},"nm":"Anglesey"}},
+		"W44000001":[{"date":{"s":"2022-02-21"},"nm":"Clwydian Range and Dee Valley","status":"live"}],
+		"W44000002":[{"date":{"s":"2022-02-21"},"nm":"Gower","status":"live"}],
+		"W44000003":[{"date":{"s":"2022-02-21"},"nm":"Llyn","status":"live"}],
+		"W44000004":[{"date":{"s":"2022-02-21"},"nm":"Anglesey","status":"live"}]},
 	"source":"Code History Database (July 2024) ChangeHistory"
 }

@@ -1,9 +1,9 @@
 {
 	"areas":{
-		"W16000001":{"date":{"s":"2009-01-01"},"nm":"North Wales","nm_alt":["Gogledd Cymru"]},
-		"W16000002":{"date":{"s":"2009-01-01"},"nm":"South West / Mid Wales","nm_alt":["De-orllewin / Canolbarth Cymru"]},
-		"W16000003":{"date":{"s":"2009-01-01"},"nm":"South Wales","nm_alt":["De Cymru"]},
-		"W16000004":{"date":{"s":"2009-01-01"},"nm":"South East Wales","nm_alt":["De-ddwyrain Cymru"]}
+		"W16000001":[{"date":{"s":"2009-01-01"},"nm":"North Wales","nm_alt":["Gogledd Cymru"],"status":"live"}],
+		"W16000002":[{"date":{"s":"2009-01-01"},"nm":"South West / Mid Wales","nm_alt":["De-orllewin / Canolbarth Cymru"],"status":"live"}],
+		"W16000003":[{"date":{"s":"2009-01-01"},"nm":"South Wales","nm_alt":["De Cymru"],"status":"live"}],
+		"W16000004":[{"date":{"s":"2009-01-01"},"nm":"South East Wales","nm_alt":["De-ddwyrain Cymru"],"status":"live"}]
 	},
 	"description":"Department for Children, Education, Lifelong Learning and Skills",
 	"source":"Code History Database (July 2024) ChangeHistory"

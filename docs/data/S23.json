@@ -1,14 +1,14 @@
 {
 	"areas":{
-		"S23000001":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Central"},
-		"S23000002":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Dumfries and Galloway"},
-		"S23000003":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Fife"},
-		"S23000004":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Grampian"},
-		"S23000005":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Lothian and Borders"},
-		"S23000006":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Northern"},
-		"S23000007":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Strathclyde"},
-		"S23000008":{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Tayside"},
-		"S23000009":{"date":{"s":"2013-04-01"},"nm":"Scotland"}
+		"S23000001":[{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Central","status":"terminated"}],
+		"S23000002":[{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Dumfries and Galloway","status":"terminated"}],
+		"S23000003":[{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Fife","status":"terminated"}],
+		"S23000004":[{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Grampian","status":"terminated"}],
+		"S23000005":[{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Lothian and Borders","status":"terminated"}],
+		"S23000006":[{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Northern","status":"terminated"}],
+		"S23000007":[{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Strathclyde","status":"terminated"}],
+		"S23000008":[{"date":{"e":"2013-03-31","s":"2009-01-01"},"nm":"Tayside","status":"terminated"}],
+		"S23000009":[{"date":{"s":"2013-04-01"},"nm":"Scotland","status":"live"}]
 	},
 	"description":"Police Force Areas",
 	"source":"Code History Database (July 2024) ChangeHistory"

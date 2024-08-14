@@ -1,12 +1,12 @@
 {
 	"areas":{
-		"E51000001":{"date":{"s":"2016-04-01"},"nm":"London Legacy Development Corporation"},
-		"E51000002":{"date":{"s":"2016-08-01"},"nm":"Old Oak and Park Royal Development Corporation"},
-		"E51000003":{"date":{"s":"2015-07-01"},"nm":"Ebbsfleet Development Corporation"},
-		"E51000004":{"date":{"s":"2017-08-01"},"nm":"South Tees Development Corporation"},
-		"E51000005":{"date":{"s":"2019-09-02"},"nm":"Stockport Town Centre West Development Corporation","parent":"E47000001"},
-		"E51000006":{"date":{"s":"2023-06-01"},"nm":"Middlesbrough Development Corporation","parent":"E47000006"},
-		"E51000007":{"date":{"s":"2023-06-01"},"nm":"Hartlepool Development Corporation","parent":"E47000006"}
+		"E51000001":[{"date":{"s":"2016-04-01"},"nm":"London Legacy Development Corporation","status":"live"}],
+		"E51000002":[{"date":{"e":"2016-07-31","s":"2016-04-01"},"nm":"Old Oak Common and Park Royal Development Corporation","status":"terminated"},{"date":{"s":"2016-08-01"},"nm":"Old Oak and Park Royal Development Corporation","status":"live"}],
+		"E51000003":[{"date":{"s":"2015-07-01"},"nm":"Ebbsfleet Development Corporation","status":"live"}],
+		"E51000004":[{"date":{"s":"2017-08-01"},"nm":"South Tees Development Corporation","status":"live"}],
+		"E51000005":[{"date":{"s":"2019-09-02"},"nm":"Stockport Town Centre West Development Corporation","parent":"E47000001","status":"live"}],
+		"E51000006":[{"date":{"s":"2023-06-01"},"nm":"Middlesbrough Development Corporation","parent":"E47000006","status":"live"}],
+		"E51000007":[{"date":{"s":"2023-06-01"},"nm":"Hartlepool Development Corporation","parent":"E47000006","status":"live"}]
 	},
 	"description":"Development Corporations",
 	"source":"Code History Database (July 2024) ChangeHistory"

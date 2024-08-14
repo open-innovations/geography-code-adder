@@ -1,14 +1,14 @@
 {
 	"areas":{
-		"E15000001":{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"North East","parent":"E92000001"},
-		"E15000002":{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"North West","parent":"E92000001"},
-		"E15000003":{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"Yorkshire and The Humber","parent":"E92000001"},
-		"E15000004":{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"East Midlands","parent":"E92000001"},
-		"E15000005":{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"West Midlands","parent":"E92000001"},
-		"E15000006":{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"Eastern","parent":"E92000001"},
-		"E15000007":{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"London","parent":"E92000001"},
-		"E15000008":{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"South East","parent":"E92000001"},
-		"E15000009":{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"South West","parent":"E92000001"}
+		"E15000001":[{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"North East","parent":"E92000001","status":"terminated"}],
+		"E15000002":[{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"North West","parent":"E92000001","status":"terminated"}],
+		"E15000003":[{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"Yorkshire and The Humber","parent":"E92000001","status":"terminated"}],
+		"E15000004":[{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"East Midlands","parent":"E92000001","status":"terminated"}],
+		"E15000005":[{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"West Midlands","parent":"E92000001","status":"terminated"}],
+		"E15000006":[{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"Eastern","parent":"E92000001","status":"terminated"}],
+		"E15000007":[{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"London","parent":"E92000001","status":"terminated"}],
+		"E15000008":[{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"South East","parent":"E92000001","status":"terminated"}],
+		"E15000009":[{"date":{"e":"2020-12-31","s":"2009-01-01"},"nm":"South West","parent":"E92000001","status":"terminated"}]
 	},
 	"description":"European Electoral Region",
 	"source":"Code History Database (July 2024) ChangeHistory"

@@ -1,6 +1,6 @@
 {
 	"areas":{
-		"N92000002":{"date":{"s":"2009-01-01"},"nm":"Northern Ireland","nm_alt":["Gogledd Iwerddon"]}
+		"N92000002":[{"date":{"s":"2009-01-01"},"nm":"Northern Ireland","nm_alt":["Gogledd Iwerddon"],"status":"live"}]
 	},
 	"description":"Country",
 	"source":"Code History Database (July 2024) ChangeHistory"

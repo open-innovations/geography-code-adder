@@ -1,12 +1,12 @@
 {
 	"areas":{
-		"S07000001":{"date":{"s":"2005-12-01"},"nm":"Highlands and Islands Transport Partnership"},
-		"S07000002":{"date":{"s":"2005-12-01"},"nm":"North East of Scotland Transport Partnership"},
-		"S07000003":{"date":{"s":"2005-12-01"},"nm":"Shetland Transport Partnership"},
-		"S07000004":{"date":{"s":"2005-12-01"},"nm":"South East of Scotland Transport Partnership"},
-		"S07000005":{"date":{"s":"2005-12-01"},"nm":"South West of Scotland Transport Partnership"},
-		"S07000006":{"date":{"s":"2005-12-01"},"nm":"Strathclyde Partnership for Transport"},
-		"S07000007":{"date":{"s":"2005-12-01"},"nm":"Tayside and Central Transport Partnership"}
+		"S07000001":[{"date":{"s":"2005-12-01"},"nm":"Highlands and Islands Transport Partnership","status":"live"}],
+		"S07000002":[{"date":{"s":"2005-12-01"},"nm":"North East of Scotland Transport Partnership","status":"live"}],
+		"S07000003":[{"date":{"s":"2005-12-01"},"nm":"Shetland Transport Partnership","status":"live"}],
+		"S07000004":[{"date":{"s":"2005-12-01"},"nm":"South East of Scotland Transport Partnership","status":"live"}],
+		"S07000005":[{"date":{"s":"2005-12-01"},"nm":"South West of Scotland Transport Partnership","status":"live"}],
+		"S07000006":[{"date":{"s":"2005-12-01"},"nm":"Strathclyde Partnership for Transport","status":"live"}],
+		"S07000007":[{"date":{"s":"2005-12-01"},"nm":"Tayside and Central Transport Partnership","status":"live"}]
 	},
 	"description":"Regional Transport Partnerships",
 	"source":"Code History Database (July 2024) ChangeHistory"

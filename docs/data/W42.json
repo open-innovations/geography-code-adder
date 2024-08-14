@@ -1,9 +1,9 @@
 {
 	"areas":{
-		"W42000001":{"date":{"s":"2018-07-01"},"nm":"Cardiff Capital Region"},
-		"W42000002":{"date":{"s":"2018-07-01"},"nm":"Growing Mid Wales"},
-		"W42000003":{"date":{"s":"2018-07-01"},"nm":"North Wales Economic Ambition Board"},
-		"W42000004":{"date":{"s":"2018-07-01"},"nm":"Swansea Bay City Region"}
+		"W42000001":[{"date":{"s":"2018-07-01"},"nm":"Cardiff Capital Region","status":"live"}],
+		"W42000002":[{"date":{"s":"2018-07-01"},"nm":"Growing Mid Wales","status":"live"}],
+		"W42000003":[{"date":{"s":"2018-07-01"},"nm":"North Wales Economic Ambition Board","status":"live"}],
+		"W42000004":[{"date":{"s":"2018-07-01"},"nm":"Swansea Bay City Region","status":"live"}]
 	},
 	"description":"City Regions ",
 	"source":"Code History Database (July 2024) ChangeHistory"

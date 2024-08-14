@@ -1,11 +1,11 @@
 {
 	"areas":{
-		"S10000001":{"date":{"s":"2007-12-01"},"nm":"Clyde Gateway"},
-		"S10000002":{"date":{"s":"2004-06-01"},"nm":"Clydebank Rebuilt"},
-		"S10000003":{"date":{"s":"2004-06-01"},"nm":"Craigmillar"},
-		"S10000004":{"date":{"s":"2006-06-01"},"nm":"Irvine Bay"},
-		"S10000005":{"date":{"s":"2004-06-01"},"nm":"Raploch"},
-		"S10000006":{"date":{"s":"2006-06-01"},"nm":"Riverside Inverclyde"}
+		"S10000001":[{"date":{"s":"2007-12-01"},"nm":"Clyde Gateway","status":"live"}],
+		"S10000002":[{"date":{"s":"2004-06-01"},"nm":"Clydebank Rebuilt","status":"live"}],
+		"S10000003":[{"date":{"s":"2004-06-01"},"nm":"Craigmillar","status":"live"}],
+		"S10000004":[{"date":{"s":"2006-06-01"},"nm":"Irvine Bay","status":"live"}],
+		"S10000005":[{"date":{"s":"2004-06-01"},"nm":"Raploch","status":"live"}],
+		"S10000006":[{"date":{"s":"2006-06-01"},"nm":"Riverside Inverclyde","status":"live"}]
 	},
 	"description":"Urban Regeneration Companies",
 	"source":"Code History Database (July 2024) ChangeHistory"

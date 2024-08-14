@@ -1,19 +1,19 @@
 {
 	"areas":{
-		"E32000001":{"date":{"s":"2010-05-06"},"nm":"Barnet and Camden","parent":"E12000007"},
-		"E32000002":{"date":{"s":"2010-05-06"},"nm":"Bexley and Bromley","parent":"E12000007"},
-		"E32000003":{"date":{"s":"2010-05-06"},"nm":"Brent and Harrow","parent":"E12000007"},
-		"E32000004":{"date":{"s":"2010-05-06"},"nm":"City and East","parent":"E12000007"},
-		"E32000005":{"date":{"s":"2010-05-06"},"nm":"Croydon and Sutton","parent":"E12000007"},
-		"E32000006":{"date":{"s":"2010-05-06"},"nm":"Ealing and Hillingdon","parent":"E12000007"},
-		"E32000007":{"date":{"s":"2010-05-06"},"nm":"Enfield and Haringey","parent":"E12000007"},
-		"E32000008":{"date":{"s":"2010-05-06"},"nm":"Greenwich and Lewisham","parent":"E12000007"},
-		"E32000009":{"date":{"s":"2010-05-06"},"nm":"Havering and Redbridge","parent":"E12000007"},
-		"E32000010":{"date":{"s":"2010-05-06"},"nm":"Lambeth and Southwark","parent":"E12000007"},
-		"E32000011":{"date":{"s":"2010-05-06"},"nm":"Merton and Wandsworth","parent":"E12000007"},
-		"E32000012":{"date":{"s":"2010-05-06"},"nm":"North East","parent":"E12000007"},
-		"E32000013":{"date":{"s":"2010-05-06"},"nm":"South West","parent":"E12000007"},
-		"E32000014":{"date":{"s":"2010-05-06"},"nm":"West Central","parent":"E12000007"}
+		"E32000001":[{"date":{"s":"2010-05-06"},"nm":"Barnet and Camden","parent":"E12000007","status":"live"}],
+		"E32000002":[{"date":{"s":"2010-05-06"},"nm":"Bexley and Bromley","parent":"E12000007","status":"live"}],
+		"E32000003":[{"date":{"s":"2010-05-06"},"nm":"Brent and Harrow","parent":"E12000007","status":"live"}],
+		"E32000004":[{"date":{"s":"2010-05-06"},"nm":"City and East","parent":"E12000007","status":"live"}],
+		"E32000005":[{"date":{"s":"2010-05-06"},"nm":"Croydon and Sutton","parent":"E12000007","status":"live"}],
+		"E32000006":[{"date":{"s":"2010-05-06"},"nm":"Ealing and Hillingdon","parent":"E12000007","status":"live"}],
+		"E32000007":[{"date":{"s":"2010-05-06"},"nm":"Enfield and Haringey","parent":"E12000007","status":"live"}],
+		"E32000008":[{"date":{"s":"2010-05-06"},"nm":"Greenwich and Lewisham","parent":"E12000007","status":"live"}],
+		"E32000009":[{"date":{"s":"2010-05-06"},"nm":"Havering and Redbridge","parent":"E12000007","status":"live"}],
+		"E32000010":[{"date":{"s":"2010-05-06"},"nm":"Lambeth and Southwark","parent":"E12000007","status":"live"}],
+		"E32000011":[{"date":{"s":"2010-05-06"},"nm":"Merton and Wandsworth","parent":"E12000007","status":"live"}],
+		"E32000012":[{"date":{"s":"2010-05-06"},"nm":"North East","parent":"E12000007","status":"live"}],
+		"E32000013":[{"date":{"s":"2010-05-06"},"nm":"South West","parent":"E12000007","status":"live"}],
+		"E32000014":[{"date":{"s":"2010-05-06"},"nm":"West Central","parent":"E12000007","status":"live"}]
 	},
 	"description":"London Assembly; Welsh Assembly; Scottish Parliament Constituency",
 	"source":"Code History Database (July 2024) ChangeHistory"

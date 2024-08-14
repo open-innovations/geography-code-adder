@@ -1,8 +1,8 @@
 {
 	"areas":{
-		"W24000001":{"date":{"s":"2009-01-01"},"nm":"Heads of the Valleys total","nm_alt":["Blaenau'r Cymoedd"],"parent":"W23000006"},
-		"W24000002":{"date":{"s":"2009-01-01"},"nm":"Connections Corridor","nm_alt":["Coridor Cysylltu"],"parent":"W23000006"},
-		"W24000003":{"date":{"s":"2009-01-01"},"nm":"City Coastal Zone","nm_alt":["Parth Arfordirol y Ddinas"],"parent":"W23000006"}
+		"W24000001":[{"date":{"s":"2009-01-01"},"nm":"Heads of the Valleys total","nm_alt":["Blaenau'r Cymoedd"],"parent":"W23000006","status":"live"}],
+		"W24000002":[{"date":{"s":"2009-01-01"},"nm":"Connections Corridor","nm_alt":["Coridor Cysylltu"],"parent":"W23000006","status":"live"}],
+		"W24000003":[{"date":{"s":"2009-01-01"},"nm":"City Coastal Zone","nm_alt":["Parth Arfordirol y Ddinas"],"parent":"W23000006","status":"live"}]
 	},
 	"description":"Spatial Plan Sub-areas",
 	"source":"Code History Database (July 2024) ChangeHistory"

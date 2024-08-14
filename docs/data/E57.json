@@ -1,8 +1,8 @@
 {
 	"areas":{
-		"E57000001":{"date":{"e":"2019-06-30","s":"2016-09-01"},"nm":"National Cancer Vanguard: Greater Manchester"},
-		"E57000002":{"date":{"e":"2019-06-30","s":"2016-09-01"},"nm":"National Cancer Vanguard: North Central and North East London"},
-		"E57000003":{"date":{"e":"2019-06-30","s":"2016-09-01"},"nm":"National Cancer Vanguard: North West and South West London"}
+		"E57000001":[{"date":{"e":"2019-06-30","s":"2016-09-01"},"nm":"National Cancer Vanguard: Greater Manchester","status":"terminated"}],
+		"E57000002":[{"date":{"e":"2019-06-30","s":"2016-09-01"},"nm":"National Cancer Vanguard: North Central and North East London","status":"terminated"}],
+		"E57000003":[{"date":{"e":"2019-06-30","s":"2016-09-01"},"nm":"National Cancer Vanguard: North West and South West London","status":"terminated"}]
 	},
 	"description":"National Cancer Vanguards",
 	"source":"Code History Database (July 2024) ChangeHistory"

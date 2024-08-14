@@ -1,6 +1,6 @@
 {
 	"areas":{
-		"N31000001":{"date":{"s":"2016-02-01"},"nm":"Northern Ireland Fire and Rescue Service"}
+		"N31000001":[{"date":{"s":"2016-02-01"},"nm":"Northern Ireland Fire and Rescue Service","status":"live"}]
 	},
 	"description":"Fire and Rescue Authorities",
 	"source":"Code History Database (July 2024) ChangeHistory"

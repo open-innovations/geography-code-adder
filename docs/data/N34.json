@@ -1,8 +1,8 @@
 {
 	"areas":{
-		"N34000001":{"date":{"s":"2019-04-01"},"nm":"Belfast City Region"},
-		"N34000002":{"date":{"s":"2019-04-01"},"nm":"Derry-Londonderry City Region"},
-		"N34000003":{"date":{"s":"2019-04-01"},"nm":"Rest of Northern Ireland (includes Armagh City, Banbridge and Craigavon, Mid Ulster, Causeway Coast and Glens and Fermanagh and Omagh)"}
+		"N34000001":[{"date":{"s":"2019-04-01"},"nm":"Belfast City Region","status":"live"}],
+		"N34000002":[{"date":{"s":"2019-04-01"},"nm":"Derry-Londonderry City Region","status":"live"}],
+		"N34000003":[{"date":{"s":"2019-04-01"},"nm":"Rest of Northern Ireland (includes Armagh City, Banbridge and Craigavon, Mid Ulster, Causeway Coast and Glens and Fermanagh and Omagh)","status":"live"}]
 	},
 	"description":"City Regions",
 	"source":"Code History Database (July 2024) ChangeHistory"
