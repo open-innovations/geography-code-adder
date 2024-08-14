@@ -162,6 +162,8 @@
 				document.body.appendChild(dl);
 			}
 			dl.click();
+			if(document.getElementById('msg-start-edit')) document.getElementById('msg-start-edit').innerHTML = '';
+			if(document.getElementById('btn-save')) document.getElementById('btn-save').style.display = 'none';
 			this._unsaved = false;
 			return this;
 		};
