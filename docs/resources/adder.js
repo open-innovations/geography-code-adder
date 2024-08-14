@@ -120,11 +120,11 @@
 				'on':{
 					'click': _obj.toggleOpenDialog
 				}
-			}).addButton({
+			})/*.addButton({
 				'id':'btn-add-gss',
 				'class':'c5-bg',
 				'text': 'Add GSS codes'
-			}).addButton({
+			})*/.addButton({
 				'id':'btn-delete',
 				'class':'icon c5-bg',
 				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/></svg>',
@@ -151,7 +151,7 @@
 				},
 				'update': function(){
 					document.getElementById('btn-delete').style.display = (this.selected.cols.length>0 || this.selected.rows.length>0) ? '' : 'none';
-					document.getElementById('btn-add-gss').style.display = (this.selected.cols.length==1) ? '' : 'none';
+					if(document.getElementById('btn-add-gss')) document.getElementById('btn-add-gss').style.display = (this.selected.cols.length==1) ? '' : 'none';
 					document.getElementById('btn-remove-empty-rows').style.display = (this._emptyrows.length>0) ? '' : 'none';
 				}
 			});
