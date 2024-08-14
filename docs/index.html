@@ -13,8 +13,25 @@
 	.container { display: flex; height: 100vh; max-height: 100vh; flex-direction: column; }
 	#main { flex-grow: 1; }
 	header { display: flex; }
-	header h1 { flex-grow: 1; }
+	header h1 {
+		flex-grow: 1;
+		padding: 1rem;
+		display: inline-block;
+		position: relative;
+		font-size: 1.4rem;
+	}
+	header h1 img {
+		margin-right: 0.25em;
+		float: left;
+		width: 1em;
+		height: 1em;
+	}
 	header .info { padding: 1rem; line-height: 0; }
+	nav { border-bottom: 1px solid #222; box-shadow: 0 4px 3px -4px rgba(0,0,0,0.25); z-index: 1; }
+	nav button { line-height: 1.5rem; margin-right: 1px; padding: 0.5em; }
+	nav button.icon { line-height: 0; }
+	nav button svg { height: 1.5rem; }
+
 	button:disabled { background: #999; }
 	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; margin-bottom: 1rem; }
 	.chooser input { font-size:1em; }
@@ -72,26 +89,11 @@
 	table th:first-child, table td:first-child { border-left: 0; }
 	table th:last-child, table td:last-child { border-right: 0; }
 	table, table .row { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+	table .row { text-align: right; }
 	table th, table .row { cursor: pointer; background: #ddd; }
 	table td, table th { min-height: 1em; padding: 0.125em 0.25em; line-height: 1.25em; }
 	td[aria-multiselectable] { background: rgba(249, 188, 38,0.4); }
 	th[aria-multiselectable], td.row[aria-multiselectable] { background: rgba(249, 188, 38,0.7); }
-	nav button { line-height: 1.5rem; margin-right: 1px; padding: 0.5em; }
-	nav button.icon { line-height: 0; }
-	nav button svg { height: 1.5rem; }
-	header, nav { position: sticky; }
-	header h1 {
-		padding: 1rem;
-		display: inline-block;
-		position: relative;
-		font-size: 1.4rem;
-	}
-	header h1 img {
-		margin-right: 0.25em;
-		float: left;
-		width: 1em;
-		height: 1em;
-	}
 	svg.bi { width: 1.5em; height: 1.5em; vertical-align:middle; cursor: pointer; }
 	.modal { padding-block: 3rem; }
 	footer { display: none; }
@@ -106,7 +108,7 @@
 			<h1><a href="https://open-innovations.org/projects/hexmaps/"><img src="https://open-innovations.org/resources/images/logos/oi-square-5.svg" style="height: 1em;"></a> Add UK geography codes</h1>
 		</header>
 
-		<nav id="navigation" class="b2-bg"></nav>
+		<nav id="navigation" class="b1-bg"></nav>
 
 		<div id="main" class="b6-bg">
 			<div id="messages"></div>
