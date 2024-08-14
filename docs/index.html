@@ -33,6 +33,7 @@
 	nav button svg { height: 1.5rem; }
 	nav #msg-start-edit { flex-grow: 1; text-align: right; padding-inline: 1rem; }
 
+	#messages { max-height: 160px; overflow-y: auto; }
 	#messages .message { border-bottom: 1px solid #222; }
 	button:disabled { background: #999; }
 	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; margin-bottom: 1rem; }
@@ -157,6 +158,7 @@
 				<div id="dialog-config-messages"></div>
 				<div id="add-geo-config" class="padded">
 					<h2>Add GSS codes</h2>
+					<p>We will try to find unique matches to various official names. Some geographies (e.g. Wards) don't have unique names which makes things tricky. In those cases we'll find the parent geographies of any unique matches and use those parents to try to narrow down the non-unique names. We'll also use the year you provide to narrow down changes over time.</p> 
 					<div class="row">
 						<label for="geography-type">Geography type:</label>
 						<select id="geography-type">

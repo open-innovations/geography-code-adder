@@ -289,6 +289,7 @@
 
 			this.csvedit.updateData(this.csvedit.data,this.csvedit.order);
 
+			this.csvedit.selected = {'cols':[],'rows':[]};
 
 			// Close the modal
 			this._geomodal.close();
@@ -622,7 +623,10 @@
 			this.el.append(inner);
 		}
 		this.close = function(){
-			if(inner) p.appendChild(inner)
+			if(inner){
+				p.appendChild(inner);
+				inner.style.display = "none";
+			}
 			document.body.removeChild(el);
 			return this;
 		};
