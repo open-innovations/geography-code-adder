@@ -52,6 +52,7 @@
 			}
 			if(typeof opts.delete==="function") opts.delete.call(this);
 			this.update();
+			if(typeof opts.edit==="function") opts.edit.call(this);
 			return this;
 		};
 
@@ -88,6 +89,7 @@
 			this.updateRowNumbers();
 			this._emptyrows = [];
 			this.update();
+			if(typeof opts.edit==="function") opts.edit.call(this);
 			return this;
 		};
 
@@ -178,9 +180,8 @@
 					el.addEventListener('click',function(e){ _obj.select("rows",parseInt(el.parentNode.getAttribute('data')),e.shiftKey,e.ctrlKey); });
 					el.addEventListener('keydown',function(e){ if(e.key=="Enter"){ e.preventDefault(); _obj.select("rows",parseInt(el.getAttribute('data')),e.shiftKey,e.ctrlKey); } });
 				});
-				//table.setAttribute('contenteditable',true);
 				table.addEventListener('input',function(e){
-					msg.log('input',e);
+					if(typeof opts.edit==="function") opts.edit.call(this);
 				});
 
 			}else{

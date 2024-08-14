@@ -27,10 +27,11 @@
 		height: 1em;
 	}
 	header .info { padding: 1rem; line-height: 0; }
-	nav { border-bottom: 1px solid #222; box-shadow: 0 4px 3px -4px rgba(0,0,0,0.25); z-index: 1; }
-	nav button { line-height: 1.5rem; margin-right: 1px; padding: 0.5em; }
+	nav { border-bottom: 1px solid #222; box-shadow: 0 4px 3px -4px rgba(0,0,0,0.25); z-index: 1; display: flex; }
+	nav button, nav div { line-height: 1.5rem; margin-right: 1px; padding: 0.5em; }
 	nav button.icon { line-height: 0; }
 	nav button svg { height: 1.5rem; }
+	nav #msg-start-edit { flex-grow: 1; text-align: right; padding-inline: 1rem; }
 
 	button:disabled { background: #999; }
 	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; margin-bottom: 1rem; }

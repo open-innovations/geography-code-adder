@@ -22,9 +22,14 @@
 		let msg = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
 		var _obj = this;
 
+		this.saveable = (typeof Blob==="function");
+
 		this.buildOutput = function(csv){
 			this.data = CSV2JSON(csv);
 			msg.log('Build output',this.data);
+
+			el = document.getElementById('msg-start-edit');
+			if(el) el.innerHTML = '';
 			
 			this.csvedit.updateData(this.data,this.data[0].order);
 
@@ -107,6 +112,59 @@
 			return this;
 		};
 
+		this.saveCSV = function(){
+			var str,file,type,c,r,m,cols;
+			file = "test.csv";
+			type = "text/csv";
+			if(document.getElementById('url').value) file = document.getElementById('url').value;
+			if(document.getElementById('standard_files').files.length > 0) file = document.getElementById('standard_files').files[0].name;
+
+			if(!this.csvedit){
+				msg.warn('No data to save',{'fade':5000});
+				console.log(this);
+				return this;
+			}
+			// Build CSV
+			str = "";
+			// Build header row
+			for(c = 0; c < this.csvedit.order.length; c++){
+				m = this.csvedit.order[c].match(",");
+				str += (c>0?',':'')+(m ? '\"' : '')+this.csvedit.order[c]+(m ? '\"' : '');
+			}
+			str += "\n";
+			cols = this.csvedit.order;
+			// Build rows
+			for(r = 0; r < this.csvedit.data.length; r++){
+				for(c = 0; c < cols.length; c++){
+					m = ((this.csvedit.data[r][cols[c]]||"")+"").match(",");
+					str += (c>0?',':'')+(m ? '\"' : '')+this.csvedit.data[r][cols[c]]+(m ? '\"' : '');
+				}
+				str += "\n";
+			}
+
+			var textFileAsBlob = new Blob([str], {type:type});
+			var fileNameToSaveAs = file;
+		
+			function destroyClickedElement(event){ document.body.removeChild(event.target); }
+			var dl = document.createElement("a");
+			dl.download = fileNameToSaveAs;
+			dl.innerHTML = "Download File";
+			if(window.webkitURL != null){
+				// Chrome allows the link to be clicked
+				// without actually adding it to the DOM.
+				dl.href = window.webkitURL.createObjectURL(textFileAsBlob);
+			}else{
+				// Firefox requires the link to be added to the DOM
+				// before it can be clicked.
+				dl.href = window.URL.createObjectURL(textFileAsBlob);
+				dl.onclick = destroyClickedElement;
+				dl.style.display = "none";
+				document.body.appendChild(dl);
+			}
+			dl.click();
+			return this;
+		};
+
 		this.init = function(){
 
 			this.lookup = new GeographyLookup({'dir':'data/'});
@@ -115,7 +173,7 @@
 			this.nav = new NavBar(document.getElementById('navigation'));
 			this.nav.addButton({
 				'id':'btn-open',
-				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/></svg>',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/><title>Open</title></svg>',
 				'class':'icon c5-bg',
 				'on':{
 					'click': _obj.toggleOpenDialog
@@ -127,7 +185,7 @@
 			})*/.addButton({
 				'id':'btn-delete',
 				'class':'icon c5-bg',
-				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/></svg>',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/><title>Delete</title></svg>',
 				'on':{
 					'click': function(e){ _obj.csvedit.delete(); }
 				}
@@ -139,6 +197,25 @@
 					'click': function(e){ _obj.csvedit.deleteEmptyRows(); }
 				}
 			});
+
+			if(this.saveable){
+				this.nav.addButton({
+					'id':'btn-save',
+					'text':'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/><title>Save</title></svg>',
+					'class':'icon c5-bg',
+					'on':{
+						'click': function(e){ 
+							_obj.saveCSV();
+						}
+					}
+				});
+				document.getElementById('btn-save').style.display = 'none';
+			}
+
+			this.nav.addText({
+				'id':'msg-start-edit'
+			})
+			
 			document.querySelectorAll('.btn-open').forEach(function(el){ el.addEventListener('click',function(){ _obj.toggleOpenDialog(); }); });
 
 			// Build the CSV editor - must be after the navbar
@@ -153,6 +230,10 @@
 					document.getElementById('btn-delete').style.display = (this.selected.cols.length>0 || this.selected.rows.length>0) ? '' : 'none';
 					if(document.getElementById('btn-add-gss')) document.getElementById('btn-add-gss').style.display = (this.selected.cols.length==1) ? '' : 'none';
 					document.getElementById('btn-remove-empty-rows').style.display = (this._emptyrows.length>0) ? '' : 'none';
+				},
+				'edit': function(){
+					document.getElementById('msg-start-edit').innerHTML = 'Unsaved changes';
+					if(document.getElementById('btn-save')) document.getElementById('btn-save').style.display = 'block';
 				}
 			});
 			this.csvedit.update();
@@ -245,10 +326,10 @@
 	}
 
 	function NavBar(el,opt){
-		this.buttons = [];
-		this.addButton = function(opts){
+		var buttons = [];
+		function addEl(typ,opts){
 			if(!opts) opts = {};
-			var btn = document.createElement('button');
+			var btn = document.createElement(typ);
 			if(opts.id) btn.setAttribute('id',opts.id);
 			if(opts.class) btn.classList.add(...opts.class.split(/ /));
 			if(opts.on){
@@ -256,11 +337,19 @@
 					btn.addEventListener(ev,opts.on[ev]);
 				}
 			}
-			btn.innerHTML = opts.text;
-			this.buttons.push(btn);
+			btn.innerHTML = opts.text||"&nbsp;";
+			buttons.push(btn);
 			el.append(btn);
 			return this;
 		}
+		this.addButton = function(opts){
+			addEl('button',opts);
+			return this;
+		};
+		this.addText = function(opts){
+			addEl('div',opts);
+			return this;
+		};
 		return this;
 	}
 
