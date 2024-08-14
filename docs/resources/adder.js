@@ -127,10 +127,10 @@
 			// Build the CSV editor - must be after the navbar
 			this.csvedit = new OI.CSVEditor(document.getElementById('output'),{
 				'delete': function(){
-					console.log('delete',this);
+					//console.log('delete',this);
 				},
 				'select': function(){
-					console.log('select',this);
+					//console.log('select',this);
 				},
 				'update': function(){
 					document.getElementById('btn-delete').style.display = (this.selected.cols.length>0 || this.selected.rows.length>0) ? '' : 'none';

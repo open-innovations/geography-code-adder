@@ -71,8 +71,8 @@
 	table, table .row { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 	table th, table .row { cursor: pointer; background: #ddd; }
 	table td, table th { min-height: 1em; padding: 0.125em 0.25em; line-height: 1.25em; }
-	.selected { background: rgba(249, 188, 38,0.4); }
-	th.selected, .row.selected { background: rgba(249, 188, 38,0.7); }
+	td[aria-multiselectable] { background: rgba(249, 188, 38,0.4); }
+	th[aria-multiselectable], td.row[aria-multiselectable] { background: rgba(249, 188, 38,0.7); }
 	nav button { line-height: 1.5rem; margin-right: 1px; }
 	nav button.icon { line-height: 0; }
 	nav button svg { height: 1.5rem; }

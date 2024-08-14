@@ -64,18 +64,16 @@
 		};
 
 		function selectEl(el){
-			el.classList.add('selected');
 			el.setAttribute('aria-multiselectable','true');
 		}
 		function deselectEl(el){
-			el.classList.remove('selected');
 			el.removeAttribute('aria-multiselectable');
 		}
 
 		this.select = function(dir,i,shift,ctrl){
 			var c,min,max,str;
 			function css(dir,i,sel){
-				if(dir=="cols") return 'tr th'+(sel ? '.selected':'')+':nth-child('+(i+1)+'),tr td'+(sel ? '.selected':'')+':nth-child('+(i+1)+')';
+				if(dir=="cols") return 'tr th'+(sel ? '[aria-multiselectable]':'')+':nth-child('+(i+1)+'),tr td'+(sel ? '[aria-multiselectable]':'')+':nth-child('+(i+1)+')';
 				else return 'tr:nth-child('+(i+1)+') td';
 			}
 			if(dir=="cols" && this.selected.rows && this.selected.rows.length > 0){
@@ -108,7 +106,7 @@
 				}
 			}else{
 				// Remove all selections
-				table.querySelectorAll('.selected').forEach(deselectEl);
+				table.querySelectorAll('[aria-multiselectable]').forEach(deselectEl);
 				if(this.selected[dir].includes(i)){
 					this.selected[dir] = [];
 				}else{
