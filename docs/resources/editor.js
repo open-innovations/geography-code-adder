@@ -279,6 +279,7 @@
 				}
 			}
 
+			this.startEdit();
 
 			// Update values
 			for(r = 0; r < geo.length; r++) this.csvedit.data[r][cdcol] = geo[r].code||"";
@@ -287,7 +288,8 @@
 			this.csvedit.order.splice(idx,0,cdcol);
 
 			this.csvedit.updateData(this.csvedit.data,this.csvedit.order);
-			
+
+
 			// Close the modal
 			this._geomodal.close();
 
