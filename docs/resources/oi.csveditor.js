@@ -40,20 +40,11 @@
 					// Remove the column from the order
 					this.order.splice(cols[i]-1,1);
 				}
-				for(i = 0; i < rows.length; i++){
-					// Remove the row from the table
-					table.querySelector('tr:nth-child('+(rows[i]+1)+')').remove();
-					// Remove the row from the data
-					this.data.splice(rows[i]-1,1);
-				}
+				for(i = 0; i < rows.length; i++) this.deleteRow(i);
 				this.selected = {'cols':[],'rows':[]};
 
-				// Update row numbers
-				tr = table.querySelectorAll('tr');
-				for(i = 1; i < tr.length; i++){
-					tr[i].setAttribute('data',i);
-					tr[i].querySelector('.row').innerHTML = i;
-				}
+				this.updateRowNumbers();
+
 				th = table.querySelectorAll('th');
 				for(i = 1; i < th.length; i++){
 					th[i].setAttribute('data',i);
@@ -61,6 +52,23 @@
 			}
 			if(typeof opts.delete==="function") opts.delete.call(this);
 			this.update();
+			return this;
+		};
+
+		this.deleteRow = function(i){
+			table.querySelector('tr:nth-child('+(i+1)+')').remove();
+			// Remove the row from the data
+			this.data.splice(i-1,1);
+			return this;
+		};
+
+		this.updateRowNumbers = function(){
+			// Update row numbers
+			tr = table.querySelectorAll('tr');
+			for(i = 1; i < tr.length; i++){
+				tr[i].setAttribute('data',i);
+				tr[i].querySelector('.row').innerHTML = i;
+			}
 			return this;
 		};
 
@@ -73,11 +81,13 @@
 				if(v=='') this._emptyrows.push(r+1);
 			}
 			return this;
-		}
+		};
+
 		this.deleteEmptyRows = function(){
-			this.selected = {'cols':[],'rows':this._emptyrows};
+			for(var r = this._emptyrows.length-1; r >= 0; r--) this.deleteRow(this._emptyrows[r]);
+			this.updateRowNumbers();
 			this._emptyrows = [];
-			this.delete();
+			this.update();
 			return this;
 		};
 
