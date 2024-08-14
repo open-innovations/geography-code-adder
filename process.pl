@@ -53,7 +53,6 @@ for($r = 0; $r < @rows; $r++){
 	for($c = 0; $c < @check; $c++){
 		if($rows[$r]->{$check[$c]}){
 			$typ = $rows[$r]->{$check[$c]};
-			$typ =~ s/ //g;
 			if(!defined($geotypes{$typ})){ $geotypes{$typ} = {}; }
 			$geotypes{$typ}{'description'} = $rows[$r]->{'Entity'};
 		}
@@ -71,6 +70,7 @@ while(<FILE>){
 		}
 	}else{
 		$typ = $cols[$head{'ENTITYCD'}];
+		# Some have trailing whitespace
 		$typ =~ s/ //g;
 		$cd = $cols[$head{'GEOGCD'}];
 		$nm = $cols[$head{'GEOGNM'}];

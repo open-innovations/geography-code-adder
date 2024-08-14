@@ -1420,7 +1420,7 @@
 		"E05001418":[{"date":{"e":"2018-05-02","s":"2009-01-01"},"nm":"Calverley and Farsley","parent":"E08000035","status":"terminated"}],
 		"E05001419":[{"date":{"e":"2018-05-02","s":"2009-01-01"},"nm":"Chapel Allerton","parent":"E08000035","status":"terminated"}],
 		"E05001420":[{"date":{"e":"2018-05-02","s":"2009-01-01"},"nm":"City and Hunslet","parent":"E08000035","status":"terminated"}],
-		"E05001421":[{"date":{"e":"2018-05-02","s":"2009-01-01"},"nm":"Cross Gates and Whinmoor","parent":"E08000035","status":"terminated"}],
+		"E05001421":[{"date":{"e":"2018-05-02","s":"2009-01-01"},"nm":"Cross Gates and Whinmoor","nm_alt":["Crossgates & Whinmoor"],"parent":"E08000035","status":"terminated"}],
 		"E05001422":[{"date":{"e":"2018-05-02","s":"2009-01-01"},"nm":"Farnley and Wortley","parent":"E08000035","status":"terminated"}],
 		"E05001423":[{"date":{"e":"2018-05-02","s":"2009-01-01"},"nm":"Garforth and Swillington","parent":"E08000035","status":"terminated"}],
 		"E05001424":[{"date":{"e":"2018-05-02","s":"2009-01-01"},"nm":"Gipton and Harehills","parent":"E08000035","status":"terminated"}],
