@@ -13,18 +13,20 @@ binmode STDERR, 'utf8';
 my $basedir = "./";
 if(abs_path($0) =~ /^(.*\/)[^\/]*/){ $basedir = $1; }
 
-my (%geotypes,$r,$typ,$cd,$nm,$file,$fh,$args,@rows,@cols,@header,$c,%head,$ext,%equivalents,%types,@check,$str,@alts,$tmp,$g);
+my (%geotypes,$r,$typ,$cd,$nm,$file,$fh,$args,@rows,@cols,@header,$c,%head,$ext,$supplemental,%equivalents,%types,@check,$str,@alts,$tmp,$g);
 
 # Get the command line arguments
 $args = ParseCommandLine({
 	'file'=>{'alias'=>['f','file'],'arguments'=>1},
 	'dir'=>{'alias'=>['d','dir'],'arguments'=>1},
 	'format'=>{'alias'=>['t','format'],'arguments'=>1},
-	'equivalents'=>{'alias'=>['e','equivalents'],'arguments'=>1}
+	'equivalents'=>{'alias'=>['e','equivalents'],'arguments'=>1},
+	'supplemental'=>{'alias'=>['s','supplemental'],'arguments'=>1}
 });
 
 if(!$args->{'file'}){ $args->{'file'} = "raw/Code_History_Database_(July_2024)/ChangeHistory.csv"; }
 if(!$args->{'equivalents'}){ $args->{'equivalents'} = "raw/Code_History_Database_(July_2024)/Equivalents.csv"; }
+if(!$args->{'supplemental'}){ $args->{'supplemental'} = "supplemental.json"; }
 if(!$args->{'format'} || $args->{'format'} ne "CSV"){ $args->{'format'} = "JSON"; }
 
 
@@ -40,12 +42,18 @@ if(!-e $args->{'equivalents'}){
 ########################################
 # Open the input files and process them
 
+if(-e $args->{'supplemental'}){
+	msg("Processing supplemental name lookup from <cyan>$args->{'supplemental'}<none>\n");
+	%equivalents = %{LoadJSON($args->{'supplemental'})};
+}
+
 @rows = LoadCSV($basedir."code-types.csv");
 @check = ("England","Wales","Scotland","Northern Ireland");
 for($r = 0; $r < @rows; $r++){
 	for($c = 0; $c < @check; $c++){
 		if($rows[$r]->{$check[$c]}){
 			$typ = $rows[$r]->{$check[$c]};
+			$typ =~ s/ //g;
 			if(!defined($geotypes{$typ})){ $geotypes{$typ} = {}; }
 			$geotypes{$typ}{'description'} = $rows[$r]->{'Entity'};
 		}
@@ -63,6 +71,7 @@ while(<FILE>){
 		}
 	}else{
 		$typ = $cols[$head{'ENTITYCD'}];
+		$typ =~ s/ //g;
 		$cd = $cols[$head{'GEOGCD'}];
 		$nm = $cols[$head{'GEOGNM'}];
 		$nm =~ s/(^\"|\"$)//g;

@@ -209,7 +209,8 @@
 			colname = this.csvedit.order[this.csvedit.selected.cols[0]-1];
 			// First get all the geography values
 			geo = new Array(this.csvedit.data.length);
-			for(r = 0; r < this.csvedit.data.length; r++) geo[r] = {'v':this.csvedit.data[r][colname].toLowerCase(),'code':''};
+			// Lowercase the name and replace trailing spaces
+			for(r = 0; r < this.csvedit.data.length; r++) geo[r] = {'v':this.csvedit.data[r][colname].toLowerCase().replace(/\s+$/g,''),'code':''};
 
 			// Get data into a nicer structure based on names
 			lookup = {};

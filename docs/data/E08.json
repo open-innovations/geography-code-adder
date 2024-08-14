@@ -30,7 +30,7 @@
 		"E08000028":[{"date":{"s":"2009-01-01"},"nm":"Sandwell","nm_alt":["Sandwell Metropolitan Borough Council"],"parent":"E12000005","status":"live"}],
 		"E08000029":[{"date":{"s":"2009-01-01"},"nm":"Solihull","nm_alt":["Solihull Metropolitan Borough Council"],"parent":"E12000005","status":"live"}],
 		"E08000030":[{"date":{"s":"2009-01-01"},"nm":"Walsall","nm_alt":["Walsall Metropolitan Borough Council"],"parent":"E12000005","status":"live"}],
-		"E08000031":[{"date":{"s":"2009-01-01"},"nm":"Wolverhampton","nm_alt":["Wolverhampton City Council"],"parent":"E12000005","status":"live"}],
+		"E08000031":[{"date":{"s":"2009-01-01"},"nm":"Wolverhampton","nm_alt":["City of Wolverhampton Council","Wolverhampton City Council"],"parent":"E12000005","status":"live"}],
 		"E08000032":[{"date":{"s":"2009-01-01"},"nm":"Bradford","nm_alt":["City of Bradford Metropolitan District Council"],"parent":"E12000003","status":"live"}],
 		"E08000033":[{"date":{"s":"2009-01-01"},"nm":"Calderdale","nm_alt":["Calderdale Metropolitan Borough Council"],"parent":"E12000003","status":"live"}],
 		"E08000034":[{"date":{"s":"2009-01-01"},"nm":"Kirklees","nm_alt":["Kirklees Council"],"parent":"E12000003","status":"live"}],
