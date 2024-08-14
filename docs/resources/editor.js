@@ -19,8 +19,12 @@
 		this.name = "Geography Code Adder";
 		this.version = "0.1";
 
-		let msg = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
+		var msg = new OI.logger(this.name+' v'+this.version,{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
 		var _obj = this;
+		this.spinner = document.createElement('div');
+		this.spinner.classList.add('spinner');
+		this.spinner.style['text-align'] = "center";
+		this.spinner.innerHTML = '<img src="https://open-innovations.org/resources/images/loader.svg" alt="Loading..." />';
 
 		this.saveable = (typeof Blob==="function");
 
@@ -28,12 +32,17 @@
 			this.data = CSV2JSON(csv);
 			msg.log('Build output',this.data);
 
-			el = document.getElementById('msg-start-edit');
+			var el = document.getElementById('msg-start-edit');
 			if(el) el.innerHTML = '';
-			
-			this.csvedit.updateData(this.data,this.data[0].order);
 
-			document.getElementById('process').disabled = false;
+			// Reshape the data
+			var data = new Array(this.data.length);
+			for(r = 0; r < this.data.length; r++) data[r] = this.data[r].cols;
+
+			// Update the table
+			this.csvedit.updateData(data,this.data[0].order);
+
+			document.getElementById('geography-add').disabled = false;
 			return this;
 		};
 
@@ -58,7 +67,7 @@
 			var reader = new FileReader();
 			reader.readAsText(myFile, "UTF-8");
 			reader.addEventListener('load',function(e){ _obj.buildOutput(e.target.result); _obj.toggleOpenDialog(); });
-			reader.onerror = function(e){ msg.error('Failed to read file'); }
+			reader.onerror = function(e){ msg.error('Failed to read file'); };
 			return this;
 		};
 
@@ -74,30 +83,20 @@
 			return this;
 		};
 
-		this.updateType = function(){
-			msg.log('Type',document.getElementById('geography-type').value);
-			this.lookup.load(document.getElementById('geography-type').value,function(){ msg.log('loaded all',this); });
-		};
-
-		this.updateColumn = function(c){
-			msg.log('Column',c);
-		};
-
 		this.toggleOpenDialog = function(){
-			msg.log('toggle',window.getComputedStyle(document.getElementById('dialog-open'))['display'])
-			var o = (window.getComputedStyle(document.getElementById('dialog-open'))['display']=="none");
+			msg.log('toggle',window.getComputedStyle(document.getElementById('dialog-open')).display);
+			var o = (window.getComputedStyle(document.getElementById('dialog-open')).display=="none");
 			document.getElementById('output').style.display = (o ? 'none' : 'block');
 			document.getElementById('dialog-open').style.display = (o ? 'block' : 'none');
 			return this;
 		};
 
 		this.reset = function(){
-			document.getElementById('process').disabled = true;
+			document.getElementById('geography-add').disabled = true;
 			this.data = {};
 			var el = document.getElementById('no-file');
 			if(el) el.remove();
 			this.updateFileDetails();
-			this.updateType();
 
 			return this;
 		};
@@ -121,7 +120,6 @@
 
 			if(!this.csvedit){
 				msg.warn('No data to save',{'fade':5000});
-				console.log(this);
 				return this;
 			}
 			// Build CSV
@@ -141,10 +139,8 @@
 				}
 				str += "\n";
 			}
-
 			var textFileAsBlob = new Blob([str], {type:type});
 			var fileNameToSaveAs = file;
-		
 			function destroyClickedElement(event){ document.body.removeChild(event.target); }
 			var dl = document.createElement("a");
 			dl.download = fileNameToSaveAs;
@@ -180,18 +176,155 @@
 			if(document.getElementById('btn-save')) document.getElementById('btn-save').disabled = true;
 			this._unsaved = false;
 			return this;
-		}
+		};
 
-		this.updateButtons = function(me){
+		this.updateButtons = function(){
+			var me = this.csvedit;
 			if(document.getElementById('btn-delete')) document.getElementById('btn-delete').disabled = (me.selected.cols.length>0 || me.selected.rows.length>0) ? false : true;
 			if(document.getElementById('btn-add-gss')) document.getElementById('btn-add-gss').disabled = (me.selected.cols.length!=1);
 			document.getElementById('btn-remove-empty-rows').disabled = (me._emptyrows.length==0);
 			if(document.getElementById('btn-isodate')) document.getElementById('btn-isodate').disabled = (me.selected.cols.length==0);
-		}
+		};
+
+		this.startGeographies = function(){
+			this._geomodal = new Modal('add-geographies',document.getElementById('dialog-config'));
+			this.updateType();
+			return this;
+		};
+
+		this.processGeography = function(){
+			var typ,yyyy,d,geo,r,part,cd,colname,lookup,i,datum,nm,cd,parents,matches,m,gooddate,ok,j,cdcol;
+			typ = document.getElementById('geography-type').value;
+			yyyy = document.getElementById('geography-year').value;
+			d = yyyy+'-04-01';
+
+			cdcol = typ+yyyy.substr(2,)+'CD';
+
+			if(this.csvedit.order.includes(cdcol)){
+				msg.warn('There is already a column for '+cdcol);
+				this._geomodal.close();
+				return this;
+			}
+
+			colname = this.csvedit.order[this.csvedit.selected.cols[0]-1];
+			// First get all the geography values
+			geo = new Array(this.csvedit.data.length);
+			for(r = 0; r < this.csvedit.data.length; r++) geo[r] = {'v':this.csvedit.data[r][colname],'code':''};
+
+			// Get data into a nicer structure based on names
+			lookup = {};
+			for(part in this.lookup.data[typ]){
+				for(cd in this.lookup.data[typ][part].areas){
+					for(j = 0; j < this.lookup.data[typ][part].areas[cd].length; j++){
+						nm = this.lookup.data[typ][part].areas[cd][j].nm;
+						if(!lookup[nm]) lookup[nm] = [];
+						datum = {'code':cd,'date':this.lookup.data[typ][part].areas[cd][j].date,'parent':this.lookup.data[typ][part].areas[cd][j].parent};
+						lookup[nm].push(datum);
+						if(this.lookup.data[typ][part].areas[cd][j].nm_alt){
+							// Loop over alternate names
+							for(i = 0; i < this.lookup.data[typ][part].areas[cd][j].nm_alt.length; i++){
+								nm = this.lookup.data[typ][part].areas[cd][j].nm_alt[i];
+								if(!lookup[nm]) lookup[nm] = [];
+								if(nm) lookup[nm].push(datum);
+							}
+						}
+					}
+				}
+			}
+
+			// First pass to look for matches.
+			parents = {};
+			for(r = 0; r < geo.length; r++){
+				nm = geo[r].v
+				if(nm){
+					if(nm in lookup){
+						if(lookup[nm].length==1){
+							geo[r].code = lookup[nm][0].code;
+							if(typeof parents[lookup[nm][0].parent]==="undefined"){
+								parents[lookup[nm][0].parent] = 0;
+							}
+							parents[lookup[nm][0].parent]++;
+						}
+					}
+				}
+			}
+
+			// Second pass to look for those without codes and then work out if there is a good match based on parent
+			for(r = 0; r < geo.length; r++){
+				nm = geo[r].v
+				if(!geo[r].code){
+					if(nm){
+						if(nm in lookup){
+							matches = [];
+							gooddate = [];
+							for(m = 0; m < lookup[nm].length; m++){
+								if(lookup[nm][m].parent in parents){
+									matches.push(lookup[nm][m]);
+								}
+							}
+							// Now go through matches and see how many are valid in time
+							for(m = 0; m < matches.length; m++){
+								ok = true;
+								if(matches[m].date.s && d < matches[m].date.s) ok = false; 
+								if(matches[m].date.e && d > matches[m].date.e) ok = false; 
+								if(ok) gooddate.push(matches[m]);
+							}
+							if(gooddate.length==1){
+								geo[r].code = gooddate[0].code;
+							}else{
+								msg.warn('No match for %c'+nm+'%c on row %c'+(r+1)+'%c','font-style:italic;','','font-weight:bold','');
+							}
+						}
+					}
+				}
+			}
+
+
+			// Update values
+			for(r = 0; r < geo.length; r++) this.csvedit.data[r][cdcol] = geo[r].code||"";
+			// Insert a column heading before the selected column
+			var idx = this.csvedit.selected.cols[0]-1;
+			this.csvedit.order.splice(idx,0,cdcol);
+
+			this.csvedit.updateData(this.csvedit.data,this.csvedit.order);
+			
+			// Close the modal
+			this._geomodal.close();
+
+			return this;
+		};
+
+		this.updateType = function(){
+			el = document.getElementById('geography-type');
+			msg.log('Type',el.value);
+
+			document.getElementById('geography-add').disabled = true;
+
+			if(el.value){
+				if(document.getElementById('geography-lookup-error')) document.getElementById('geography-lookup-error').remove();
+				el.disabled = true;
+				el.after(this.spinner);
+				this.lookup.load(el.value);
+			}
+			return this;
+		};
 
 		this.init = function(){
 
-			this.lookup = new GeographyLookup({'dir':'data/'});
+			this.lookup = new GeographyLookup({
+				'dir':'data/',
+				'on': {
+					'load': function(){
+						_obj.spinner.remove();
+						document.getElementById('geography-type').disabled = false;
+						document.getElementById('geography-add').disabled = false;
+					},
+					'error': function(){
+						_obj.spinner.remove();
+						document.getElementById('geography-type').disabled = false;
+					}
+				}
+			});
 
 			// Create a navigation bar
 			this.nav = new NavBar(document.getElementById('navigation'));
@@ -201,55 +334,6 @@
 				'class':'icon c5-bg',
 				'on':{
 					'click': _obj.toggleOpenDialog
-				}
-			})/*.addButton({
-				'id':'btn-add-gss',
-				'class':'c5-bg',
-				'text': 'Add GSS codes'
-			})*/.addButton({
-				'id':'btn-delete',
-				'class':'icon c5-bg',
-				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/><title>Delete</title></svg>',
-				'on':{
-					'click': function(e){ _obj.csvedit.delete(); }
-				}
-			}).addButton({
-				'id':'btn-remove-empty-rows',
-				'class':'c5-bg',
-				'text':'<svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2 5h12v5h-12v-5M6 5v5M10 5v5M14 2l-12 12" fill="transparent" /><title>Remove empty rows</title></svg>',
-				'on':{
-					'click': function(e){ _obj.csvedit.deleteEmptyRows(); }
-				}
-			}).addButton({
-				'id':'btn-isodate',
-				'class':'c5-bg',
-				'text':'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16"><path d="M8 5.5m 5.5,0 a 5.5,5.5 0 1,0 -11,0 a 5.5,5.5 0 1,0 11,0M 8 5.5m-0.5 -0.5v-3.5h1v4.5h-4v-1h3z"/><text x="8" y="12" text-anchor="middle" dominant-baseline="hanging" font-size="4" font-family="Poppins">ISO8601</text><title>Convert dates to ISO8601</title></svg>',
-				'on':{
-					'click': function(e){
-						_obj.startEdit();
-						var me = _obj.csvedit;
-						var i,c,r,cell,otxt,txt,yy,mm,dd;
-						if(me.selected.cols.length > 0){
-							for(r = 0; r < me.data.length; r++){
-								for(i = 0; i < me.selected.cols.length; i++){
-									c = me.selected.cols[i];
-									otxt = me.data[r][me.order[c-1]];
-									txt = "";
-									if(otxt){
-										if(otxt.match(/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/)){
-											txt = otxt.replace(/^([0-9]{2})[\/\-]([0-9]{2})[\/\-]([0-9]{4})$/,function(m,p1,p2,p3){ return p3+'-'+p2+'-'+p1; });
-										}
-									}
-									if(txt!=otxt){
-										// Update data and cell
-										me.data[r][me.order[c-1]] = txt;
-										cell = me.getCell(r,c);
-										cell.innerHTML = txt;
-									}
-								}
-							}
-						}
-					}
 				}
 			});
 
@@ -275,6 +359,44 @@
 				});
 			}
 
+			this.nav.addButton({
+				'id':'btn-delete',
+				'class':'icon c5-bg',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/><title>Delete</title></svg>',
+				'on':{
+					'click': function(e){ _obj.csvedit.delete(); }
+				}
+			}).addButton({
+				'id':'btn-remove-empty-rows',
+				'class':'c5-bg',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2 5h12v5h-12v-5M6 5v5M10 5v5M14 2l-12 12" fill="transparent" /><title>Remove empty rows</title></svg>',
+				'on':{
+					'click': function(e){ _obj.csvedit.deleteEmptyRows(); }
+				}
+			}).addButton({
+				'id':'btn-add-gss',
+				'class':'c5-bg',
+				'text': 'Add GSS codes',
+				'on':{
+					'click': function(e){ _obj.startGeographies(); }
+				}
+			}).addButton({
+				'id':'btn-isodate',
+				'class':'c5-bg',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16"><path d="M8 5.5m 5.5,0 a 5.5,5.5 0 1,0 -11,0 a 5.5,5.5 0 1,0 11,0M 8 5.5m-0.5 -0.5v-3.5h1v4.5h-4v-1h3z"/><text x="8" y="12" text-anchor="middle" dominant-baseline="hanging" font-size="4" font-family="Poppins">ISO8601</text><title>Convert dates to ISO8601</title></svg>',
+				'on':{
+					'click': function(e){
+						_obj.startEdit();
+						_obj.csvedit.updateSelectedColumns(function(otxt){
+							if(otxt && otxt.match(/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/)){
+								return otxt.replace(/^([0-9]{2})[\/\-]([0-9]{2})[\/\-]([0-9]{4})$/,function(m,p1,p2,p3){ return p3+'-'+p2+'-'+p1; });
+							}
+							return otxt;
+						});
+					}
+				}
+			});
+
 			this.nav.addText({'id':'msg-start-edit'});
 			
 			document.querySelectorAll('.btn-open').forEach(function(el){ el.addEventListener('click',function(){ _obj.toggleOpenDialog(); }); });
@@ -282,13 +404,11 @@
 			// Build the CSV editor - must be after the navbar
 			this.csvedit = new OI.CSVEditor(document.getElementById('output'),{
 				'delete': function(){
-					//console.log('delete',this);
 				},
 				'select': function(){
-					//console.log('select',this);
 				},
 				'update': function(){
-					_obj.updateButtons(this);
+					_obj.updateButtons();
 				},
 				'edit': function(){
 					_obj.startEdit();
@@ -301,7 +421,7 @@
 			if(year.value==""){
 				var d = new Date();
 				year.value = d.getFullYear();
-				year.setAttribute('max',year.value)
+				year.setAttribute('max',year.value);
 			}
 
 			document.getElementById('reset').addEventListener('click',function(e){
@@ -339,6 +459,7 @@
 			document.getElementById('standard_files').addEventListener('change',function(e){ dragOff(); _obj.updateFileDetails(); });
 
 			document.getElementById('geography-type').addEventListener('change',function(){ _obj.updateType(); });
+			document.getElementById('geography-add').addEventListener('click',function(){ _obj.processGeography(); });
 
 			// Build any examples
 			var exs = document.querySelectorAll('a.example');
@@ -357,7 +478,7 @@
 			info.addEventListener('click',function(e){
 				var foot = document.querySelector('footer');
 				var main = document.getElementById('main');
-				var o = window.getComputedStyle(foot)['display'];
+				var o = window.getComputedStyle(foot).display;
 				if(o=="none"){
 					foot.style.display = "block";
 					main.style.display = "none";
@@ -365,7 +486,6 @@
 					foot.style.display = "none";
 					main.style.display = "block";
 				}
-				console.log(o);
 			});
 			document.querySelector('header').append(info);
 
@@ -377,14 +497,13 @@
 			return this;
 		};
 
-
 		this.init();
 
 		return this;
 	}
 
 	function NavBar(el,opt){
-		var buttons = [];
+		var buttons = [],ev;
 		function addEl(typ,opts){
 			if(!opts) opts = {};
 			var btn = document.createElement(typ);
@@ -413,18 +532,30 @@
 
 	function GeographyLookup(opt){
 		if(!opt) opt = {};
+		if(!opt.on) opt.on = {};
 		if(!opt.dir) opt.dir = "";
-		var msg = new OI.logger('Geography Lookup',{el:document.getElementById('messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
+		var msg = new OI.logger('Geography Lookup',{el:document.getElementById('dialog-config-messages'),'visible':['info','warning','error'],'fade':60000,'class':'msg'});
 		this.data = {};
+		this.ready = false;
 		this.lookup = {
 			'LAD':['E06','E07','E08','E09','N09','S12','W06'],
 			'WD':['E05','N08','W05','S13'],
 			'PCON':['E14','N05','W07','S14']
 		};
+		this.setOpt = function(i,o){
+			opt[i] = o;
+			return this;
+		};
+		this.doneLoading = function(cb){
+			this.ready = true;
+			if(typeof cb==="function") cb.call(this);
+			if(typeof opt.on.load==="function") opt.on.load.call(this);
+			return this;
+		};
 		this.getCode = function(name,code,cb){
 			if(this.data[name][code]){
 				this.loaded++;
-				if(this.loaded==this.toload && typeof cb==="function") cb.call(this);
+				if(this.loaded==this.toload) this.doneLoading(cb);
 			}else{
 				this.data[name][code] = {};
 				var url = opt.dir+code+'.json';
@@ -435,40 +566,65 @@
 				}).then(json => {
 					this.loaded++;
 					this.data[name][code] = json;
-					if(this.loaded==this.toload && typeof cb==="function") cb.call(this);
+					if(this.loaded==this.toload) this.doneLoading(cb);
 				}).catch(e => {
-					msg.error('There has been a problem loading CSV data from <em>%c'+url+'%c</em>. It may not be publicly accessible or have some other issue.','font-style:italic;','font-style:normal;');
+					msg.error('There has been a problem loading CSV data from <em>%c'+url+'%c</em>. It may not be publicly accessible or have some other issue.','font-style:italic;','font-style:normal;',{'id':'geography-lookup-error'});
+					if(typeof opt.on.error==="function") opt.on.error.call(this);
 				});
 			}
 			return this;
-		}
+		};
 		this.load = function(name,cb){
+			var i;
 			if(name){
+				this.ready = false;
 				if(this.lookup[name]){
-					this.loaded = 0;
-					this.toload = 0;
 					if(!this.data[name]) this.data[name] = {};
-					for(var i = 0; i < this.lookup[name].length; i++){
-						if(!this.data[name][this.lookup[name][i]]){ this.toload++; }
+					this.loaded = 0;
+					this.toload = this.lookup[name].length;
+					for(i = 0; i < this.lookup[name].length; i++){
+						if(this.data[name][this.lookup[name][i]]) this.loaded++;
 					}
-					for(var i = 0; i < this.lookup[name].length; i++) this.getCode(name,this.lookup[name][i],cb);
+					if(this.toload==this.loaded){
+						this.doneLoading(cb);
+					}else{
+						for(i = 0; i < this.lookup[name].length; i++) this.getCode(name,this.lookup[name][i],cb);
+					}
 				}else{
-					msg.warn('No known geography of type <em>'+name+'</em>.');
+					msg.warn('No known geography of type <em>'+name+'</em>.',{'id':'geography-lookup-error'});
+					if(typeof opt.on.error==="function") opt.on.error.call(this);
 				}
 			}
 			return this;
+		};
+
+		return this;
+	}
+
+	function Modal(id,inner){
+		var el = document.getElementById(id);
+		var p = inner.parentNode;
+		var _obj = this;
+		if(!el){
+			el = document.createElement('div');
+			el.classList.add('modal');
+			el.innerHTML = '<div class="modal-inner b6-bg"></div>';
+			el.id = id;
+			el.addEventListener('click',function(e){
+				if(e.target==el) _obj.close();
+			});
 		}
-		
-		/*
-		First pass to look for matches. Keep all matches for a given name.
-
-		For unique matches, add to a parent counter.
-
-		Second pass of geographies (with multiple matches) to see which ones share a parent.
-
-		If there are still multiple matches we produce an error and leave blank?
-		*/
-
+		this.el = el.querySelector('.modal-inner');
+		if(inner){
+			inner.style.display = "";
+			this.el.append(inner);
+		}
+		this.close = function(){
+			if(inner) p.appendChild(inner)
+			document.body.removeChild(el);
+			return this;
+		};
+		document.body.append(el);
 		return this;
 	}
 
@@ -478,60 +634,6 @@
 		if(b > 1e6) return (b/1e6).toFixed(2)+" MB";
 		if(b > 1e3) return (b/1e3).toFixed(2)+" kB";
 		return (b)+" bytes";
-	}
-
-	if(!OI.logger){
-		// Version 1.5
-		OI.logger = function(title,attr){
-			if(!attr) attr = {};
-			title = title||"OI Logger";
-			var ms = {};
-			this.logging = (location.search.indexOf('debug=true') >= 0);
-			if(console && typeof console.log==="function"){
-				this.log = function(){ if(this.logging){ console.log.apply(null,getParam(arguments)); updatePage('log',arguments); } };
-				this.info = function(){ console.info.apply(null,getParam(arguments)); updatePage('info',arguments); };
-				this.warn = function(){ console.warn.apply(null,getParam(arguments)); updatePage('warning',arguments); };
-				this.error = function(){ console.error.apply(null,getParam(arguments)); updatePage('error',arguments); };
-			}
-			this.remove = function(id){
-				var el = attr.el.querySelector('#'+id);
-				if(ms[id]) clearTimeout(ms[id]);
-				el.remove();
-			};
-			function updatePage(){
-				if(attr.el){
-					var cls = arguments[0];
-					var txt = Array.prototype.shift.apply(arguments[1]);
-					var opt = arguments[1]||{};
-					if(opt.length > 0) opt = opt[opt.length-1];
-					if(attr.visible.includes(cls)) opt.visible = true;
-					if(opt.visible){
-						var el = document.createElement('div');
-						el.classList.add('message',cls);
-						if(attr.class) el.classList.add(...attr.class.split(/ /));
-						el.innerHTML = txt.replace(/\%c/g,"");
-						el.style.display = (txt ? 'block' : 'none');
-						attr.el.prepend(el);
-						id = "default";
-						if(opt.id){
-							id = opt.id;
-							el.setAttribute('id',opt.id);
-						}
-						ms[id] = setTimeout(function(){ el.remove(); },(typeof opt.fade==="number" ? opt.fade : (typeof attr.fade==="number" ? attr.fade : 10000)));
-					}
-				}
-			}
-			function getParam(){
-				var a = Array.prototype.slice.call(arguments[0], 0);
-				var str = (typeof a[0]==="string" ? a[0] : "");
-				// Build basic result
-				var ext = ['%c'+title+'%c: '+str.replace(/<[^\>]*>/g,""),'font-weight:bold;',''];
-				var n = (str ? 1 : 0);
-				// If there are extra parameters passed we add them
-				return (a.length > n) ? ext.concat(a.splice(n)) : ext;
-			}
-			return this;
-		};
 	}
 
 	// Simple CSV to JSON parser v3.2
@@ -560,12 +662,9 @@
 	}
 
 	OI.Application = Application;
-
 	root.OI = OI||root.OI||{};
 
 })(window || this);
 
 var app;
-OI.ready(function(){
-	app = new OI.Application({});
-});
+OI.ready(function(){ app = new OI.Application({}); });

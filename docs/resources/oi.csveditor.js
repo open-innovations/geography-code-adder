@@ -97,6 +97,26 @@
 			return this;
 		};
 
+		this.updateSelectedColumns = function(fn){
+			var i,c,r,cell,otxt,txt;
+			if(this.selected.cols.length > 0){
+				for(r = 0; r < this.data.length; r++){
+					for(i = 0; i < this.selected.cols.length; i++){
+						c = this.selected.cols[i];
+						otxt = this.data[r][this.order[c-1]];
+						txt = fn.call(this,otxt);
+						if(txt!=otxt){
+							// Update data and cell
+							this.data[r][this.order[c-1]] = txt;
+							cell = this.getCell(r,c);
+							cell.innerHTML = txt;
+						}
+					}
+				}
+			}
+			return this;
+		};
+
 		this.select = function(dir,i,shift,ctrl){
 			var c,min,max,str;
 			function css(dir,i,sel){
@@ -155,8 +175,7 @@
 				table = el.querySelector('table');
 			}
 			this.order = order;
-			this.data = new Array(data.length);
-			for(r = 0; r < data.length; r++) this.data[r] = data[r].cols;
+			this.data = data;
 
 			html = '';
 
@@ -166,11 +185,11 @@
 				for(c = 0; c < nc; c++){
 					th += '<th data="'+(c+1)+'" tabindex="0" contenteditable>'+this.order[c]+'</th>';
 				}
-				html += '<tr>'+th+'</tr>';
+				html += '<tr data="0">'+th+'</tr>';
 				for(r = 0; r < this.data.length; r++){
 					tr = '<td class="row" tabindex="0">'+(r+1)+'</td>';
 					for(c = 0; c < nc; c++){
-						tr += '<td contenteditable>'+this.data[r][this.order[c]]+'</td>';
+						tr += '<td data="'+(c+1)+'" contenteditable>'+this.data[r][this.order[c]]+'</td>';
 					}
 					html += '<tr data="'+(r+1)+'">'+tr+'</tr>';
 				}
@@ -185,6 +204,7 @@
 					el.addEventListener('keydown',function(e){ if(e.key=="Enter"){ e.preventDefault(); _obj.select("rows",parseInt(el.getAttribute('data')),e.shiftKey,e.ctrlKey); } });
 				});
 				table.addEventListener('input',function(e){
+					_obj.updateByDom(e.target);
 					if(typeof opts.edit==="function") opts.edit.call(this);
 				});
 
@@ -195,19 +215,41 @@
 			this.update();
 			return this;
 		}
+
+		this.updateByDom = function(el){
+			var c = this.getCoord(el);
+			var r,old;
+			if(c.row<0){
+				// Update header
+				old = this.order[c.col];
+				this.order[c.col] = el.innerHTML;
+				// Go through all data updating
+				for(r = 0; r < this.data.length; r++){
+					// Set new key equal to old data
+					this.data[r][this.order[c.col]] = this.data[r][old];
+					// Delete old key
+					delete this.data[r][old];
+				}
+			}else{
+				// Update cell
+				this.data[c.row][c.colname] = el.innerHTML;
+			}
+			return this;
+		};
+
+		this.getCoord = function(el){
+			var r = parseInt(el.closest('tr').getAttribute('data'))-1;
+			var c = parseInt(el.getAttribute('data'))-1;
+			return {'row':r,'col':c,'colname':this.order[c]};
+		};
+
+		return this;
 	}
 
-	function selectEl(el){
-		el.setAttribute('aria-multiselectable','true');
-	}
-
-	function deselectEl(el){
-		el.removeAttribute('aria-multiselectable');
-	}
-
+	function selectEl(el){ el.setAttribute('aria-multiselectable','true'); }
+	function deselectEl(el){ el.removeAttribute('aria-multiselectable'); }
 
 	OI.CSVEditor = CSVEditor;
-
 	root.OI = OI||root.OI||{};
 
 })(window || this);

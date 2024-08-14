@@ -33,6 +33,7 @@
 	nav button svg { height: 1.5rem; }
 	nav #msg-start-edit { flex-grow: 1; text-align: right; padding-inline: 1rem; }
 
+	#messages .message { border-bottom: 1px solid #222; }
 	button:disabled { background: #999; }
 	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; margin-bottom: 1rem; }
 	.chooser input { font-size:1em; }
@@ -95,10 +96,13 @@
 	td[aria-multiselectable] { background: rgba(249, 188, 38,0.4); }
 	th[aria-multiselectable], td.row[aria-multiselectable] { background: rgba(249, 188, 38,0.7); }
 	svg.bi { width: 1.5em; height: 1.5em; vertical-align:middle; cursor: pointer; }
-	.modal { padding-block: 3rem; }
+	.bigpadding { padding-block: 3rem; }
 	footer { display: none; }
+	.modal { position: absolute; z-index: 100; width: 100vw; height: 100vh; background: rgba(255,255,255,0.5); top: 0; left: 0; }
+	.modal-inner { position: absolute; z-index: 100; box-shadow: 0 4px 3px -4px rgba(0,0,0,0.25); border: 1px solid #999; max-width: 100%; width: 640px; padding: 2rem; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0); }
 	</style>
-	<script type="text/javascript" src="resources/adder.js"></script>
+	<script type="text/javascript" src="resources/oi.logger.js"></script>
+	<script type="text/javascript" src="resources/editor.js"></script>
 	<script type="text/javascript" src="resources/oi.csveditor.js"></script>
 </head>
 <body class="b1-bg">
@@ -108,13 +112,13 @@
 			<h1><a href="https://open-innovations.org/projects/hexmaps/"><img src="https://open-innovations.org/resources/images/logos/oi-square-5.svg" style="height: 1em;"></a> Add UK geography codes</h1>
 		</header>
 
-		<nav id="navigation" class="b1-bg"></nav>
+		<nav id="navigation" class="b3-bg"></nav>
 
 		<div id="main" class="b6-bg">
 			<div id="messages"></div>
 
 			<div id="output">
-				<div class="holder padded cen modal">
+				<div class="holder padded cen bigpadding">
 					<div class="warning msg message padded-bottom">
 						<div class="holder cen">This is very much under development and isn't yet fully functional.</div>
 					</div>
@@ -125,7 +129,7 @@
 			</div>
 			
 			<div role="dialog" id="dialog-open" aria-labelledby="dialog-open-label" style="display:none;">
-				<div class="tallpadded padded holder modal">
+				<div class="tallpadded padded holder bigpadding">
 					<h2 id="dialog-open-label">Load a CSV</h2>
 					<form id="validation_form" name="validation_form" submit="return true;" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
 						<div class="chooser">
@@ -150,34 +154,27 @@
 			</div>
 
 			<div role="dialog" id="dialog-config" aria-labelledby="dialog-config-label" style="display:none;">
-				<div class="holder tallpadded padded">
-					<h2 id="dialog-config-label">Step 2 - configuration</h2>
-					<div class="b5-bg">
-						<div id="config" class="padded">
-							<div class="row">
-								<label for="geography-type">Geography type:</label>
-								<select id="geography-type">
-									<option value=""></option>
-									<option value="LAD">Local Authorities</option>
-									<option value="WD">Wards</option>
-									<option value="PCON">Constituencies</option>
-								</select>
-							</div>
-							<div class="row">
-								<label for="geography-year">Geography year:</label>
-								<input type="number" min="2010" max="2024" id="geography-year">
-							</div>
-						</div>
+				<div id="dialog-config-messages"></div>
+				<div id="add-geo-config" class="padded">
+					<h2>Add GSS codes</h2>
+					<div class="row">
+						<label for="geography-type">Geography type:</label>
+						<select id="geography-type">
+							<option value=""></option>
+							<option value="LAD">Local Authorities</option>
+							<option value="WD">Wards</option>
+							<option value="PCON">Constituencies</option>
+						</select>
 					</div>
-					<button id="process" type="submit" class="button c5-bg">Add codes</button>
+					<div class="row">
+						<label for="geography-year">Geography year:</label>
+						<input type="number" min="2010" max="2024" id="geography-year">
+					</div>
 				</div>
+				<button id="geography-add" type="submit" class="button c5-bg">Add codes</button>
 			</div>
 		</div>
-			<!--<div class="spinner" style="text-align:center;">
-				<img src="https://open-innovations.org/resources/images/loader.svg" alt="Loading..." />
-			</div>-->
 
-		
 		<footer class="b1-bg">
 			<div class="holder tallpadded padded">
 				<h2>Credits</h2>
