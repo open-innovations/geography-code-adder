@@ -370,7 +370,7 @@
 			this.nav.addButton({
 				'id':'btn-open',
 				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/><title>Open</title></svg>',
-				'class':'icon c5-bg',
+				'class':'icon',
 				'on':{
 					'click': _obj.toggleOpenDialog
 				}
@@ -380,7 +380,7 @@
 				this.nav.addButton({
 					'id':'btn-save',
 					'text':'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/><title>Save</title></svg>',
-					'class':'icon c5-bg',
+					'class':'icon',
 					'on':{
 						'click': function(e){ 
 							_obj.saveCSV();
@@ -400,14 +400,14 @@
 
 			this.nav.addButton({
 				'id':'btn-delete',
-				'class':'icon c5-bg',
+				'class':'icon',
 				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/><title>Delete</title></svg>',
 				'on':{
 					'click': function(e){ _obj.csvedit.delete(); }
 				}
 			}).addButton({
 				'id':'btn-remove-empty-rows',
-				'class':'c5-bg',
+				'class':'',
 				'text':'<svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="bi" viewBox="0 0 16 16"><path d="M2 5h12v5h-12v-5M6 5v5M10 5v5M14 2l-12 12" fill="transparent" /><title>Remove empty rows</title></svg>',
 				'on':{
 					'click': function(e){
@@ -418,14 +418,14 @@
 				}
 			}).addButton({
 				'id':'btn-add-gss',
-				'class':'c5-bg',
+				'class':'',
 				'text': '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16"><path d="M3 8m-0.5 0.5l-2.5 0 0 -1 2.5 0 0 -2.5 1 0 0 2.5 2.5 0 0 1 -2.5 0 0 2.5 -1 0 0 -2.5z"/><text x="6.5" y="2" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">E06</text><text x="6.5" y="6" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">S14</text><text x="6.5" y="10" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">N05</text><title>Add GSS codes</title></svg>',
 				'on':{
 					'click': function(e){ _obj.startGeographies(); }
 				}
 			}).addButton({
 				'id':'btn-isodate',
-				'class':'c5-bg',
+				'class':'',
 				'text':'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/><text x="8" y="7" text-anchor="middle" dominant-baseline="hanging" font-size="5" font-family="Poppins">8601</text><title>Convert dates to ISO8601</title></svg>',
 				'on':{
 					'click': function(e){
