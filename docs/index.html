@@ -34,7 +34,10 @@
 	nav #msg-start-edit { flex-grow: 1; text-align: right; padding-inline: 1rem; }
 
 	#messages { max-height: 160px; overflow-y: auto; }
-	#messages .message { border-bottom: 1px solid #222; }
+	#messages .message { border-bottom: 1px solid #222; position: relative; display: flex; }
+	#messages .message .message-inner { flex-grow: 1; }
+	#messages .message .close { padding-inline: 0.5em; cursor: pointer; border-radius: 2px; }
+	#messages .message .close:hover, #messages .message .close:focus { background: rgba(0,0,0,0.2); }
 	button:disabled { background: #999; }
 	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; margin-bottom: 1rem; }
 	.chooser input { font-size:1em; }
@@ -180,7 +183,7 @@
 		<footer class="b1-bg">
 			<div class="holder tallpadded padded">
 				<h2>How to use</h2>
-				<p>Open a CSV file in the editor. Find a column with a named UK geography and click the header for that column. This should highlight the whole column. Click the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16"><path d="M3 8m-0.5 0.5l-2.5 0 0 -1 2.5 0 0 -2.5 1 0 0 2.5 2.5 0 0 1 -2.5 0 0 2.5 -1 0 0 -2.5z"/><text x="6.5" y="2" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">E06</text><text x="6.5" y="6" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">S14</text><text x="6.5" y="10" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">N05</text><title>Add GSS codes</title></svg> button. You will then be presented with a dialog box to choose the type of geography and a year for the names. The type of geography can be a UK ward, Westminster constituency, or UK local authority. As the GSS codes can be altered over time whilst still using the same names, providing a year helps to choose the most appropriate codes. Once you click "Add codes" a new column will be inserted before the column you had selected.</p>
+				<p>Open a CSV file using the <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" class="btn-open bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/></svg> button. Find a column that contains names of UK wards, Westminster constituencies, or UK local authorities and click the header for that column; that should highlight the whole column. Click the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16"><path d="M3 8m-0.5 0.5l-2.5 0 0 -1 2.5 0 0 -2.5 1 0 0 2.5 2.5 0 0 1 -2.5 0 0 2.5 -1 0 0 -2.5z"/><text x="6.5" y="2" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">E06</text><text x="6.5" y="6" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">S14</text><text x="6.5" y="10" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">N05</text><title>Add GSS codes</title></svg> button. You will then be presented with a dialog box to choose the type of geography and a year for the names. As the GSS codes can change over time, whilst still using the same names, providing a year helps to choose the most appropriate codes. Click the "Add codes" button and a new column will be inserted before the column you had selected.</p>
 				<h2>Credits</h2>
 				<p>This open source project is made possible thanks to other open source and open data projects:</p>
 

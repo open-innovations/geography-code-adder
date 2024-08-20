@@ -20,7 +20,7 @@
 			this.remove = function(id){
 				var el = attr.el.querySelector('#'+id);
 				if(ms[id]) clearTimeout(ms[id]);
-				el.remove();
+				if(el) el.remove();
 			};
 			function updatePage(){
 				if(attr.el){
@@ -34,14 +34,20 @@
 						var el = document.createElement('div');
 						el.classList.add('message',cls);
 						if(attr.class) el.classList.add(...attr.class.split(/ /));
-						el.innerHTML = txt.replace(/\%c/g,"");
-						el.style.display = (txt ? 'block' : 'none');
+						el.innerHTML = '<div class="message-inner">'+txt.replace(/\%c/g,"")+'</div>';
+						el.style.display = (txt ? '' : 'none');
 						attr.el.prepend(el);
 						id = "default";
 						if(opt.id){
 							id = opt.id;
 							el.setAttribute('id',opt.id);
 						}
+						var cls = document.createElement('div');
+						cls.setAttribute('tabindex',0);
+						cls.classList.add('close');
+						cls.innerHTML = '&times;';
+						cls.addEventListener('click',function(e){ clearTimeout(ms[id]); el.remove(); });
+						el.appendChild(cls);
 						ms[id] = setTimeout(function(){ el.remove(); },(typeof opt.fade==="number" ? opt.fade : (typeof attr.fade==="number" ? attr.fade : 10000)));
 					}
 				}

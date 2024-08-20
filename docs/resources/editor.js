@@ -313,7 +313,7 @@
 				}
 				if(!geo[r].code) bad++;
 			}
-			if(bad > 0) msg.warn('Failed to match %c'+bad+'%c rows','font-weight:bold','');
+			if(bad > 0) msg.warn('Failed to match %c'+bad+'%c of '+geo.length+' rows','font-weight:bold','');
 
 			this.startEdit();
 
@@ -410,7 +410,11 @@
 				'class':'c5-bg',
 				'text':'<svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="bi" viewBox="0 0 16 16"><path d="M2 5h12v5h-12v-5M6 5v5M10 5v5M14 2l-12 12" fill="transparent" /><title>Remove empty rows</title></svg>',
 				'on':{
-					'click': function(e){ _obj.csvedit.deleteEmptyRows(); }
+					'click': function(e){
+						// Remove any message about empty rows
+						msg.remove('empty-rows');
+						_obj.csvedit.deleteEmptyRows();
+					}
 				}
 			}).addButton({
 				'id':'btn-add-gss',
@@ -442,9 +446,12 @@
 
 			// Build the CSV editor - must be after the navbar
 			this.csvedit = new OI.CSVEditor(document.getElementById('output'),{
-				'delete': function(){
-				},
-				'select': function(){
+				'delete': function(){},
+				'select': function(){},
+				'load': function(){
+					if(this._emptyrows.length > 0){
+						msg.warn('There seem to be '+this._emptyrows.length+' empty rows. You can remove them with the <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="bi" viewBox="0 0 16 16"><path d="M2 5h12v5h-12v-5M6 5v5M10 5v5M14 2l-12 12" fill="transparent"></path><title>Remove empty rows</title></svg> menu button.',{'id':'empty-rows'});
+					}
 				},
 				'update': function(){
 					_obj.updateButtons();

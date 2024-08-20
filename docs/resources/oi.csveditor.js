@@ -213,6 +213,7 @@
 			}
 			this.findEmptyRows();
 			this.update();
+			if(typeof opts.load==="function") opts.load.call(this);
 			return this;
 		}
 
