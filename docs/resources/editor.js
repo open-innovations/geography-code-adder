@@ -408,21 +408,21 @@
 			}).addButton({
 				'id':'btn-remove-empty-rows',
 				'class':'c5-bg',
-				'text':'<svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2 5h12v5h-12v-5M6 5v5M10 5v5M14 2l-12 12" fill="transparent" /><title>Remove empty rows</title></svg>',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="bi" viewBox="0 0 16 16"><path d="M2 5h12v5h-12v-5M6 5v5M10 5v5M14 2l-12 12" fill="transparent" /><title>Remove empty rows</title></svg>',
 				'on':{
 					'click': function(e){ _obj.csvedit.deleteEmptyRows(); }
 				}
 			}).addButton({
 				'id':'btn-add-gss',
 				'class':'c5-bg',
-				'text': 'Add GSS codes',
+				'text': '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16"><path d="M3 8m-0.5 0.5l-2.5 0 0 -1 2.5 0 0 -2.5 1 0 0 2.5 2.5 0 0 1 -2.5 0 0 2.5 -1 0 0 -2.5z"/><text x="6.5" y="2" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">E06</text><text x="6.5" y="6" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">S14</text><text x="6.5" y="10" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">N05</text><title>Add GSS codes</title></svg>',
 				'on':{
 					'click': function(e){ _obj.startGeographies(); }
 				}
 			}).addButton({
 				'id':'btn-isodate',
 				'class':'c5-bg',
-				'text':'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16"><path d="M8 5.5m 5.5,0 a 5.5,5.5 0 1,0 -11,0 a 5.5,5.5 0 1,0 11,0M 8 5.5m-0.5 -0.5v-3.5h1v4.5h-4v-1h3z"/><text x="8" y="12" text-anchor="middle" dominant-baseline="hanging" font-size="4" font-family="Poppins">ISO8601</text><title>Convert dates to ISO8601</title></svg>',
+				'text':'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16"><path d="M8 5.5m 5.5,0 a 5.5,5.5 0 1,0 -11,0 a 5.5,5.5 0 1,0 11,0M 8 5.5m-0.5 -0.5v-3.5h1v4.5h-4v-1h3z"/><text x="8" y="12" text-anchor="middle" dominant-baseline="hanging" font-size="4" font-family="Poppins">ISO8601</text><title>Convert dates to ISO8601</title></svg>',
 				'on':{
 					'click': function(e){
 						_obj.startEdit();

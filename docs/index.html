@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Add UK geography codes</title>
+	<title>Add GSS codes</title>
 	<link rel="icon" href="https://open-innovations.org/resources/images/logos/oi-square-5.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8" />
@@ -110,7 +110,7 @@
 
 	<div class="container">
 		<header class="b1-bg">
-			<h1><a href="https://open-innovations.org/projects/hexmaps/"><img src="https://open-innovations.org/resources/images/logos/oi-square-5.svg" style="height: 1em;"></a> Add UK geography codes</h1>
+			<h1><a href="https://open-innovations.org/projects/hexmaps/"><img src="https://open-innovations.org/resources/images/logos/oi-square-5.svg" style="height: 1em;"></a> Add GSS codes</h1>
 		</header>
 
 		<nav id="navigation" class="b3-bg"></nav>
@@ -121,11 +121,11 @@
 			<div id="output">
 				<div class="holder padded cen bigpadding">
 					<div class="warning msg message padded-bottom">
-						<div class="holder cen">This is a work-in-progress so may not be fully functional.</div>
+						<div class="holder cen">Note (August 2024): this is an experimental tool. If you spot any bugs, please <a href="https://github.com/open-innovations/geography-code-adder/issues">let us know</a>.</div>
 					</div>
 
-					<p>If you have a CSV file that has a column with named UK geographies and want to add a column of GSS codes, this tool can help. For example, say you have a column that lists "Leeds", "Birmingham", "Salford" etc, it would add a column with the codes <code>E08000035</code>, <code>E08000025</code> and <code>E08000006</code>.</p>
-					<p>Press <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" class="btn-open bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/></svg> to load a CSV file.</p>
+					<p>Do you have a CSV file with named UK areas but no <a href="https://en.wikipedia.org/wiki/GSS_coding_system">GSS codes</a>? This tool could help add them. For example, if you have a column that lists "Leeds", "Birmingham", "Salford" etc, it would add a column with the local authority codes <code>E08000035</code>, <code>E08000025</code> and <code>E08000006</code> etc. This tool can recognise UK wards, Westminster parliamentary constituencies, and local authorities.</p>
+					<p>Start by using the <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" class="btn-open bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/></svg> button to load a CSV file.</p>
 				</div>
 			</div>
 			
