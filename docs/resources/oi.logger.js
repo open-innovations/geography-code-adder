@@ -24,24 +24,25 @@
 			};
 			function updatePage(){
 				if(attr.el){
-					var id, visible = false;
+					var id, el, visible = false;
 					var cls = arguments[0];
 					var txt = Array.prototype.shift.apply(arguments[1]);
 					var opt = arguments[1]||{};
 					if(opt.length > 0) opt = opt[opt.length-1];
 					if(attr.visible.includes(cls)) visible = true;
 					if(visible){
-						var el = document.createElement('div');
-						el.classList.add('message',cls);
+						id = "default";
+						if(opt.id) id = opt.id;
+						el = document.getElementById(id);
+						if(!el){
+							el = document.createElement('div');
+							el.classList.add('message',cls);
+							el.setAttribute('id',id);
+						}
 						if(attr.class) el.classList.add(...attr.class.split(/ /));
 						el.innerHTML = '<div class="message-inner">'+txt.replace(/\%c/g,"")+'</div>';
 						el.style.display = (txt ? '' : 'none');
 						attr.el.prepend(el);
-						id = "default";
-						if(opt.id){
-							id = opt.id;
-							el.setAttribute('id',opt.id);
-						}
 						var cls = document.createElement('div');
 						cls.setAttribute('tabindex',0);
 						cls.classList.add('close');

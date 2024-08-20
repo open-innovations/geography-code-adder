@@ -98,7 +98,7 @@
 		};
 
 		this.updateSelectedColumns = function(fn){
-			var i,c,r,cell,otxt,txt;
+			var i,c,r,cell,otxt,txt,w=0;
 			if(this.selected.cols.length > 0){
 				for(r = 0; r < this.data.length; r++){
 					for(i = 0; i < this.selected.cols.length; i++){
@@ -110,8 +110,11 @@
 							this.data[r][this.order[c-1]] = txt;
 							cell = this.getCell(r,c);
 							cell.innerHTML = txt;
-						}
+						}else w++;
 					}
+				}
+				if(w > 0){
+					msg.warn('There are '+w+' invalid dates. They should be in the form DD/MM/YYYY.',{'id':'bad-dates'});
 				}
 			}
 			return this;
@@ -209,7 +212,7 @@
 				});
 
 			}else{
-				msg1.log('No data loaded.');
+				msg.log('No data loaded.');
 			}
 			this.findEmptyRows();
 			this.update();
