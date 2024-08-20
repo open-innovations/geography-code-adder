@@ -38,7 +38,8 @@
 	#messages .message .message-inner { flex-grow: 1; }
 	#messages .message .close { padding-inline: 0.5em; cursor: pointer; border-radius: 2px; }
 	#messages .message .close:hover, #messages .message .close:focus { background: rgba(0,0,0,0.2); }
-	button:disabled { background: #999; }
+	button:disabled { background: #999; color: #555; }
+	button:disabled:hover, button:disabled:focus { background: #999!important; color: #555!important; }
 	.chooser { text-align: left; display: flex; flex-wrap: wrap; line-height: 1.5rem; gap: 1rem; align-items: stretch; justify-content: center; margin-bottom: 1rem; }
 	.chooser input { font-size:1em; }
 	.chooser .vs { font-family: serif; font-style: italic; color: #666666; align-self: center; }
