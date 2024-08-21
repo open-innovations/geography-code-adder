@@ -161,7 +161,7 @@
 			<div role="dialog" id="dialog-config" aria-labelledby="dialog-config-label" style="display:none;">
 				<div id="dialog-config-messages"></div>
 				<div id="add-geo-config" class="padded">
-					<h2>Add GSS codes</h2>
+					<h2 id="dialog-config-label">Add GSS codes</h2>
 					<p>We will try to find unique matches to various official names. Some geographies (e.g. Wards) don't have unique names which makes things tricky. In those cases we'll find the parent geographies of any unique matches and use those parents to try to narrow down the non-unique names. We'll also use the year you provide to narrow down changes over time.</p> 
 					<div class="row">
 						<label for="geography-type">Geography type:</label>
@@ -178,6 +178,38 @@
 					</div>
 				</div>
 				<button id="geography-add" type="submit" class="button c5-bg">Add codes</button>
+			</div>
+
+
+			<div role="dialog" id="dialog-dates" aria-labelledby="dialog-dates-label" style="display:none;">
+				<div id="dialog-dates-messages"></div>
+				<div id="add-date-config" class="padded">
+					<h2 id="dialog-dates-label">Convert dates</h2>
+					<p>Convert dates in a column to a different format.</p> 
+					<div class="row">
+						<label for="inp-date">Input format:</label>
+						<select id="inp-date">
+							<option value="DD/MM/YYYY" selected="selected">British format (DD/MM/YYYY)</option>
+							<option value="MM/DD/YYYY">US format (MM/DD/YYYY)</option>
+							<option value="MMMM DD, YYYY">August 21, 2024</option>
+							<option value="MMM DD, YYYY">Aug 21, 2024</option>
+							<option value="YYYY-MM-DD">ISO 8601 (YYYY-MM-DD)</option>
+							<option value="YYYY-MM-DDThh:mm:ss">ISO 8601 (YYYY-MM-DDThh:mm:ss)</option>
+						</select>
+					</div>
+					<div class="row">
+						<label for="out-date">Output format:</label>
+						<select id="out-date">
+							<option value="DD/MM/YYYY">British format (DD/MM/YYYY)</option>
+							<option value="MM/DD/YYYY">US format (MM/DD/YYYY)</option>
+							<option value="MMMM DD, YYYY">August 21, 2024</option>
+							<option value="MMM DD, YYYY">Aug 21, 2024</option>
+							<option value="YYYY-MM-DD" selected="selected">ISO 8601 (YYYY-MM-DD)</option>
+							<option value="YYYY-MM-DDThh:mm:ss">ISO 8601 (YYYY-MM-DDThh:mm:ss)</option>
+						</select>
+					</div>
+				</div>
+				<button id="dates-convert" type="submit" class="button c5-bg">Convert dates</button>
 			</div>
 		</div>
 

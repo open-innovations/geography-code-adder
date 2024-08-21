@@ -348,6 +348,13 @@
 			return this;
 		};
 
+
+		this.startDates = function(){
+			this._datemodal = new Modal('add-dates',document.getElementById('dialog-dates'));
+			return this;
+		};
+
+
 		this.init = function(){
 
 			this.lookup = new GeographyLookup({
@@ -372,6 +379,44 @@
 				'text':'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/><title>Open</title></svg>',
 				'class':'icon',
 				'on':{
+					'init': function(btn,e){
+						document.querySelectorAll('.btn-open').forEach(function(el){ el.addEventListener('click',function(){ _obj.toggleOpenDialog(); }); });
+
+						document.getElementById('reset').addEventListener('click',function(e){
+							document.getElementById('standard_files').value = '';
+							_obj.reset();
+						});
+
+						// Add callbacks
+						document.getElementById('btnSubmit').addEventListener('click',function(e){
+							e.preventDefault();
+							// Remove any existing warning message
+							var el = document.getElementById('no-file');
+							if(el) el.remove();
+							// If we have a file we read that
+							var file = document.getElementById('standard_files').files[0];
+							if(file) _obj.readFile(file);
+							else{
+								// Try to read a URL
+								var url = document.getElementById('url').value;
+								if(url) _obj.getURL(url);
+								else msg.warn('No input CSV provided. Please provide a URL or a file.',{'id':'no-file'});
+							}
+						});
+
+						document.getElementById('url').addEventListener('change',function(e){ _obj.getURL(e.target.value); });
+						function dropOver(evt){
+							evt.stopPropagation();
+							evt.preventDefault();
+							dropZone.classList.add('drop');
+						}
+						function dragOff(){ dropZone.classList.remove('drop'); }
+						var dropZone = document.getElementById('drop_zone');
+						dropZone.addEventListener('dragover', dropOver, false);
+						dropZone.addEventListener('dragout', dragOff, false);
+						document.getElementById('standard_files').addEventListener('change',function(e){ dragOff(); _obj.updateFileDetails(); });
+
+					},
 					'click': _obj.toggleOpenDialog
 				}
 			});
@@ -421,28 +466,39 @@
 				'class':'',
 				'text': '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16"><path d="M3 8m-0.5 0.5l-2.5 0 0 -1 2.5 0 0 -2.5 1 0 0 2.5 2.5 0 0 1 -2.5 0 0 2.5 -1 0 0 -2.5z"/><text x="6.5" y="2" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">E06</text><text x="6.5" y="6" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">S14</text><text x="6.5" y="10" text-anchor="start" dominant-baseline="hanging" font-size="4.5" font-family="Poppins">N05</text><title>Add GSS codes</title></svg>',
 				'on':{
+					'init': function(btn,e){
+						document.getElementById('geography-type').addEventListener('change',function(){ _obj.updateType(); });
+						document.getElementById('geography-add').addEventListener('click',function(){ _obj.processGeography(); });
+					},
 					'click': function(e){ _obj.startGeographies(); }
-				}
+				},
+				'this':this
 			}).addButton({
 				'id':'btn-isodate',
 				'class':'',
 				'text':'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/><text x="8" y="7" text-anchor="middle" dominant-baseline="hanging" font-size="5" font-family="Poppins">8601</text><title>Convert dates to ISO8601</title></svg>',
 				'on':{
-					'click': function(e){
-						_obj.startEdit();
-						_obj.csvedit.updateSelectedColumns(function(otxt){
-							if(otxt && otxt.match(/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/)){
-								return otxt.replace(/^([0-9]{2})[\/\-]([0-9]{2})[\/\-]([0-9]{4})$/,function(m,p1,p2,p3){ return p3+'-'+p2+'-'+p1; });
-							}
-							return otxt;
+					'click': function(e){ _obj.startDates(); },
+					'init': function(btn,e){
+						document.getElementById('dates-convert').addEventListener('click',function(e){
+							e.preventDefault();
+							var inp = document.getElementById('inp-date').value;
+							var out = document.getElementById('out-date').value;
+							console.log('inp',inp,'out',out);
+							_obj.csvedit.updateSelectedColumns(function(otxt){
+								var d = extractDate(inp,otxt);
+								return (d ? formatDate(out,d) : '');
+							});
+							_obj._datemodal.close();
 						});
 					}
 				}
 			});
 
+
+
+
 			this.nav.addText({'id':'msg-start-edit'});
-			
-			document.querySelectorAll('.btn-open').forEach(function(el){ el.addEventListener('click',function(){ _obj.toggleOpenDialog(); }); });
 
 			// Build the CSV editor - must be after the navbar
 			this.csvedit = new OI.CSVEditor(document.getElementById('output'),{
@@ -469,43 +525,6 @@
 				year.value = d.getFullYear();
 				year.setAttribute('max',year.value);
 			}
-
-			document.getElementById('reset').addEventListener('click',function(e){
-				document.getElementById('standard_files').value = '';
-				_obj.reset();
-			});
-
-			// Add callbacks
-			document.getElementById('btnSubmit').addEventListener('click',function(e){
-				e.preventDefault();
-				// Remove any existing warning message
-				var el = document.getElementById('no-file');
-				if(el) el.remove();
-				// If we have a file we read that
-				var file = document.getElementById('standard_files').files[0];
-				if(file) _obj.readFile(file);
-				else{
-					// Try to read a URL
-					var url = document.getElementById('url').value;
-					if(url) _obj.getURL(url);
-					else msg.warn('No input CSV provided. Please provide a URL or a file.',{'id':'no-file'});
-				}
-			});
-
-			document.getElementById('url').addEventListener('change',function(e){ _obj.getURL(e.target.value); });
-			function dropOver(evt){
-				evt.stopPropagation();
-				evt.preventDefault();
-				dropZone.classList.add('drop');
-			}
-			function dragOff(){ dropZone.classList.remove('drop'); }
-			var dropZone = document.getElementById('drop_zone');
-			dropZone.addEventListener('dragover', dropOver, false);
-			dropZone.addEventListener('dragout', dragOff, false);
-			document.getElementById('standard_files').addEventListener('change',function(e){ dragOff(); _obj.updateFileDetails(); });
-
-			document.getElementById('geography-type').addEventListener('change',function(){ _obj.updateType(); });
-			document.getElementById('geography-add').addEventListener('click',function(){ _obj.processGeography(); });
 
 			// Build any examples
 			var exs = document.querySelectorAll('a.example');
@@ -549,15 +568,17 @@
 	}
 
 	function NavBar(el,opt){
-		var buttons = [],ev;
+		var buttons = [],ev,btn;
 		function addEl(typ,opts){
 			if(!opts) opts = {};
-			var btn = document.createElement(typ);
+			btn = document.createElement(typ);
 			if(opts.id) btn.setAttribute('id',opts.id);
 			if(opts.class) btn.classList.add(...opts.class.split(/ /));
 			if(opts.on){
 				for(ev in opts.on){
-					btn.addEventListener(ev,opts.on[ev]);
+					if(ev == "click"){
+						btn.addEventListener(ev,opts.on[ev]);
+					}
 				}
 			}
 			btn.innerHTML = opts.text||"&nbsp;";
@@ -567,6 +588,7 @@
 		}
 		this.addButton = function(opts){
 			addEl('button',opts);
+			if(opts.on && typeof opts.on.init==="function") opts.on.init.call(opts['this']||this,btn,opts);
 			return this;
 		};
 		this.addText = function(opts){
@@ -709,11 +731,91 @@
 		}
 		return data;
 	}
+	var _months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+	var _monthshort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+	function extractDate(format,str){
+		var i,j,idx,m,m2,mon,d;
+		d = new Date(0,0,1,0,0);
+		for(i=0,j=0;i<format.length;i++,j++){
+			m = format.substr(i,).match(/^(Y+|M+|D+|h+|m+|s+|p|P)/);
+			if(m){
+				if(m[1]=="YY"){
+					d.setYear(2000+parseInt(str.substr(j,m[1].length)));
+					j += 2-1;
+				}else if(m[1]=="YYYY"){
+					d.setFullYear(parseInt(str.substr(j,m[1].length)));
+					j += 4-1;
+				}else if(m[1]=="D" || m[1]=="DD"){
+					d.setDate(parseInt(str.substr(j,m[1].length)));
+					j += m[1].length-1;
+				}else if(m[1]=="M" || m[1]=="MM"){
+					d.setMonth(parseInt(str.substr(j,m[1].length))-1);
+					j += m[1].length-1;
+				}else if(m[1]=="MMM" || m[1]=="MMMM"){
+					mon = (m[1]=="MMM") ? _monthshort : _months;
+					m2 = str.substr(j,).match(new RegExp("^("+mon.join("|")+")","i"));
+					if(m2){
+						idx = mon.indexOf(m2[1]);
+						if(idx >= 0){
+							d.setMonth(idx);
+							j += m2[1].length-1;
+						}
+					}
+				}else if(m[1]=="hh" || m[1]=="h"){
+					d.setHours(parseInt(str.substr(j,m[1].length)));
+					j += m[1].length-1;
+				}else if(m[1]=="mm" || m[1]=="m"){
+					d.setMinutes(parseInt(str.substr(j,m[1].length)));
+					j += m[1].length-1;
+				}else if(m[1]=="p" || m[1]=="P"){
+					if(str.substr(j,2)=="pm" || str.substr(j,2)=="PM"){
+						d.setHours(d.getHours()+12);
+					}
+					j++;
+				}
+				i += m[1].length-1;
+			}
+		}
+		return (d instanceof Date && !isNaN(d) ? d : null);
+	}
+	function formatDate(format,date){
+		if(typeof format !== 'string') return '';
+		if(!(date instanceof Date)) date = new Date();
 
+		var dd,mm,yy,h,m,zeroPad;
+		dd = date.getDate();
+		mm = date.getMonth();
+		yy = date.getFullYear();
+		h = date.getHours();
+		zeroPad = (nNum, nPad) => ((Math.pow(10, nPad) + nNum) + '').slice(1);
+
+		return format.replace(/(Y+|M+|D+|h+|m+|s+|p|P)/g, (sMatch) => {
+			return (({
+				'YYYY': yy,
+				'YY': yy-2000,
+				'M': (mm + 1),
+				'MM': zeroPad(mm + 1,2),
+				'MMM': _months[mm].slice(0, 3),
+				'MMMM': _months[mm],
+				'D': dd,
+				'DD': zeroPad(dd, 2),
+				'h': date.getHours(),
+				'hh': zeroPad(date.getHours(), 2),
+				'm': date.getMinutes(),
+				'mm': zeroPad(date.getMinutes(), 2),
+				's': date.getSeconds(),
+				'ss': zeroPad(date.getSeconds(),2),
+				'p': (h < 12) ? 'AM' : 'PM',
+				'P': (h < 12) ? 'am' : 'pm',
+			}[sMatch] || '') + '') || sMatch;
+		});
+	}
 	OI.Application = Application;
 	root.OI = OI||root.OI||{};
 
 })(window || this);
+
+
 
 var app;
 OI.ready(function(){ app = new OI.Application({}); });
