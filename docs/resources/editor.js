@@ -329,6 +329,8 @@
 
 			// Close the modal
 			this._geomodal.close();
+			
+			this.csvedit.update();
 
 			return this;
 		};
