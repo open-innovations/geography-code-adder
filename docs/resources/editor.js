@@ -492,6 +492,7 @@
 								return (d ? formatDate(out,d) : '');
 							});
 							_obj._datemodal.close();
+							_obj.startEdit();
 						});
 					}
 				}
