@@ -115,7 +115,7 @@
 			var str,file,type,c,r,m,cols;
 			file = "test.csv";
 			type = "text/csv";
-			if(document.getElementById('url').value) file = document.getElementById('url').value;
+			if(document.getElementById('url').value) file = document.getElementById('url').value.replace(/.*\/([^\/])/,function(m,p1){ return p1; });
 			if(document.getElementById('standard_files').files.length > 0) file = document.getElementById('standard_files').files[0].name;
 
 			if(!this.csvedit){
