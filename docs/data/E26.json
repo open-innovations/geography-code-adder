@@ -1,17 +1,17 @@
 {
 	"areas":{
-		"E26000001":[{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"Dartmoor National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"Dartmoor","nm_alt":["Dartmoor National Park"],"status":"live"}],
-		"E26000002":[{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"Exmoor National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"Exmoor","nm_alt":["Exmoor National Park"],"status":"live"}],
+		"E26000001":[{"date":{"s":"2022-12-31"},"nm":"Dartmoor","nm_alt":["Dartmoor National Park"],"status":"live"},{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"Dartmoor National Park","status":"terminated"}],
+		"E26000002":[{"date":{"s":"2022-12-31"},"nm":"Exmoor","nm_alt":["Exmoor National Park"],"status":"live"},{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"Exmoor National Park","status":"terminated"}],
 		"E26000003":[{"date":{"e":"2016-07-31","s":"2009-01-01"},"nm":"Lake District National Park","status":"terminated"}],
-		"E26000004":[{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"Northumberland National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"Northumberland","nm_alt":["Northumberland National Park"],"status":"live"}],
-		"E26000005":[{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"North York Moors National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"North York Moors","nm_alt":["North York Moors National Park"],"status":"live"}],
-		"E26000006":[{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"Peak District National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"Peak District","nm_alt":["Peak District National Park"],"status":"live"}],
-		"E26000007":[{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"The Broads Authority","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"The Broads","nm_alt":["The Broads Authority"],"status":"live"}],
+		"E26000004":[{"date":{"s":"2022-12-31"},"nm":"Northumberland","nm_alt":["Northumberland National Park"],"status":"live"},{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"Northumberland National Park","status":"terminated"}],
+		"E26000005":[{"date":{"s":"2022-12-31"},"nm":"North York Moors","nm_alt":["North York Moors National Park"],"status":"live"},{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"North York Moors National Park","status":"terminated"}],
+		"E26000006":[{"date":{"s":"2022-12-31"},"nm":"Peak District","nm_alt":["Peak District National Park"],"status":"live"},{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"Peak District National Park","status":"terminated"}],
+		"E26000007":[{"date":{"s":"2022-12-31"},"nm":"The Broads","nm_alt":["The Broads Authority"],"status":"live"},{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"The Broads Authority","status":"terminated"}],
 		"E26000008":[{"date":{"e":"2016-07-31","s":"2009-01-01"},"nm":"Yorkshire Dales National Park","status":"terminated"}],
-		"E26000009":[{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"New Forest National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"New Forest","nm_alt":["New Forest National Park"],"status":"live"}],
-		"E26000010":[{"date":{"e":"2022-12-30","s":"2010-04-01"},"nm":"South Downs National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"South Downs","nm_alt":["South Downs National Park"],"status":"live"}],
-		"E26000011":[{"date":{"e":"2022-12-30","s":"2016-08-01"},"nm":"Lake District National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"Lake District","status":"live"}],
-		"E26000012":[{"date":{"e":"2022-12-30","s":"2016-08-01"},"nm":"Yorkshire Dales National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"Yorkshire Dales","status":"live"}]
+		"E26000009":[{"date":{"s":"2022-12-31"},"nm":"New Forest","nm_alt":["New Forest National Park"],"status":"live"},{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"New Forest National Park","status":"terminated"}],
+		"E26000010":[{"date":{"s":"2022-12-31"},"nm":"South Downs","nm_alt":["South Downs National Park"],"status":"live"},{"date":{"e":"2022-12-30","s":"2010-04-01"},"nm":"South Downs National Park","status":"terminated"}],
+		"E26000011":[{"date":{"s":"2022-12-31"},"nm":"Lake District","status":"live"},{"date":{"e":"2022-12-30","s":"2016-08-01"},"nm":"Lake District National Park","status":"terminated"}],
+		"E26000012":[{"date":{"s":"2022-12-31"},"nm":"Yorkshire Dales","status":"live"},{"date":{"e":"2022-12-30","s":"2016-08-01"},"nm":"Yorkshire Dales National Park","status":"terminated"}]
 	},
 	"description":"National Parks",
 	"source":"Code History Database (July 2024) ChangeHistory"

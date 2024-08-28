@@ -1,7 +1,7 @@
 {
 	"areas":{
 		"N09000001":[{"date":{"s":"2015-04-01"},"nm":"Antrim and Newtownabbey","status":"live"}],
-		"N09000002":[{"date":{"e":"2016-02-23","s":"2015-04-01"},"nm":"Armagh, Banbridge and Craigavon","status":"terminated"},{"date":{"s":"2016-02-24"},"nm":"Armagh City, Banbridge and Craigavon","status":"live"}],
+		"N09000002":[{"date":{"s":"2016-02-24"},"nm":"Armagh City, Banbridge and Craigavon","status":"live"},{"date":{"e":"2016-02-23","s":"2015-04-01"},"nm":"Armagh, Banbridge and Craigavon","status":"terminated"}],
 		"N09000003":[{"date":{"s":"2015-04-01"},"nm":"Belfast","status":"live"}],
 		"N09000004":[{"date":{"s":"2015-04-01"},"nm":"Causeway Coast and Glens","status":"live"}],
 		"N09000005":[{"date":{"s":"2016-02-24"},"nm":"Derry City and Strabane","status":"live"},{"date":{"e":"2016-02-23","s":"2015-04-01"},"nm":"Derry and Strabane","status":"terminated"}],

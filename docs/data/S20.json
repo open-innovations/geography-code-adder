@@ -1643,7 +1643,7 @@
 		"S20001641":[{"date":{"s":"2022-03-31"},"nm":"Cleland","status":"live"}],
 		"S20001642":[{"date":{"s":"2022-03-31"},"nm":"Coalburn","status":"live"}],
 		"S20001643":[{"date":{"s":"2022-03-31"},"nm":"Coaltown of Wemyss","status":"live"}],
-		"S20001644":[{"date":{"e":"2022-12-31","s":"2022-03-31"},"nm":"Coatbridge, Aidrie, Chapelhall and Bargeddie","status":"terminated"},{"date":{"s":"2023-01-01"},"nm":"Coatbridge, Airdrie, Chapelhall and Bargeddie","status":"live"}],
+		"S20001644":[{"date":{"s":"2023-01-01"},"nm":"Coatbridge, Airdrie, Chapelhall and Bargeddie","status":"live"},{"date":{"e":"2022-12-31","s":"2022-03-31"},"nm":"Coatbridge, Aidrie, Chapelhall and Bargeddie","status":"terminated"}],
 		"S20001645":[{"date":{"s":"2022-03-31"},"nm":"Cockenzie","status":"live"}],
 		"S20001646":[{"date":{"s":"2022-03-31"},"nm":"Coldingham","status":"live"}],
 		"S20001647":[{"date":{"s":"2022-03-31"},"nm":"Coldstream","status":"live"}],

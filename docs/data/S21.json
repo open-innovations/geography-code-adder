@@ -1,8 +1,8 @@
 {
 	"areas":{
 		"S21000001":[{"date":{"e":"2010-10-01","s":"2009-01-01"},"nm":"The Cairngorms National Park","status":"terminated"}],
-		"S21000002":[{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"The Loch Lomond and the Trossachs National Park","status":"terminated"},{"date":{"s":"2023-04-17"},"nm":"Loch Lomond and The Trossachs","nm_alt":["The Loch Lomond and the Trossachs National Park"],"status":"live"},{"date":{"e":"2023-04-16","s":"2022-12-31"},"nm":"Loch Lomond and the Trossachs","nm_alt":["The Loch Lomond and the Trossachs National Park"],"status":"terminated"}],
-		"S21000003":[{"date":{"e":"2022-12-30","s":"2010-10-02"},"nm":"The Cairngorms National Park","status":"terminated"},{"date":{"s":"2022-12-31"},"nm":"Cairngorms","nm_alt":["The Cairngorms National Park"],"status":"live"}]
+		"S21000002":[{"date":{"s":"2023-04-17"},"nm":"Loch Lomond and The Trossachs","nm_alt":["The Loch Lomond and the Trossachs National Park"],"status":"live"},{"date":{"e":"2023-04-16","s":"2022-12-31"},"nm":"Loch Lomond and the Trossachs","nm_alt":["The Loch Lomond and the Trossachs National Park"],"status":"terminated"},{"date":{"e":"2022-12-30","s":"2009-01-01"},"nm":"The Loch Lomond and the Trossachs National Park","status":"terminated"}],
+		"S21000003":[{"date":{"s":"2022-12-31"},"nm":"Cairngorms","nm_alt":["The Cairngorms National Park"],"status":"live"},{"date":{"e":"2022-12-30","s":"2010-10-02"},"nm":"The Cairngorms National Park","status":"terminated"}]
 	},
 	"description":"National Parks",
 	"source":"Code History Database (July 2024) ChangeHistory"

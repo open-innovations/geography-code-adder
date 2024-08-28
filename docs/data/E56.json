@@ -2,7 +2,7 @@
 	"areas":{
 		"E56000001":[{"date":{"e":"2017-02-13","s":"2016-09-01"},"nm":"North East and Cumbria","status":"terminated"}],
 		"E56000002":[{"date":{"e":"2017-02-13","s":"2016-09-01"},"nm":"Lancashire and South Cumbria","status":"terminated"}],
-		"E56000003":[{"date":{"e":"2018-07-12","s":"2016-09-01"},"nm":"West Yorkshire","status":"terminated"},{"date":{"e":"2020-03-31","s":"2018-07-13"},"nm":"West Yorkshire and Harrogate","status":"terminated"}],
+		"E56000003":[{"date":{"e":"2020-03-31","s":"2018-07-13"},"nm":"West Yorkshire and Harrogate","status":"terminated"},{"date":{"e":"2018-07-12","s":"2016-09-01"},"nm":"West Yorkshire","status":"terminated"}],
 		"E56000004":[{"date":{"e":"2020-03-31","s":"2016-09-01"},"nm":"Humber, Coast and Vale","status":"terminated"}],
 		"E56000005":[{"date":{"s":"2016-09-01"},"nm":"Cheshire and Merseyside","status":"live"}],
 		"E56000006":[{"date":{"e":"2019-06-30","s":"2016-09-01"},"nm":"South Yorkshire, Bassetlaw, North Derbyshire and Hardwick","status":"terminated"}],

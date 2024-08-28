@@ -13,7 +13,7 @@ binmode STDERR, 'utf8';
 my $basedir = "./";
 if(abs_path($0) =~ /^(.*\/)[^\/]*/){ $basedir = $1; }
 
-my (%geotypes,$r,$typ,$cd,$nm,$file,$fh,$args,@rows,@cols,@header,$c,%head,$ext,$supplemental,%equivalents,%types,@check,$str,@alts,$tmp,$g);
+my (%geotypes,$r,$typ,$cd,$nm,$file,$fh,$args,@rows,@cols,@header,$c,%head,$ext,$supplemental,%equivalents,%types,@check,$str,@alts,$tmp,$g,$n);
 
 # Get the command line arguments
 $args = ParseCommandLine({
@@ -147,7 +147,16 @@ while(<FILE>){
 }
 close(FILE);
 
-
+# Update sort order
+foreach $typ (sort(keys(%geotypes))){
+	foreach $cd (sort(keys(%{$geotypes{$typ}{'areas'}}))){
+		# Set sort order
+		$n = @{$geotypes{$typ}{'areas'}{$cd}};
+		if($n > 1){
+			@{$geotypes{$typ}{'areas'}{$cd}} = sort{ ($b->{'date'}{'s'}||"1974-04-01") cmp ($a->{'date'}{'s'}||"1974-04-01") } @{$geotypes{$typ}{'areas'}{$cd}};
+		}
+	}
+}
 
 
 
