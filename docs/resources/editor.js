@@ -24,7 +24,7 @@
 		this.spinner = document.createElement('div');
 		this.spinner.classList.add('spinner');
 		this.spinner.style['text-align'] = "center";
-		this.spinner.innerHTML = '<img src="https://open-innovations.org/resources/images/loader.svg" alt="Loading..." />';
+		this.spinner.innerHTML = '<img src="resources/loader.svg" alt="Loading..." />';
 
 		this.saveable = (typeof Blob==="function");
 
